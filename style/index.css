@@ -5,32 +5,36 @@ body {
 .logo-container {
   text-align: center;
 }
+
 .logo-container__logo-img {
   width: 60%;
   height: auto;
 }
 
 .smooth-scroll__initializer {
-  font-family: "VT323";
+  font-family: 'VT323';
   text-decoration: underline;
   color: white;
   font-size: 55px;
   text-transform: uppercase;
   text-align: center;
 }
+
 .smooth-scroll__initializer:hover {
   color: grey;
   cursor: pointer;
 }
 
 .add-name {
-  font-family: "VT323";
+  font-family: 'VT323';
 }
+
 .add-name__name-input {
   border-radius: 15px;
   height: 30px;
   width: 300px;
 }
+
 .add-name__confirm-name-btn {
   background-color: #34EC46;
   border-radius: 30px;
@@ -38,6 +42,7 @@ body {
   height: 30px;
   width: 30px;
 }
+
 .add-name__confirm-name-btn:active {
   background-color: grey;
   border-color: grey;
@@ -45,4 +50,5 @@ body {
 
 .fas {
   color: white;
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */
