@@ -1,10 +1,4 @@
-<<<<<<< Updated upstream
 .ul-container {
-=======
-.nav-container .ul-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
->>>>>>> Stashed changes
   display: flex;
   width: 100%;
   background-color: rgba(206, 217, 255, 0.2);
@@ -12,11 +6,6 @@
       -ms-flex-align: center;
           align-items: center;
 }
-<<<<<<< Updated upstream
-.ul-container .icon {
-  width: 10px;
-}/*# sourceMappingURL=planet-info.css.map */
-=======
 
 .nav-container .ul-container li {
   margin: 10px;
@@ -53,4 +42,3 @@ body {
   color: #ffffff;
 }
 /*# sourceMappingURL=planet-info.css.map */
->>>>>>> Stashed changes
