@@ -4,11 +4,35 @@ $color-3: #ff7a41;
 $color-4: #66f875;
 $color-5: #f5f5f5;
 
-.ul-container {
-  display: flex;
-  background-color: $color-1;
+$font-1: 'courier new';
 
-  .icon {
-    width: 10px;
+
+.nav-container{
+  
+  .ul-container {
+  
+    display: flex;
+    width: 100%;
+    background-color: rgba($color-2, 0.2);
+    align-items: center;
+    
+    li{
+      
+      margin: 10px;
+
+      img{
+        height: 2rem;
+        padding: 2rem;
+      }
+    }
+
+    .nav-heading{
+      color: $color-5;
+      font-size: 2rem;
+      font-family: $font-1;      
+    }
   }
+  
 }
+
+
