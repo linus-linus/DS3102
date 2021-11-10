@@ -1,6 +1,6 @@
 /*mob*/
 .page-header {
-  background-color: #f5f5f5;
+  background: rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -24,8 +24,9 @@
 .page-header .nav-container .ul-container .icon__building {
   width: 1.5rem;
   padding: 0.8rem;
-  background-color: #020d33;
+  border: 0.15rem solid;
   border-radius: 20%;
+  border-color: #ff7a41;
 }
 .page-header .info-text {
   order: 2;
@@ -40,7 +41,7 @@
 .page-header .start-quize-btn {
   order: 1;
   font-family: "VT323", monospace;
-  color: #ff7a41;
+  color: #020d33;
   background-color: #ced9ff;
   border: none;
   border-radius: 20px;
