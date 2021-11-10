@@ -29,6 +29,10 @@
           box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 .planet-section {
   margin: auto;
   max-width: 1000px;
@@ -40,6 +44,11 @@
 
 .planet-section .planet {
   display: none;
+}
+
+.planet-section .planet__img {
+  vertical-align: middle;
+  width: 100%;
 }
 
 .planet-section .next-btn {

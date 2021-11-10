@@ -9,25 +9,31 @@ $font-1: 'courier new';
 *{
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+}
+
 .planet-section{
 
     margin: auto;
     max-width: 1000px;
     position: relative;
     
+
     /* Hide planets */
     .planet{
         display: none;
         
         &__img{
-            ;
+            vertical-align: middle;
+            width: 100%;
         }
+        
     }
 
     /* Buttons */
     .next-btn {
         right: 0;
-        
     }
 
     .prev-btn, .next-btn{
@@ -76,5 +82,9 @@ $font-1: 'courier new';
     @keyframes fade{
         from {opacity: .4}
   to {opacity: 1}
+    }
+
+    @media (min-width: 720px){
+
     }
 }
