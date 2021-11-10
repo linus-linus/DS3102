@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACMA,AAAA,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,gBAAgB,EARR,OAAO;CAahB;;AAPD,AAIE,aAJW,CAIX,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "planet-info.scss",
+        "_planet-info-nav.scss"
+    ],
+    "names": [],
+    "file": "planet-info.css"
+}

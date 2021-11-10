@@ -1,0 +1,11 @@
+.ul-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #020d33;
+}
+
+.ul-container .icon {
+  width: 10px;
+}
+/*# sourceMappingURL=planet-info.css.map */
