@@ -1,63 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Meyer reset-->
-    <link rel="stylesheet" href="/style/reset-mayers.css">
+    <link rel="stylesheet" href="/style/reset-mayers.css" />
     <!--CSS-->
     <link rel="stylesheet" href="/style/planet-info/planet-info.css" />
+    <link rel="stylesheet" href="/style/shared-css/share.css" />
 
     <title>Planets</title>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <header>
-            <nav class="nav-container">
-                <ul class="ul-container">
-                    <li><a class="ul-container__link" href="#"><img src="/images/icons/planet-icon.png" alt="planet icon"></a></li>
-                    <li><a class="ul-container__link" href="#"><img src="/images/icons/building-icon.png" alt="building icon"></a></li>
-                    <li class="nav-heading">Planets</li>
-                </ul>
-            </nav>
-        </header>
+      <header class="page-header">
+        <nav class="nav-container">
+          <ul class="ul-container">
+            <li>
+              <a class="ul-container__link" href="#"
+                ><img
+                  class="icon__planet"
+                  src="/images/icons/planet-icon.png"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a class="ul-container__link" href="#"
+                ><img
+                  class="icon__building"
+                  src="/images/icons/building-icon.png"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </nav>
 
-        <main>
-            <!-- Header -->
-            <section class="planet-header">
-                <h2 class="planet-header__txt">Click on the planet you want to learn more about!</h2>
-            </section>
+        <h2 class="info-text">
+          Click on the building you want to learn more about!
+        </h2>
 
-            <!-- Main content -->
-            <section class="planet-section">
-                <article class="planet slide">
-                    <img class="planet__img" src="images/planets/mercury.png">
-                    <h3 class="planet-name">Mercury</h3>
-                </article>
+        <button class="start-quize-btn">Start Quiz</button>
+      </header>
+      <main>
+        <section class="planet-header">
+          <h3>hello</h3>
+        </section>
+        <!-- Main content -->
+        <section class="planet-section">
+          <article class="planet slide">
+            <img class="planet__img" src="images/planets/mercury.png" />
+            <h3 class="planet-name">Mercury</h3>
+          </article>
 
-                <article class="planet slide">
-                    <img class="planet__img" src="images/planets/venus.png">
-                    <h3 class="planet-name">Venus</h3>
-                </article>
+          <article class="planet slide">
+            <img class="planet__img" src="images/planets/venus.png" />
+            <h3 class="planet-name">Venus</h3>
+          </article>
 
-                <article class="planet slide">
-                    <img class="planet__img" src="images/planets/earth.png">
-                    <h3 class="planet-name">Earth</h3>
-                </article>
+          <article class="planet slide">
+            <img class="planet__img" src="images/planets/earth.png" />
+            <h3 class="planet-name">Earth</h3>
+          </article>
 
-                <article class="planet slide">
-                    <img class="planet__img" src="images/planets/earth.png">
-                    <h3 class="planet-name">Earth</h3>
-                </article>
+          <article class="planet slide">
+            <img class="planet__img" src="images/planets/earth.png" />
+            <h3 class="planet-name">Earth</h3>
+          </article>
 
-                <!-- Previous and next btn -->
-                <a class="prev-btn" onclick="slideBtns(-1)">&#10094;</a>
-                <a class="next-btn" onclick="slideBtns(1)">&#10095;</a>
-            </section>
-        </main>
+          <!-- Previous and next btn -->
+          <a class="prev-btn" onclick="slideBtns(-1)">&#10094;</a>
+          <a class="next-btn" onclick="slideBtns(1)">&#10095;</a>
+        </section>
+      </main>
     </div>
-    
-</body>
-<script src="scripts/planets.js"></script>
+  </body>
+  <script src="scripts/planets.js"></script>
 </html>
