@@ -1,0 +1,59 @@
+$primary: #34EC46;
+$secondary: #FF891C;
+
+body{
+    background-color: black;
+}
+
+.logo-container{
+    text-align: center;
+
+    &__logo-img{
+        width: 60%;
+        height: auto;
+    }
+}
+
+.smooth-scroll{
+
+    &__initializer{
+        font-family: 'VT323';
+        text-decoration: underline;
+        color: white;
+        font-size: 55px;
+        text-transform: uppercase;
+        text-align: center;
+    }   
+
+    &__initializer:hover{
+        color: grey;
+        cursor: pointer;
+    }
+}
+
+.add-name{
+    font-family: 'VT323';
+
+    &__name-input{
+        border-radius: 15px;
+        height: 30px;
+        width: 300px;
+    }
+
+    &__confirm-name-btn{
+        background-color: $primary;
+        border-radius: 30px;
+        border-color: $primary;
+        height: 30px;
+        width: 30px;
+    }
+
+    &__confirm-name-btn:active{
+        background-color: grey;
+        border-color: grey;
+    }
+}
+
+.fas{
+    color: white;
+}
