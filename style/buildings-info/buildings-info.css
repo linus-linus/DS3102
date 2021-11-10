@@ -1,5 +1,5 @@
 body {
-  background-color: #020d33;
+  background-color: #31493d;
 }
 
 .all-buildings-section {
@@ -72,8 +72,8 @@ body {
 .page-header .info-text {
   order: 2;
   font-family: "VT323", monospace;
-  font-size: 0.9rem;
-  color: #ced9ff;
+  font-size: 1rem;
+  color: #020d33;
   width: 100%;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -83,7 +83,7 @@ body {
   order: 1;
   font-family: "VT323", monospace;
   color: #020d33;
-  background-color: #ced9ff;
+  background-color: #ff7a41;
   border: none;
   border-radius: 20px;
   width: 6rem;
