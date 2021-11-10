@@ -1,6 +1,43 @@
-.all-buildings-section {
-  margin-top: 9rem;
+body {
+  background-color: #020d33;
 }
+
+.all-buildings-section {
+  margin: 1.2rem;
+  margin-top: 9rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+  font-family: "VT323", monospace;
+  color: #020d33;
+  /*mobil*/
+  /*tablet*/
+}
+.all-buildings-section .building {
+  grid-column: auto/span 12;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.05));
+  grid-column: auto/span 12;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.all-buildings-section .building__title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.all-buildings-section .building__img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .all-buildings-section .building {
+    grid-column: auto/span 4;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .all-buildings-section .building {
+    grid-column: auto/span 3;
+  }
+}
+
 /*mob*/
 .page-header {
   background: rgba(255, 255, 255, 0.3);
@@ -11,6 +48,7 @@
   position: fixed;
   width: 100vw;
   top: 0;
+  /*tablet*/
 }
 .page-header .nav-container {
   order: 0;
@@ -53,5 +91,13 @@
   margin: 0.8rem;
   margin-top: 1.1;
 }
-
-/*pc*//*# sourceMappingURL=buildings-info.css.map */
+@media screen and (min-width: 768px) {
+  .page-header .info-text {
+    order: 1;
+    font-size: 0.9rem;
+    width: auto;
+  }
+  .page-header .start-quize-btn {
+    order: 2;
+  }
+}/*# sourceMappingURL=buildings-info.css.map */
