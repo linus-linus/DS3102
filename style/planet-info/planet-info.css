@@ -1,23 +1,16 @@
 .nav-container .ul-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   background-color: rgba(206, 217, 255, 0.2);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .nav-container .ul-container li {
   margin: 10px;
 }
-
 .nav-container .ul-container li img {
   height: 2rem;
   padding: 2rem;
 }
-
 .nav-container .ul-container .nav-heading {
   color: #f5f5f5;
   font-size: 2rem;
@@ -25,8 +18,7 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -41,7 +33,6 @@ body {
   /* Buttons */
   /* Animation */
 }
-
 .planet-section .planet {
   display: none;
 }
@@ -54,7 +45,6 @@ body {
 .planet-section .next-btn {
   right: 0;
 }
-
 .planet-section .prev-btn, .planet-section .next-btn {
   color: #f5f5f5;
   position: absolute;
@@ -63,18 +53,15 @@ body {
   margin-top: -22px;
   padding: 16px;
   font-size: 18px;
-  -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-
 .planet-section .prev-btn:hover, .planet-section .next-btn:hover {
   background-color: rgba(206, 217, 255, 0.2);
 }
-
 .planet-section .planet-name {
   color: #f5f5f5;
   font-size: 18px;
@@ -83,14 +70,12 @@ body {
   width: 100%;
   text-align: center;
 }
-
 .planet-section .slide {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
   from {
     opacity: 0.4;
@@ -99,10 +84,9 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     opacity: 1;
@@ -114,18 +98,12 @@ body {
 }
 
 .planet-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 1rem;
   font-size: 1.5rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
-
 .planet-header__txt {
   color: #ffffff;
-}
-/*# sourceMappingURL=planet-info.css.map */
+}/*# sourceMappingURL=planet-info.css.map */
