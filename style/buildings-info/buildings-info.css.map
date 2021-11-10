@@ -1,10 +1,9 @@
 {
-  "version": 3,
-  "sources": [
-    "_buildings-info-nav.scss",
-    "buildings-info.scss"
-  ],
-  "names": [],
-  "mappings": "AAMA,MAAA;AACA;EACE,yBAJQ;EAKR,aAAA;EACA,8BAAA;EACA,eAAA;EACA,mBAAA;EAGA,eAAA;EACA,YAAA;EACA,MAAA;ACPF;ADSE;EACE,QAAA;ACPJ;ADSI;EACE,aAAA;EACA,gBAAA;EACA,kBAAA;ACPN;ADUQ;EACE,WAAA;EACA,eAAA;ACRV;ADUQ;EACE,aAAA;EACA,eAAA;EACA,cAlCA;EAmCA,yBAnCA;EAoCA,kBAAA;ACRV;ADcE;EACE,QAAA;EACA,+BAAA;EACA,iBAAA;EACA,cA9CM;EA+CN,WAAA;EACA,iBAAA;EACA,kBAAA;EACA,aAAA;ACZJ;ADcE;EACE,QAAA;EACA,+BAAA;EACA,cAxDM;EAyDN,yBAxDM;EAyDN,YAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EACA,cAAA;EACA,eAAA;ACZJ;;ADgBA,KAAA",
-  "file": "buildings-info.css"
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "buildings-info.scss"
+    ],
+    "names": [],
+    "file": "buildings-info.css"
 }
