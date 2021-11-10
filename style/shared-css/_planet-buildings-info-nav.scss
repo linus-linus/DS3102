@@ -67,6 +67,15 @@ $color-7: #464d66;
     margin: 0.8rem;
     margin-top: 1.1;
   }
+  /*tablet*/
+  @media screen and(min-width: 768px) {
+    .info-text {
+      order: 1;
+      font-size: 0.9rem;
+      width: auto;
+    }
+    .start-quize-btn {
+      order: 2;
+    }
+  }
 }
-
-/*pc*/

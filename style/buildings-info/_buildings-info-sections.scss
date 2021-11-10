@@ -4,14 +4,51 @@ $color-3: #ff7a41;
 $color-4: #66f875;
 $color-5: #f5f5f5;
 
+body {
+  background-color: $color-1;
+}
 .all-buildings-section {
+  margin: 1.2rem;
   margin-top: 9rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+  font-family: "VT323", monospace;
+  color: $color-1;
 
+  /*mobil*/
   .building {
+    grid-column: auto/span 12;
+    background: linear-gradient(
+      rgb(255, 255, 255, 0.5),
+      rgb(255, 255, 255, 0.05)
+    );
+
+    // border: 0.15rem solid;
+    //border-color: $color-3;
+    grid-column: auto/span 12;
+    padding: 1.5rem;
+    border-radius: 10px;
+
     &__title {
+      font-size: 1.2rem;
+      text-align: center;
+      //color: $color-3;
     }
 
     &__img {
+      width: 100%;
+    }
+  }
+  /*tablet*/
+  @media screen and(min-width: 768px) {
+    .building {
+      grid-column: auto/span 4;
+    }
+  }
+  @media screen and(min-width: 1200px) {
+    .building {
+      grid-column: auto/span 3;
     }
   }
 }
