@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": "ACMA,AAAA,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,gBAAgB,EARR,OAAO;CAahB;;AAPD,AAIE,aAJW,CAIX,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;CACZ",
-    "sources": [
-        "planet-info.scss",
-        "_planet-info-nav.scss"
-    ],
-    "names": [],
-    "file": "planet-info.css"
-}
+{"version":3,"sources":["_planet-info-nav.scss","planet-info.scss"],"names":[],"mappings":"AAMA;EACE,aAAA;EACA,yBARQ;ACGV;ADOE;EACE,WAAA;ACLJ","file":"planet-info.css"}

@@ -13,13 +13,18 @@
   order: 0;
 }
 .page-header .nav-container .ul-container {
+  display: flex;
   list-style: none;
+  margin: 0;
+}
+.page-header .nav-container .ul-container__link {
+  padding: 10px;
 }
 .page-header .nav-container .ul-container .icon__planet {
-  width: 3rem;
+  width: 2rem;
 }
 .page-header .nav-container .ul-container .icon__building {
-  width: 3rem;
+  width: 2rem;
 }
 .page-header .info-text {
   order: 2;
@@ -27,6 +32,7 @@
   font-size: 0.9rem;
   color: #ced9ff;
   width: 100%;
+  align-items: center;
 }
 .page-header .start-quize {
   order: 1;
@@ -38,3 +44,5 @@
   width: 6rem;
   height: 2rem;
 }
+
+/*pc*//*# sourceMappingURL=buildings-info.css.map */
