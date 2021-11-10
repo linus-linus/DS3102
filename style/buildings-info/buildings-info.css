@@ -1,1 +1,57 @@
-/* No CSS *//*# sourceMappingURL=buildings-info.css.map */
+.all-buildings-section {
+  margin-top: 9rem;
+}
+/*mob*/
+.page-header {
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+.page-header .nav-container {
+  order: 0;
+}
+.page-header .nav-container .ul-container {
+  display: flex;
+  list-style: none;
+  margin-top: 0.3rem;
+}
+.page-header .nav-container .ul-container .icon__planet {
+  width: 2rem;
+  padding: 0.8rem;
+}
+.page-header .nav-container .ul-container .icon__building {
+  width: 1.5rem;
+  padding: 0.8rem;
+  border: 0.15rem solid;
+  border-radius: 20%;
+  border-color: #ff7a41;
+}
+.page-header .info-text {
+  order: 2;
+  font-family: "VT323", monospace;
+  font-size: 0.9rem;
+  color: #ced9ff;
+  width: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+.page-header .start-quize-btn {
+  order: 1;
+  font-family: "VT323", monospace;
+  color: #020d33;
+  background-color: #ced9ff;
+  border: none;
+  border-radius: 20px;
+  width: 6rem;
+  height: 2rem;
+  margin: 0.8rem;
+  margin-top: 1.1;
+}
+
+/*pc*//*# sourceMappingURL=buildings-info.css.map */
