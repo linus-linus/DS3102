@@ -1,7 +1,42 @@
-.ul-container {
+/*mob*/
+.page-header {
+  background-color: #f5f5f5;
   display: flex;
-  background-color: #020d33;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
-.ul-container .icon {
-  width: 10px;
-}/*# sourceMappingURL=buildings-info.css.map */
+.page-header .nav-container {
+  order: 0;
+}
+.page-header .nav-container .ul-container {
+  list-style: none;
+}
+.page-header .nav-container .ul-container .icon__planet {
+  width: 3rem;
+}
+.page-header .nav-container .ul-container .icon__building {
+  width: 3rem;
+}
+.page-header .info-text {
+  order: 2;
+  font-family: "VT323", monospace;
+  font-size: 0.9rem;
+  color: #ced9ff;
+  width: 100%;
+}
+.page-header .start-quize {
+  order: 1;
+  font-family: "VT323", monospace;
+  color: #020d33;
+  background-color: #ced9ff;
+  border: none;
+  border-radius: 20px;
+  width: 6rem;
+  height: 2rem;
+}
+
+/*pc*//*# sourceMappingURL=buildings-info.css.map */
