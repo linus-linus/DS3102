@@ -1,1 +1,9 @@
-{"version":3,"sources":["_buildings-info-nav.scss","buildings-info.scss"],"names":[],"mappings":"AAMA;EACE,aAAA;EACA,yBARQ;ACGV;ADOE;EACE,WAAA;ACLJ","file":"buildings-info.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,IAAI,CAAJ,sBAAI;AACJ,IAAI,CAAJ,2BAAI",
+    "sources": [
+        "buildings-info.scss"
+    ],
+    "names": [],
+    "file": "buildings-info.css"
+}
