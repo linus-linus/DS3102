@@ -1,78 +1,57 @@
-* {
-  box-sizing: border-box;
+/*mob*/
+.page-header {
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+.page-header .nav-container {
+  order: 0;
+}
+.page-header .nav-container .ul-container {
+  display: flex;
+  list-style: none;
+  margin-top: 0.3rem;
+}
+.page-header .nav-container .ul-container .icon__planet {
+  width: 2rem;
+  padding: 0.8rem;
+}
+.page-header .nav-container .ul-container .icon__building {
+  width: 1.5rem;
+  padding: 0.8rem;
+  border: 0.15rem solid;
+  border-radius: 20%;
+  border-color: #ff7a41;
+}
+.page-header .info-text {
+  order: 2;
+  font-family: "VT323", monospace;
+  font-size: 0.9rem;
+  color: #ced9ff;
+  width: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+.page-header .start-quize-btn {
+  order: 1;
+  font-family: "VT323", monospace;
+  color: #020d33;
+  background-color: #ced9ff;
+  border: none;
+  border-radius: 20px;
+  width: 6rem;
+  height: 2rem;
+  margin: 0.8rem;
+  margin-top: 1.1;
 }
 
-body {
-  margin: 0;
-}
-
-.planet-section {
-  margin: auto;
-  max-width: 1000px;
-  position: relative;
-  /* Hide planets */
-  /* Buttons */
-  /* Animation */
-}
-.planet-section .planet {
-  display: none;
-}
-.planet-section .planet__img {
-  vertical-align: middle;
-  width: 100%;
-}
-.planet-section .next-btn {
-  right: 0;
-}
-.planet-section .prev-btn,
-.planet-section .next-btn {
-  color: #f5f5f5;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  font-size: 18px;
-  transition: 0.6s ease;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.planet-section .prev-btn:hover,
-.planet-section .next-btn:hover {
-  background-color: rgba(206, 217, 255, 0.2);
-}
-.planet-section .planet-name {
-  color: #f5f5f5;
-  font-size: 18px;
-  padding: 8px 12px;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-}
-.planet-section .slide {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/*pc*/
 body {
   background-color: #000000;
 }
@@ -86,4 +65,4 @@ body {
 }
 .planet-header__txt {
   color: #ffffff;
-} /*# sourceMappingURL=planet-info.css.map */
+}/*# sourceMappingURL=planet-info.css.map */
