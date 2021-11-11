@@ -6,84 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--reset mayers-->
-   <link rel="stylesheet" href="/style/reset-mayers.css">
+    <link rel="stylesheet" href="/style/reset-mayers.css" />
 
-   <!--font awesome-->
-   <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
- />
-   <!--font-->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-   <!--CSS-->
-  <link rel="stylesheet" href="/style/buildings-info/buildings-info.css">
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="/style/buildings-info/buildings-info.css" />
 
     <!--icon-->
     <link rel="icon" href="images/icons/planet-icon.svg" />
     <title>Buildings info</title>
   </head>
   <body>
-<div>
-    <header class="page-header">
-     
+    <div>
+      <header class="page-header">
         <nav class="nav-container">
-            <ul class="ul-container">
-                <li><a class="ul-container__link" href="#"><img class="icon__planet" src="/images/icons/planet-icon.png" alt=""></a></li>
-                <li><a class="ul-container__link" href="#"><img 
-                  class="icon__building" src="/images/icons/building-icon.png" alt=""></a></li>
-            </ul>
-            
+          <ul class="ul-container">
+            <li>
+              <a class="ul-container__link planet-bte" href="#"
+                ><img
+                  class="icon__planet"
+                  src="/images/icons/planet-icon.png"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a class="ul-container__link building-bte" href="#"
+                ><img
+                  class="icon__building"
+                  src="/images/icons/building-icon.png"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
         </nav>
-         
-<h2 class="info-text">Click on the building you want to learn more about!</h2>
 
-<button class="start-quize-btn">Start Quiz</button>
-      
-    </header>
-  
-    <main>
-      <section class="all-buildings-section">
-        <article class="building">
-          <h3 class="building__title">Taj Mahal</h3>
-          <img class="building__img" src="/images/buildings/taj-mahal.png" alt="Taj Mahal">
-        </article>
+        <h2 class="info-text">
+          Click on the building you want to learn more about!
+        </h2>
 
-        <article class="building">
-          <h3 class="building__title">space needle</h3>
-          <img class="building__img" src="/images/buildings/space-needle.png" alt="Taj Mahal">
-        </article>
-        
-        <article class="building">
-          <h3 class="building__title">Notre-dame</h3>
-          <img class="building__img" src="/images/buildings/notre-dame.png" alt="Taj Mahal">
-        </article>
+        <button class="start-quize-btn">Start Quiz</button>
+      </header>
 
-        <article class="building">
-          <h3 class="building__title">Louvre</h3>
-          <img class="building__img" src="/images/buildings/louvre.png" alt="Taj Mahal">
-        </article>
-        <article class="building">
-          <h3 class="building__title">Leaning tower of pisa</h3>
-          <img class="building__img" src="/images/buildings/leaning-tower-of-pisa.png" alt="Taj Mahal">
-        </article>
-        
-        <article class="building">
-          <h3 class="building__title">Hallgrimskirkja</h3>
-          <img class="building__img" src="/images/buildings/hallgrimskirkja.png" alt="Taj Mahal">
-        </article>
-        
-      
-
-        
-
-      </section>
-
-    </main>
-
-
-</div>
-  </body>
+      <main>
+        <section class="all-buildings-section print-out"></section>
+      </main>
+    </div>
+    <script src="/scripts/buildings.js"></script>
   </body>
 </html>
