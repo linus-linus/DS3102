@@ -2,6 +2,7 @@ body {
   background-color: black;
 }
 
+<<<<<<< Updated upstream
 .logo-container {
   text-align: center;
 }
@@ -46,3 +47,19 @@ body {
 .fas {
   color: white;
 }/*# sourceMappingURL=index.css.map */
+=======
+.logo-container__logo-img {
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+
+.smooth-scroll__initializer {
+  text-decoration: underline;
+  color: white;
+  font-family: 'VT323';
+  font-size: 45px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=index.css.map */
+>>>>>>> Stashed changes

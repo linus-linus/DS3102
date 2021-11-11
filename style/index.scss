@@ -1,22 +1,35 @@
 $primary: #34EC46;
 $secondary: #FF891C;
 
+<<<<<<< Updated upstream
 body{
+=======
+body {
+>>>>>>> Stashed changes
     background-color: black;
 }
 
 .logo-container{
+<<<<<<< Updated upstream
     text-align: center;
 
     &__logo-img{
         width: 60%;
         height: auto;
+=======
+
+    &__logo-img{
+        width: 50%;
+        height: auto;
+        text-align: center;
+>>>>>>> Stashed changes
     }
 }
 
 .smooth-scroll{
 
     &__initializer{
+<<<<<<< Updated upstream
         font-family: 'VT323';
         text-decoration: underline;
         color: white;
@@ -56,4 +69,12 @@ body{
 
 .fas{
     color: white;
+=======
+        text-decoration: underline;
+        color: white;
+        font-family: 'VT323';
+        font-size: 45px;
+        text-transform: uppercase;
+    }
+>>>>>>> Stashed changes
 }
