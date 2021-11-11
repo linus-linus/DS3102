@@ -4,8 +4,7 @@ $color-3: #ff7a41;
 $color-4: #66f875;
 $color-5: #f5f5f5;
 
-$font-1: "courier new";
-
+$font-1: "VT323", monospace;
 
 body {
   margin: 0;
@@ -18,33 +17,39 @@ body {
   max-width: 1000px;
   position: relative;
   
-  
+  .planet-name {
+    font-family: $font-1;
+    color: $color-5;
+    font-size: 22px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
 
   /* Hide planets */
   .planet {
     display: none;
 
     &__img {
-      vertical-align: middle;
-      width: 80%;
-      margin-left: 2rem;
-      margin-top: 2rem;
+      width: 60%;
+      display: block;
+      margin: auto;
     }
   }
 
   /* Buttons */
   .next-btn {
     right: 0;
-    
   }
 
   .prev-btn,
   .next-btn {
     color: $color-5;
     position: absolute;
-    top: 30vw;
+    top: 28vw;
     width: auto;
-    padding: 20px;
+    padding: 10px;
+    margin: 20px;
     font-size: 18px;
     margin-top: -22px;
     transition: 0.6s ease;
@@ -54,16 +59,6 @@ body {
     &:hover {
       background-color: rgba($color-2, 0.2);
     }
-  }
-
-  .planet-name {
-    color: $color-5;
-    font-size: 18px;
-    padding-top: 60px;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    display: none;
   }
 
   /* Animation */
@@ -92,35 +87,39 @@ body {
     }
   }
 
-  /* Tablet 
+  /* Tablet */
   @media (min-width: 720px) {
     .planet {
+
+      .planet-name {
+        padding-top: 2rem;
+      }
+      
       &__img {
-        width: 50%;
-        padding: 50px 0 0 200px;
+        width: 60%;
+        display: block;
+        margin: auto;
       }
     }
 
     .prev-btn,
     .next-btn {
-      position: absolute;
-      top:30vw;
-      padding: 0px 50px 0px 50px;
+      margin: 3rem;
+      padding: 1rem;
+      margin-top: -22px;
+      top: 28vw;
+      font-size: 22px;
+      
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     .planet {
-      &__img {
-        padding-left: 6rem;
+
+      .prev-btn,
+      .next-btn {
+      cursor: pointer;
       }
     }
-
-    .prev-btn,
-    .next-btn {
-      position: absolute;
-      top:25vw;
-    }
-
-  }*/
+  }
 }
