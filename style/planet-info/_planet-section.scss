@@ -31,9 +31,10 @@ body {
     display: none;
 
     &__img {
-      width: 60%;
+      width: 60vw;
       display: block;
       margin: auto;
+      height: 60vw;
     }
   }
 
@@ -46,7 +47,8 @@ body {
   .next-btn {
     color: $color-5;
     position: absolute;
-    top: 28vw;
+    top: 50%;
+    transform:translateY(-50%);
     width: auto;
     padding: 10px;
     margin: 20px;
@@ -92,13 +94,14 @@ body {
     .planet {
 
       .planet-name {
-        padding-top: 2rem;
+        padding-top: 1rem;
       }
       
       &__img {
-        width: 60%;
         display: block;
         margin: auto;
+        width: 50vw;
+        height: 50vw;
       }
     }
 
@@ -107,18 +110,25 @@ body {
       margin: 3rem;
       padding: 1rem;
       margin-top: -22px;
-      top: 28vw;
       font-size: 22px;
       
     }
   }
 
+  /* Desktop */
   @media (min-width: 1200px) {
     .planet {
 
+      &__img {
+        display: block;
+        margin: auto;
+        width: 45vw;
+        height: 45vw;
+      }
+
       .prev-btn,
       .next-btn {
-      cursor: pointer;
+        cursor: pointer;
       }
     }
   }
