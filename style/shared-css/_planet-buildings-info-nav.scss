@@ -20,6 +20,7 @@ $color-7: #464d66;
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 
   .nav-container {
     order: 0;

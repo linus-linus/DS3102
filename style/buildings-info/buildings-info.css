@@ -48,6 +48,7 @@ body {
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
   /*tablet*/
 }
 .page-header .nav-container {
