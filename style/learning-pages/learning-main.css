@@ -1,0 +1,110 @@
+/*mob*/
+.page-header {
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  /*tablet*/
+}
+.page-header #serch-info {
+  order: 0;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 2rem;
+  border: none;
+  margin-left: 1rem;
+}
+.page-header .serch-info__icon {
+  order: 1;
+  color: #f5f5f5;
+  margin-right: 3rem;
+}
+.page-header .start-quize-btn {
+  order: 2;
+  font-family: "VT323", monospace;
+  font-size: 0.9rem;
+  color: #020d33;
+  background-color: #ff7a41;
+  border: none;
+  border-radius: 2rem;
+  width: 5rem;
+  height: 2rem;
+  margin: 0.8rem;
+  margin-right: 1rem;
+}
+body {
+  background-color: #31493d;
+}
+
+.all-learning-section {
+  margin: 1.2rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+  font-family: "VT323", monospace;
+  color: #020d33;
+  /*mobil*/
+  /*tablet*/
+}
+.all-learning-section .info {
+  grid-column: auto/span 12;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.05));
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.all-learning-section .info__title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.all-learning-section .info__img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .all-learning-section .info {
+    grid-column: auto/span 4;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .all-learning-section .info {
+    grid-column: auto/span 3;
+  }
+}
+
+.info:hover {
+  background-color: #f5f5f5;
+  padding: 6rem;
+}
+
+.icon {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 4rem;
+}
+.icon__titel {
+  grid-column: auto/span 12;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.icon__planet {
+  width: 2rem;
+  padding: 0.8rem;
+}
+.icon__planet:hover {
+  border: 0.15rem solid;
+  border-radius: 20%;
+  border-color: #66f875;
+}
+.icon__building {
+  width: 2rem;
+  padding: 0.8rem;
+}
+.icon__building:hover {
+  border: 0.15rem solid;
+  border-radius: 20%;
+  border-color: #ff7a41;
+}/*# sourceMappingURL=learning-main.css.map */

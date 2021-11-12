@@ -25,34 +25,64 @@ const buildingsArray = [
   },
 ]
 
+const planetArray = [
+  {
+    name: "Earth",
+    img: "/images/planets/earth.svg",
+  },
+  {
+    name: "Jupiter",
+    img: "/images/planets/jupiter.svg",
+  },
+  {
+    name: "Mars",
+    img: "/images/planets/mars.svg",
+  },
+  {
+    name: "Mars",
+    img: "/images/planets/mars.svg",
+  },
+  {
+    name: "Mars",
+    img: "/images/planets/mars.svg",
+  },
+  {
+    name: "Mars",
+    img: "/images/planets/mars.svg",
+  },
+]
+
 let printOut = document.querySelector(".print-out")
 
-let planetBte = document.querySelector(".planet-bte")
 let buildingBte = document.querySelector(".building-bte")
-
-let clickedBtn = false
-
-//let printBuildings = () =>
+let planetBte = document.querySelector(".planet-bte")
 
 let printAllBuldings = () => {
-  if (!clickedBtn) {
-    clickedBtn = true
-    console.log(clickedBtn)
-
-    buildingsArray.forEach((building) => {
-      printOut.innerHTML += `
-    <article class="building">
-          <h3 class="building__title">${building.name}</h3>
-          <img class="building__img" src=${building.img} alt="Taj Mahal">
+  printOut.innerHTML = ""
+  buildingsArray.forEach((building) => {
+    printOut.innerHTML += `
+    <article class="info">
+          <h3 class="info__title">${building.name}</h3>
+          <img class="info__img" src=${building.img} alt="Taj Mahal">
         </article>
     
     `
-    })
-  } else {
-    clickedBtn = false
-    console.log(clickedBtn)
-    printOut.innerHTML = ""
-  }
+  })
 }
 
 buildingBte.addEventListener("click", printAllBuldings)
+
+let printAllplanets = () => {
+  printOut.innerHTML = ""
+  planetArray.forEach((planet) => {
+    printOut.innerHTML += `
+        <article class="info">
+              <h3 class="info__title">${planet.name}</h3>
+              <img class="info__img" src=${planet.img} alt="Taj Mahal">
+            </article>
+        
+        `
+  })
+}
+
+planetBte.addEventListener("click", printAllplanets)
