@@ -6,33 +6,53 @@ $color-5: #f5f5f5;
 $color-6: #6f7488;
 $color-7: #464d66;
 
-.icon {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  margin-top: 4rem;
+/* Mob */
+.icon-section {
+  display: flex;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  //align-items: center;
+  //width: 100vw;
 
-  &__titel {
-    grid-column: auto/span 12;
+  .icon-titel {
+    order: 0;
+    width: 100%;
     color: $color-5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "VT323", monospace;
+    text-align: center;
   }
 
-  &__planet {
-    width: 2rem;
-    padding: 0.8rem;
-  }
-  &__planet:hover {
-    border: 0.15rem solid;
-    border-radius: 20%;
-    border-color: $color-4;
-  }
-  &__building {
-    width: 2rem;
-    padding: 0.8rem;
-  }
-  &__building:hover {
-    border: 0.15rem solid;
-    border-radius: 20%;
-    border-color: $color-3;
+  .icon {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+
+    &__planet {
+      width: 2rem;
+      height: 1.5rem;
+      padding: 1rem;
+      margin-right: 2rem;
+    }
+    &__planet:hover {
+      background-color: $color-3;
+      opacity: 0.5;
+    }
+
+    &__building {
+      width: 2rem;
+      padding: 1rem;
+      height: 1.5rem;
+    }
+    &__building:hover {
+      background-color: $color-1;
+      opacity: 0.5;
+      /*   border: 0.15rem solid;
+      border-radius: 20%;
+      border-color: $color-3;
+      width: 2rem;
+      height: 1.5rem;
+      */
+    }
   }
 }

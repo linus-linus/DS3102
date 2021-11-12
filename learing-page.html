@@ -28,38 +28,62 @@
   <body>
     <div>
       <header class="page-header">
-        <input type="text" name="" id="serch-info" value="søk" /><i
-          class="serch-info__icon fas fa-search"
-        ></i>
+        <div class="search">
+          <input
+            type="text"
+            name=""
+            class="search__info"
+            placeholder="Search"
+          />
+          <i class="search__icon fas fa-search"></i>
+        </div>
         <button class="start-quize-btn">Start Quiz</button>
       </header>
       <main>
-        <section class="icon">
-          <h2 class="icon__titel">
-            Click on the icon you want to learn more about!
-          </h2>
-          <a class="icon__link planet-bte" href="#"
-            ><img class="icon__planet" src="/images/icons/planet.png" alt=""
-          /></a>
+        <section class="icon-section">
+          <header class="icon-titel">
+            <h2>Click on the icon you want to learn more about!</h2>
+          </header>
+          <div class="icon">
+            <a class="icon__link planet-bte" href="#"
+              ><img class="icon__planet" src="/images/icons/planet.png" alt=""
+            /></a>
 
-          <a class="icon__link building-bte" href="#"
-            ><img
-              class="icon__building"
-              src="/images/icons/building.png"
-              alt=""
-            />
-          </a>
+            <a class="icon__link building-bte" href="#"
+              ><img
+                class="icon__building"
+                src="/images/icons/building.png"
+                alt=""
+              />
+            </a>
+          </div>
         </section>
 
-        <section class="buttons">
-          <h3>Sort by:</h3>
-          <button>Size</button>
-          <button>Alphabetical a-z</button>
-          <button>Years old</button>
+        <section class="button">
+          <h3 class="header-btn-text">Sort by:</h3>
+          <button class="button__size">Size</button>
+          <button class="button__alphabetical">Alphabetical a-z</button>
+          <button class="button__year">Years old</button>
         </section>
+
+        <section class="continent">
+          <label for="continents">Sort by continent</label>
+          <form action="">
+            <select name="continents" id="">
+              <option value="Asia">Asia</option>
+              <option value="Africa">Africa</option>
+              <option value="Nort America">North America</option>
+              <option value="South America">South America</option>
+              <option value="Antarctica">Antarctia</option>
+              <option value="Europa">Europa</option>
+              <option value="oseania">Oseania</option>
+            </select>
+          </form>
+        </section>
+
         <section class="all-learning-section print-out"></section>
       </main>
     </div>
-    <script src="/scripts/buildings.js"></script>
+    <script src="/scripts/learning.js"></script>
   </body>
 </html>
