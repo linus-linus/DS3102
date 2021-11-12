@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--reset mayers-->
+    <link rel="stylesheet" href="/style/reset-mayers.css" />
+
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="/style/learning-pages/learning-main.css" />
+
+    <title>Learning page</title>
+  </head>
+  <body>
+    <div>
+      <header class="page-header">
+        <input type="text" name="" id="serch-info" value="søk" /><i
+          class="serch-info__icon fas fa-search"
+        ></i>
+        <button class="start-quize-btn">Start Quiz</button>
+      </header>
+      <main>
+        <section class="icon">
+          <h2 class="icon__titel">
+            Click on the icon you want to learn more about!
+          </h2>
+          <a class="icon__link planet-bte" href="#"
+            ><img class="icon__planet" src="/images/icons/planet.png" alt=""
+          /></a>
+
+          <a class="icon__link building-bte" href="#"
+            ><img
+              class="icon__building"
+              src="/images/icons/building.png"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="buttons">
+          <h3>Sort by:</h3>
+          <button>Size</button>
+          <button>Alphabetical a-z</button>
+          <button>Years old</button>
+        </section>
+        <section class="all-learning-section print-out"></section>
+      </main>
+    </div>
+    <script src="/scripts/buildings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+$color-1: #020d33;
+$color-2: #ced9ff;
+$color-3: #ff7a41;
+$color-4: #66f875;
+$color-5: #f5f5f5;
+$color-6: #6f7488;
+$color-7: #464d66;
+
+.icon {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 4rem;
+
+  &__titel {
+    grid-column: auto/span 12;
+    color: $color-5;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__planet {
+    width: 2rem;
+    padding: 0.8rem;
+  }
+  &__planet:hover {
+    border: 0.15rem solid;
+    border-radius: 20%;
+    border-color: $color-4;
+  }
+  &__building {
+    width: 2rem;
+    padding: 0.8rem;
+  }
+  &__building:hover {
+    border: 0.15rem solid;
+    border-radius: 20%;
+    border-color: $color-3;
+  }
+}

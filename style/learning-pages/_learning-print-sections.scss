@@ -7,9 +7,10 @@ $color-5: #f5f5f5;
 body {
   background-color: #31493d;
 }
-.all-buildings-section {
+
+.all-learning-section {
   margin: 1.2rem;
-  margin-top: 9rem;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1rem;
@@ -17,16 +18,15 @@ body {
   color: $color-1;
 
   /*mobil*/
-  .building {
+  .info {
     grid-column: auto/span 12;
     background: linear-gradient(
       rgb(255, 255, 255, 0.5),
       rgb(255, 255, 255, 0.05)
     );
-
     // border: 0.15rem solid;
     //border-color: $color-3;
-    grid-column: auto/span 12;
+
     padding: 1.5rem;
     border-radius: 10px;
 
@@ -42,13 +42,18 @@ body {
   }
   /*tablet*/
   @media screen and(min-width: 768px) {
-    .building {
+    .info {
       grid-column: auto/span 4;
     }
   }
   @media screen and(min-width: 1200px) {
-    .building {
+    .info {
       grid-column: auto/span 3;
     }
   }
+}
+
+.info:hover {
+  background-color: $color-5;
+  padding: 6rem;
 }
