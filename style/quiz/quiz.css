@@ -1,26 +1,5 @@
 @charset "UTF-8";
-body {
-  background-color: #020d33;
-}
-
-.menu {
-  margin-top: 4rem;
-  display: flex;
-  padding: 2rem;
-  flex-direction: column;
-  align-items: center;
-}
-.menu__planet, .menu__building {
-  width: 2rem;
-  margin: 0.5rem;
-}
-.menu__title {
-  color: #f5f5f5;
-  font-family: "VT323", monospace;
-  font-size: 15px;
-<<<<<<< Updated upstream
-}
-
+/* Shared CSS */
 /*mob*/
 .page-header {
   background: rgba(255, 255, 255, 0.3);
@@ -74,6 +53,128 @@ body {
     width: 7rem;
     margin-right: 2rem;
   }
-=======
->>>>>>> Stashed changes
+}
+
+/* Mob */
+.icon-section {
+  display: flex;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+.icon-section .icon-titel {
+  order: 0;
+  width: 100%;
+  color: #f5f5f5;
+  font-family: "VT323", monospace;
+  text-align: center;
+}
+.icon-section .icon {
+  order: 1;
+  width: 100%;
+  text-align: center;
+  margin: 2rem;
+}
+.icon-section .icon__planet {
+  width: 2rem;
+  height: 1.5rem;
+  padding: 1rem;
+  margin-right: 2rem;
+}
+.icon-section .icon__planet:hover {
+  background-color: #ff7a41;
+  opacity: 0.5;
+}
+.icon-section .icon__building {
+  width: 2rem;
+  padding: 1rem;
+  height: 1.5rem;
+}
+.icon-section .icon__building:hover {
+  background-color: #020d33;
+  opacity: 0.5;
+  /*   border: 0.15rem solid;
+  border-radius: 20%;
+  border-color: $color-3;
+  width: 2rem;
+  height: 1.5rem;
+  */
+}
+
+/* Quiz CSS */
+body {
+  background-color: #020d33;
+}
+
+.quiz {
+  box-sizing: border-box;
+  background-color: #ced9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3rem 3rem 3rem;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.quiz__div {
+  color: #020d33;
+  font-family: "VT323", monospace;
+  overflow: hidden;
+}
+.quiz__div #question-h3 {
+  padding: 0.5rem;
+}
+.quiz #next-btn {
+  border-radius: 5px;
+  display: block;
+  border: none;
+  background-color: #020d33;
+  color: #f5f5f5;
+  font-family: "VT323", monospace;
+  padding: 0.5rem;
+}
+.quiz #next-btn:focus {
+  outline: none;
+  background-color: #ff7a41;
+}
+
+/* Mobile */
+.page-header {
+  justify-content: flex-start;
+  /* Tablet */
+}
+.page-header .back-btn {
+  margin-left: 0.5rem;
+  color: #ff7a41;
+  padding: 0.4rem;
+  flex: start;
+}
+.page-header .nav-btn {
+  width: 9rem;
+  margin: 0.5rem;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .page-header .back-btn:hover {
+    color: #66f875;
+    background-color: #020d33;
+    border-radius: 50%;
+    padding: 0.4rem;
+  }
+}
+
+/* Mob */
+.icon-section {
+  display: flex;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.icon-section .icon-titel {
+  padding: 1rem;
+}
+.icon-section .icon {
+  margin: 0.5rem;
+}
+.icon-section .icon__planet, .icon-section .icon__building {
+  padding: 0.5rem;
 }/*# sourceMappingURL=quiz.css.map */

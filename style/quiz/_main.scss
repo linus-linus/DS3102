@@ -11,4 +11,49 @@ body{
     background-color: $color-1;
 }
 
+.quiz{
+    box-sizing: border-box;
+    background-color: $color-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem 3rem 3rem;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &__div{
+        color: $color-1;
+        font-family: $font-1;
+        overflow: hidden;
+
+        #question-h3{
+            padding: 0.5rem;
+        }
+
+        .list{
+           
+        }
+
+    }
+
+    #next-btn{
+        border-radius: 5px;
+        display: block;
+        border: none;
+        background-color: $color-1;
+        color: $color-5;
+        font-family: $font-1;
+        padding: 0.5rem;
+
+        &:focus{
+            outline: none;
+            background-color: $color-3;
+        }
+
+    }
+
+
+}
+
 

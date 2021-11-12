@@ -1,5 +1,10 @@
+/* Shared CSS */
+@import "../shared/header";
+@import "../shared/theme-selection";
+
+/* Quiz CSS */
 @import "./main";
-@import "./menu";
-@import "../quiz/header";
+@import "./quiz-header";
+@import "./quiz-theme-selection";
 
 
