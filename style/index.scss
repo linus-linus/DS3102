@@ -19,9 +19,14 @@ body {
     }
 }
 
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .smooth-scroll{
-    text-align: center;
-    padding: 200px;
     height: 600px;
 
     &__initializer{
@@ -39,7 +44,6 @@ body {
 }
 
 .add-name{
-    text-align: center;
     height: 600px;
 
     &__name-input{
@@ -63,6 +67,7 @@ body {
         border-color: grey;
     }
 }
+
 
 .fas{
     color: white;

@@ -16,9 +16,20 @@ body {
   height: auto;
 }
 
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
 .smooth-scroll {
-  text-align: center;
-  padding: 200px;
   height: 600px;
 }
 
@@ -36,7 +47,6 @@ body {
 }
 
 .add-name {
-  text-align: center;
   height: 600px;
 }
 
