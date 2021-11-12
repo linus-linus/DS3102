@@ -56,4 +56,17 @@ body {
   height: 2rem;
   margin: 0.8rem;
   margin-right: 1rem;
+}
+.learning-page-btn {
+  order: 2;
+  font-family: "VT323", monospace;
+  font-size: 0.6rem;
+  color: #020d33;
+  background-color: #ff7a41;
+  border: none;
+  border-radius: 2rem;
+  width: 5rem;
+  height: 2rem;
+  margin: 0.8rem;
+  margin-right: 1rem;
 }/*# sourceMappingURL=quiz.css.map */
