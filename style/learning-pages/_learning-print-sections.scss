@@ -46,6 +46,8 @@ body {
       grid-column: auto/span 4;
     }
   }
+
+  /*pc*/
   @media screen and(min-width: 1200px) {
     .info {
       grid-column: auto/span 3;
