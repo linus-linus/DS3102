@@ -1,6 +1,10 @@
 $primary: #34EC46;
 $secondary: #FF891C;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
 }
@@ -9,20 +13,28 @@ body {
     text-align: center;
 
     &__logo-img{
-        width: 60%;
+        margin-top: 40px;
+        width: 100%;
         height: auto;
     }
 }
 
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .smooth-scroll{
+    height: 600px;
 
     &__initializer{
         font-family: 'VT323';
         text-decoration: underline;
         color: white;
-        font-size: 55px;
+        font-size: 45px;
         text-transform: uppercase;
-        text-align: center;
     }   
 
     &__initializer:hover{
@@ -32,12 +44,14 @@ body {
 }
 
 .add-name{
-    font-family: 'VT323';
+    height: 600px;
 
     &__name-input{
         border-radius: 15px;
         height: 30px;
         width: 300px;
+        font-family: 'VT323';
+        font-size: 20px;
     }
 
     &__confirm-name-btn{
@@ -54,6 +68,8 @@ body {
     }
 }
 
+
 .fas{
     color: white;
 }
+
