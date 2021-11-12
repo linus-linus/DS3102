@@ -10,36 +10,73 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
     <!-- CSS -->
     <link rel="stylesheet" href="style/quiz/quiz.css" />
-
     <title>Quiz - KnowledgeMe</title>
 </head>
 <body>
     <div>
-        
-    <main>
         <header class="page-header">
-            <button class="learning-page-btn">Til læringsside</button>
+            <a href ="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <button class="nav-btn">Til Læringsside</button>
         </header>
+        <main>
+            <section class="icon-section">
+                <header class="icon-titel">
+                    <h2>Velg quiz ved å trykke på ett av ikonene nedenfor</h2>
+                </header>
+                <div class="icon">
+                    <a class="icon__link planet-bte" href="#">
+                        <img class="icon__planet" src="/images/icons/planet.png" alt=""/>
+                    </a>
+                    <a class="icon__link building-bte" href="#">
+                        <img class="icon__building" src="/images/icons/building.png" alt=""/>
+                    </a>
+                </div>
+            </section>
+            
+            <section class="quiz">
+                <div class="quiz__div" id="quiz">
+                    <div class="quiz__content"><!--quiz-header-->
+                        <h3 id="question-h3">Question Text</h3>
+                        <ul class="list">
+                            <li class="list__answer">
+                                <input type="radio" name="quiz-choice" id="a" class="quiz-choice"><!--answer-->
+                                <label for="a" id="a-label"></label><!--a_text-->
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz-choice" id="b" class="quiz-choice"><!--answer-->
+                                <label for="b" id="b-label"></label><!--a_text-->
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz-choice" id="c" class="quiz-choice"><!--answer-->
+                                <label for="c" id="c-label"></label><!--a_text-->
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz-choice" id="d" class="quiz-choice"><!--answer-->
+                                <label for="d" id="d-label"></label><!--a_text-->
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz-choice" id="e" class="quiz-choice"><!--answer-->
+                                <label for="e" id="e-label"></label><!--a_text-->
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz-choice" id="f" class="quiz-choice"><!--answer-->
+                                <label for="f" id="f-label"></label><!--a_text-->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-        <section class="menu-section">
-            <header class="menu-title">
-              <h2>Bytt tema ved å trykke på ett av ikonene nedenfor:</h2>
-            </header>
-            <div class="menu">
-              <a class="menu__link planet-btn" href="#">
-                  <img class="menu__planet" src="/images/icons/planet.png" alt=""/>
-                </a>
-              <a class="menu__link building-btn" href="#">
-                  <img class="menu__building" src="/images/icons/building.png" alt=""/>
-              </a>
-            </div>
-          </section>
-        
+                <button id="next-btn">Neste</button>
+                
+            </section>
 
-    </main>
-    <footer>
+        </main>
+        <footer>
 
-    </footer>
+        </footer>
     </div>
+    <script src="/scripts/quiz.js"></script>
 </body>
 </html>
