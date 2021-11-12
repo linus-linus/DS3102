@@ -11,6 +11,11 @@ body {
   box-sizing: border-box;
 }
 
+.dropdown-menu{
+  margin-top: 5rem;
+  color: $color-5;
+}
+
 .planet-section {
   margin: auto;
   margin-top: 5rem;
@@ -87,6 +92,12 @@ body {
     to {
       opacity: 1;
     }
+  }
+
+  .facts-section{
+    color: $color-5;
+    text-align: center;
+    font-size: 18px;
   }
 
   /* Tablet */

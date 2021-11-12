@@ -45,6 +45,22 @@
 
       <main class="main-class">
         <!-- Main content -->
+
+        <section class="dropdown-menu">
+          <label>Choose a planet in the menu</label>
+          <select id="planet-filter">
+            <option>-Choose-</option>
+            <option>Mercury</option>
+            <option>Venus</option>
+            <option>Earth</option>
+            <option>Mars</option>
+            <option>Jupiter</option>
+            <option>Saturn</option>
+            <option>Uranus</option>
+            <option>Neptune</option>
+          </select>
+        </section>
+
         <section class="planet-section">
           <article class="planet slide">
             <h3 class="planet-name">Mercury</h3>
@@ -89,6 +105,11 @@
           <!-- Previous and next btn -->
           <a class="prev-btn" onclick="slideBtns(-1)">&#10094;</a>
           <a class="next-btn" onclick="slideBtns(1)">&#10095;</a>
+        
+          <section class="facts-section">
+            <h3 class="facts-header">Facts about Mercury</h3>
+            <p class="facts-p">This is information about mercury</p>
+          </section>
         </section>
       </main>
     </div>
