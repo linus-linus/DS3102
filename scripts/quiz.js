@@ -1,5 +1,5 @@
-// Quiz-array //
-var planetQuiz = [
+/* Planet Array 
+const planetQuiz = [
     {
         question: "Hva er kallenavnet til Jorda?",
         a: "Venus",
@@ -37,7 +37,7 @@ var planetQuiz = [
     }  
 ]
 
-// Quiz-array //
+// Buildings Array //
 var buildingQuiz = [
     {
         question: "Hvilket land ligger Chrysler Bygningen i?",
@@ -74,9 +74,173 @@ var buildingQuiz = [
         c: "41 år",
         correctAnswer: "c"
     }  
+]*/
 
+
+
+
+
+/* Funksjoner */
+
+// Laster Planetquiz
+function loadQuiz(){
+    //Lagrer HTML output
+    const output = []
+
+    planetArray.forEach(
+        (activeQuestion, questionNo) => {
+            //Lagrer mulige svar
+            const options = []
+
+            //og for hvert mulige svar..
+            for(choice in activeQuestion.options){
+
+                //legg til radioKnapp i HTML
+                options.push(`
+                    <label class="quiz-label">
+                        <input type="radio" name="questions${questionNo}" value="${choice}">
+                        ${choice} :
+                        ${activeQuestion.options[choice]}
+                    </label>
+                `
+                )
+            }
+            //push spørsmål og svaralternativ til HTML
+            output.push(`
+                <div class="question"> ${activeQuestion.question}</div>
+                <div class="options"> ${options.join('')}</div>
+            `
+            )
+        }
+    )
+
+    quizOutput.innerHTML = output.join('')
+}
+
+function displayResults(){
+    //Hent svaralternativ fra quizen
+    const optionsBoxes = quizOutput.querySelectorAll(".options")
+
+    //Brukersvar
+    let noOfRightAnswers = 0
+
+    //For each question..
+    planetArray.forEach( (activeQuestion, questionNo) => {
+        //Finn det riktige svaret
+        const optionsBox = optionsBoxes[questionNo]
+        const userChoice = `input[name=questions${questionNo}]:checked`
+        const userAnswer = (optionsBox.querySelector(userChoice) || {}).value;
+
+        //hvis svaret er riktig
+        if(userAnswer === activeQuestion.rightAnswer){
+            //legg til i antall riktige svar
+            noOfRightAnswers++
+        }else{
+            optionsBoxes[questionNo].style.color = "red"
+        }
+    })
+
+    resultsOutput.innerHTML = `${noOfRightAnswers} av ${planetArray.length}`
+}
+
+//Variabler
+const quizOutput = document.getElementById("quiz")
+const resultsOutput = document.getElementById("results-div")
+const submitBtn = document.getElementById("submit-btn")
+const planetBtn = document.querySelector(".planet-icon")
+
+const planetArray = [
+    {
+        question: "Hva er kallenavnet til Jorda?",
+        options: {
+                a: "Den Blå Lagune",
+                b: "Den Blå Planeten",
+                c: "Venus"
+        },
+        rightAnswer: "b"
+        
+    },
+    {
+        question: "Hvorfor blir Mars kalt Den Røde Planeten?",
+        options: {
+            a: "Fordi den består av flytende lava",
+            b: "Fordi den er så nærme Sola",
+            c: "Fordi overflaten er dekket av jernoksid"
+        },
+        rightAnswer: "c"
+    }
 ]
 
+const buildingsArray = [
+    {
+        question: "Hvilket land ligger Chryslerbygningen i?",
+        options: {
+            a: "Dubai",
+            b: "Australia",
+            c: "USA"
+        },
+        rightAnswer: "c"
+    },
+    {
+        question: "Hvem bygde Keiser Shah Jahan mausoleet Taj mahal for?",
+        options: {
+            a: "Favorittbarnebarnet",
+            b: "Favorittkonen",
+            c: "Dalmantineren Hercules"
+        },
+        rightAnswer: "b"
+    },
+    {
+        question: "Hvor høyt er Det Skjeve Tårnet i Pisa?",
+        options: {
+            a: "115 meter",
+            b: "16 meter",
+            c: "56"
+        },
+        rightAnswer: "c"
+    }
+]
+
+
+//Laster quiz ved knappetrykk
+
+planetBtn.addEventListener("click", loadQuiz)
+
+
+
+submitBtn.addEventListener("click", displayResults)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 // Ikoner //
 const planetIcon = document.querySelector(".planet-icon")
 const buildingIcon = document.querySelector(".building-icon")
@@ -121,19 +285,8 @@ function loadBuildingQuiz(){
     
     emptyQuizChoices()
 
-    let quizHtmlContent = ""
+    const buildingDataHolder = buildingQuiz[buildingData]
 
-    planetQuiz.forEach(question => {
-        let optionContent = ""
-        question.options.forEach(option => {
-            optionContent += `
-            <li class="list__answer">
-                <input type="radio" name="quiz-choice" id="a" class="quiz-choice"><!--answer-->
-                <label for="a" id="a-label"></label><!--a_text-->
-            </li>
-            `
-        })
-    });
 
     question.innerHTML = buildingDataHolder.question
     choiceA.innerHTML = buildingDataHolder.a
@@ -160,28 +313,60 @@ function selectedAnswer(){
     return answer
 }
 
+planetQuizActive = false;
+function planetQuizFunction(){
+    if(!planetQuizActive){
+        planetQuizActive = true;
+    }
+}
+
+buildingQuizActive = false;
+function buildingQuizFunction(){
+    if(!buildingQuizActive){
+        buildingQuizActive = true;
+    }
+}
+
 nextBtn.addEventListener('click', () => {
+    if(!planetQuizFunction){
     const answer = selectedAnswer()
         if(answer) {
-        if(answer === planetQuiz[planetData].correctAnswer){
+            if(answer === planetQuiz[planetData].correctAnswer){
+                score++
+            }
+            planetData++
+            
+            if(planetData < planetQuiz.length){
+                loadPlanetQuiz()
+            }else{
+                planetQuiz.innerHTML = `
+                <h3>Din score ${score} av ${planetQuiz.length} spørsmål</h3>
+                <button onclick="location.reload()">Prøv igjen</button>
+                `
+            }
+        }
+    }if(!buildingQuizFunction){
+        const answer = selectedAnswer()
+        if(answer) {
+        if(answer === buildingQuiz[buildingData].correctAnswer){
             score++
         }
-        planetData++
+        buildingData++
         
-        if(planetData < planetQuiz.length){
-            loadPlanetQuiz()
+        if(buildingData < buildingQuiz.length){
+            loadBuildingQuiz()
         }else{
-            planetQuiz.innerHTML = `
-            <h3>Din score ${score} av ${planetQuiz.length} spørsmål</h3>
+            buildingQuiz.innerHTML = `
+            <h3>Din score ${score} av ${buildingQuiz.length} spørsmål</h3>
             <button onclick="location.reload()">Prøv igjen</button>
             `
         }
     }
-})
+}})
     
 
 
 planetIcon.addEventListener("click", loadPlanetQuiz)
 buildingIcon.addEventListener("click", loadBuildingQuiz)
 
-
+*/
