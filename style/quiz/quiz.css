@@ -106,15 +106,15 @@ body {
 }
 
 .quiz {
-  box-sizing: border-box;
   background-color: #ced9ff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 3rem 3rem 3rem;
-  padding: 1rem;
+  margin: 0 1rem 3rem 1rem;
+  padding: 0.5rem;
   border-radius: 5px;
   overflow: hidden;
+  font-size: 14px;
 }
 .quiz__div {
   color: #020d33;
@@ -132,6 +132,7 @@ body {
   color: #f5f5f5;
   font-family: "VT323", monospace;
   padding: 0.5rem;
+  margin: 1rem;
 }
 .quiz #next-btn:focus {
   outline: none;
