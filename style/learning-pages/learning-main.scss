@@ -1,4 +1,5 @@
-@use "./header";
+@use "../shared/header";
 @use "./learning-print-sections";
-@use "./theme-selection";
+@use "../shared/theme-selection";
 @use "./lerning-sort-btn";
+@use "./continent";

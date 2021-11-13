@@ -3,6 +3,7 @@ const buildingsArray = [
     name: "Taj Mahal",
     img: "/images/buildings/taj-mahal.png",
     year: 1653,
+    yearText: "år",
     continent: "Asia",
     country: "India",
     history:
@@ -12,6 +13,7 @@ const buildingsArray = [
     name: "Space Needele",
     img: "/images/buildings/space-needle.png",
     year: 1962,
+    yearText: "år",
     continent: "Nord-Amerika",
     country: "USA",
     history:
@@ -21,6 +23,7 @@ const buildingsArray = [
     name: "Notre Dame",
     img: "/images/buildings/notre-dame.png",
     year: 1260,
+    yearText: "år",
     continent: "Europa",
     country: "Frankrike",
     history:
@@ -30,6 +33,7 @@ const buildingsArray = [
     name: "Louvre",
     img: "/images/buildings/louvre.png",
     year: 1793,
+    yearText: "år",
     continent: "Europa",
     country: "Frankrike",
     history:
@@ -39,6 +43,7 @@ const buildingsArray = [
     name: "Leaning tower of Pisa",
     img: "/images/buildings/leaning-tower-of-pisa.png",
     year: 1372,
+    yearText: "år",
     continent: "Europa",
     country: "Italia",
     history:
@@ -48,6 +53,7 @@ const buildingsArray = [
     name: "Hallgrimskirkja",
     img: "/images/buildings/hallgrimskirkja.png",
     year: 1986,
+    yearText: "år",
     continent: "Europa",
     country: "Island",
     history:
@@ -55,8 +61,9 @@ const buildingsArray = [
   },
   {
     name: "Pyramidekomplekset ved Giza",
-    img: "/images/buildings/great-sphinx-of-gisa.png",
+    img: "/images/buildings/great-sphinx-of-giza.png",
     year: 2400,
+    yearText: "f.kr",
     continent: "Afrika",
     country: "Egypt",
     history:
@@ -66,6 +73,7 @@ const buildingsArray = [
     name: "Empire state building",
     img: "/images/buildings/empire-state-building.png",
     year: 1931,
+    yearText: "år",
     continent: "Nord-Amerika",
     country: "USA",
     history:
@@ -75,6 +83,7 @@ const buildingsArray = [
     name: "Eiffeltårnet",
     img: "/images/buildings/eiffel-tower.png",
     year: 1889,
+    yearText: "år",
     continent: "Europa",
     country: "Frankrike",
     history:
@@ -83,7 +92,8 @@ const buildingsArray = [
   {
     name: "Colosseum",
     img: "/images/buildings/colosseum.png",
-    year: "80 e.kr",
+    year: 80,
+    yearText: "e.Kr",
     continent: "Europa",
     country: "Italia",
     history:
@@ -93,6 +103,7 @@ const buildingsArray = [
     name: "Chrysler Building",
     img: "/images/buildings/chrysler-building.png",
     year: 1930,
+    yearText: "år",
     continent: "Nord-Amerika",
     country: "USA",
     history:
@@ -101,7 +112,8 @@ const buildingsArray = [
   {
     name: "The Pagoda of Auspicious Light",
     img: "/images/buildings/auspicious-light-pagoda.png",
-    year: "280 e.Kr",
+    year: 280,
+    yearText: "e.Kr",
     continent: "Asia",
     country: "Kina",
     history:
@@ -110,7 +122,8 @@ const buildingsArray = [
   {
     name: "Samarra-moskeen",
     img: "/images/buildings/great-mosque-of-samarra.png",
-    year: " 851 e.Kr",
+    year: 851,
+    yearText: "e.Kr",
     continent: "Europa",
     country: "Island",
     history:
@@ -119,7 +132,8 @@ const buildingsArray = [
   {
     name: "Klippedomen",
     img: "/images/buildings/dome-of-the-rock.png",
-    year: "691 e.Kr",
+    year: 691,
+    yearText: "e.kr",
     continent: "Asia",
     country: "Israel",
     history:
@@ -129,6 +143,7 @@ const buildingsArray = [
     name: "Triumfbuen eller Arc de Triomphe",
     img: "/images/buildings/arc-de-triomphe.png",
     year: 1836,
+    yearText: "år",
     continent: "Europa",
     country: "Frankrike",
     history:
@@ -138,6 +153,7 @@ const buildingsArray = [
     name: "Angkor Wat",
     img: "/images/buildings/angkor-wat.png",
     year: 1100,
+    yearText: "år",
     continent: "Asia",
     country: "Kambodsja",
     history:
@@ -145,56 +161,134 @@ const buildingsArray = [
   },
 ]
 
-const planetArray = [
-  {
-    name: "Earth",
-    img: "/images/planets/earth.svg",
-  },
-  {
-    name: "Jupiter",
-    img: "/images/planets/jupiter.svg",
-  },
-  {
-    name: "Mars",
-    img: "/images/planets/mars.svg",
-  },
-  {
-    name: "Mars",
-    img: "/images/planets/mars.svg",
-  },
-  {
-    name: "Mars",
-    img: "/images/planets/mars.svg",
-  },
-  {
-    name: "Mars",
-    img: "/images/planets/mars.svg",
-  },
-]
+/***** DOM *****/
 
-let printOut = document.querySelector(".print-out")
-
+/* Print out ved å trykke på icon Buildings eller planets  */
+let printOutBuilding = document.querySelector(".print-out-building")
 let buildingBte = document.querySelector(".building-bte")
-let planetBte = document.querySelector(".planet-bte")
+
+//let btnSection = document.querySelector(".button-section")
+
+/*DOM printer ut all info btn */
+let btnInfo = document.querySelector(".button__info")
+
+/*DOM printer ut basert på alfabetisk rekkefølge btn*/
+let btnAlphabetical = document.querySelector(".button__alphabetical")
+
+/*DOM printer ut basert på year btn*/
+let btnYear = document.querySelector(".button__year")
 
 /*DOM for printing ut av continenter */
 let selectes = document.querySelector("#continents-selection")
 
+/***** DOM slutt *****/
+
+/* Printer ut alle Buildings */
+
+let printAllBuldings = () => {
+  printOutBuilding.innerHTML = ""
+
+  let btnDisplay = (document.querySelector(".button").style.display = "block")
+  let continentDisplay = (document.querySelector(".continent").style.display =
+    "block")
+
+  buildingsArray.forEach((building) => {
+    printOutBuilding.innerHTML += `
+    <article class="info">
+          <h3 class="info__title">${building.name}</h3>
+          <img class="info__img" src=${building.img} alt="Taj Mahal">
+        </article>
+    
+    `
+  })
+}
+
+buildingBte.addEventListener("click", printAllBuldings)
+
+/* Print ut all info om building */
+
+let printAllBuldingInfo = () => {
+  printOutBuilding.innerHTML = ""
+
+  buildingsArray.forEach((building) => {
+    printOutBuilding.innerHTML += `
+    <article class="info">
+          <h3 class="info__title">${building.name}</h3>
+          <img class="info__img" src=${building.img} alt="Taj Mahal">
+          <p>${building.year}</p>
+          <p>${building.yearText}</p>
+          <p>${building.continent}</p>
+          <p>${building.country}</p>
+          <p>${building.history}</p>
+    </article>
+    `
+  })
+}
+
+btnInfo.addEventListener("click", printAllBuldingInfo)
+
+/* Printer ut basert på alfabetisk rekkefølge */
+
+let showAlphabeticalOrder = () => {
+  printOutBuilding.innerHTML = ""
+  let alphabeticalSort = buildingsArray.sort((building1, building2) =>
+    building1.name > building2.name ? 1 : -1
+  )
+
+  alphabeticalSort.forEach((building) => {
+    printOutBuilding.innerHTML += `
+    <article class="info">
+          <h3 class="info__title">${building.name}</h3>
+          <img class="info__img" src=${building.img} alt="Taj Mahal">
+        </article>
+    
+    `
+  })
+}
+
+console.log(showAlphabeticalOrder)
+
+btnAlphabetical.addEventListener("click", showAlphabeticalOrder)
+
+/* Printer ut basert på year*/
+
+let showYearOrder = () => {
+  printOutBuilding.innerHTML = ""
+  let yearSort = buildingsArray.sort((building1, building2) =>
+    building1.year > building2.year ? 1 : -1
+  )
+
+  yearSort.forEach((building) => {
+    printOutBuilding.innerHTML += `
+    <article class="info">
+          <h3 class="info__title">${building.name}</h3>
+          <img class="info__img" src=${building.img} alt="Taj Mahal">
+          <p>${building.year}</p>
+          <p>${building.yearText}</p>
+         
+        </article>
+    
+    `
+  })
+}
+
+btnYear.addEventListener("click", showYearOrder)
+
 /* Print ut på valg av continent */
 let showSelected = () => {
-  printOut.innerHTML = ""
+  //printOut.innerHTML = ""
   let continentSearch = buildingsArray.filter((building) => {
     return building.continent === selectes.value
   })
   console.log(selectes.value)
 
   if (selectes.value === "Afrika") {
-    printOut.innerHTML = "ok"
+    printOutBuilding.innerHTML = "ok"
   } else {
-    printOut.innerHTML = ""
+    printOutBuilding.innerHTML = ""
 
     continentSearch.forEach((search) => {
-      printOut.innerHTML += `
+      printOutBuilding.innerHTML += `
   
   <article class="info">
   <h3 class="info__title">${search.name}</h3>
@@ -207,36 +301,3 @@ let showSelected = () => {
 }
 
 selectes.addEventListener("change", showSelected)
-
-/* Printer ut alle Buildings */
-
-let printAllBuldings = () => {
-  printOut.innerHTML = ""
-  buildingsArray.forEach((building) => {
-    printOut.innerHTML += `
-    <article class="info">
-          <h3 class="info__title">${building.name}</h3>
-          <img class="info__img" src=${building.img} alt="Taj Mahal">
-        </article>
-    
-    `
-  })
-}
-
-buildingBte.addEventListener("click", printAllBuldings)
-
-/* Printer ut alle Planet */
-
-let printAllplanets = () => {
-  printOut.innerHTML = ""
-  planetArray.forEach((planet) => {
-    printOut.innerHTML += `
-        <article class="info">
-              <h3 class="info__title">${planet.name}</h3>
-              <img class="info__img" src=${planet.img} alt="Taj Mahal">
-            </article>
-        
-        `
-  })
-}
-planetBte.addEventListener("click", printAllplanets)

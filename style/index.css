@@ -9,7 +9,6 @@ body {
 .logo-container {
   text-align: center;
 }
-
 .logo-container__logo-img {
   margin-top: 40px;
   width: 100%;
@@ -17,30 +16,22 @@ body {
 }
 
 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 .smooth-scroll {
   height: 600px;
 }
-
 .smooth-scroll__initializer {
-  font-family: 'VT323';
+  font-family: "VT323";
   text-decoration: underline;
   color: white;
   font-size: 45px;
   text-transform: uppercase;
 }
-
 .smooth-scroll__initializer:hover {
   color: grey;
   cursor: pointer;
@@ -49,15 +40,13 @@ section {
 .add-name {
   height: 600px;
 }
-
 .add-name__name-input {
   border-radius: 15px;
   height: 30px;
   width: 300px;
-  font-family: 'VT323';
+  font-family: "VT323";
   font-size: 20px;
 }
-
 .add-name__confirm-name-btn {
   background-color: #34EC46;
   border-radius: 30px;
@@ -65,7 +54,6 @@ section {
   height: 30px;
   width: 30px;
 }
-
 .add-name__confirm-name-btn:active {
   background-color: grey;
   border-color: grey;
@@ -73,5 +61,4 @@ section {
 
 .fas {
   color: white;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

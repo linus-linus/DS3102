@@ -9,12 +9,10 @@ $color-6: #6f7488;
 $color-7: #464d66;
 
 .button {
-  .header-btn-text {
-    color: $color-5;
-  }
+  display: none;
 
-  &__size {
-    width: 5rem;
+  &__info {
+    width: 6.5rem;
     padding: 0.8rem;
     border-radius: 2rem;
     border-style: none;
@@ -28,7 +26,7 @@ $color-7: #464d66;
   }
 
   &__year {
-    width: 6rem;
+    width: 6.5rem;
     padding: 0.8rem;
     border-radius: 2rem;
     border-style: none;
