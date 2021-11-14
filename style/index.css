@@ -11,7 +11,7 @@ body {
 }
 
 .logo-container__logo-img {
-  margin-top: 40px;
+  margin-top: 15px;
   height: auto;
   width: 100%;
 }
@@ -35,8 +35,8 @@ body {
 
 .main-content-container .start-section {
   text-align: center;
-  margin-top: 300px;
   height: 300px;
+  margin-top: 300px;
 }
 
 .main-content-container .start-section__initializer {
@@ -56,7 +56,6 @@ body {
   display: none;
   height: 300px;
   text-align: center;
-  vertical-align: center;
 }
 
 .main-content-container .add-name__name-input {

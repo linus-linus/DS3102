@@ -3,7 +3,7 @@
 // HTML-elements
 const storeNameBtn = document.querySelector(".add-name__confirm-name-btn")
 const nameInput = document.querySelector(".add-name__name-input")
-const nameOutput = document.querySelector(".show-name__name-output")
+const nameOutput = document.querySelector(".choose-action__name-output")
 
 // Function that stores the input value to localStorage, and also returns the value to innerHTML
 function storeName(){
@@ -29,6 +29,7 @@ let chooseActionSection = document.querySelector(".choose-action")
 let initiateVisibility = document.querySelector(".start-section__initializer")
 
 function makeVisible(){
+    
     addNameSection.style.display = "block"
     startSection.style.display = "none"
 }
