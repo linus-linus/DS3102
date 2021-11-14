@@ -1,7 +1,6 @@
-@use "../shared/header";
-@use "./learning-print-sections";
-@use "../shared/theme-selection";
-@use "./lerning-sort-btn";
-@use "./continent";
-
 @use "./search-section";
+@use "../shared/header";
+@use "./print-sections";
+@use "../shared/theme-selection";
+@use "./sort-btn";
+@use "./continent-input";
