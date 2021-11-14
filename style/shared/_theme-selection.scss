@@ -9,7 +9,7 @@ $color-7: #464d66;
 /* Mob */
 .icon-section {
   display: flex;
-  margin-top: 5rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
   //align-items: center;
   //width: 100vw;
@@ -29,20 +29,20 @@ $color-7: #464d66;
     margin: 2rem;
 
     &__planet {
-      width: 2rem;
-      height: 1.5rem;
+      width: 3rem;
+      height: 2.1rem;
       padding: 1rem;
       margin-right: 2rem;
     }
     &__planet:hover {
-      background-color: $color-3;
+      background-color: $color-1;
       opacity: 0.5;
     }
 
     &__building {
-      width: 2rem;
+      width: 2.5rem;
       padding: 1rem;
-      height: 1.5rem;
+      height: 2.2rem;
     }
     &__building:hover {
       background-color: $color-1;

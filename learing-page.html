@@ -28,16 +28,9 @@
   <body>
     <div>
       <header class="page-header">
-        <div class="search">
-          <input
-            type="text"
-            name=""
-            class="search__info"
-            placeholder="Search"
-          />
-          <i class="search__icon fas fa-search"></i>
+        <div class="btn-align">
+          <button class="nav-btn">Start Quiz</button>
         </div>
-        <button class="nav-btn">Start Quiz</button>
       </header>
       <main>
         <section class="icon-section">
@@ -59,35 +52,50 @@
           </div>
         </section>
 
-        <section class=""></section>
-
-        <section class="button">
-          <button class="button__info">Se all info</button>
-          <button class="button__alphabetical">Alphabetical a-z</button>
-          <button class="button__year">Years old</button>
+        <section class="search-section">
+          <div class="search">
+            <input
+              type="text"
+              name=""
+              class="search__input"
+              placeholder="Søk 🔍"
+            />
+          </div>
         </section>
 
-        <section class="continent">
-          <label for="continent_header">Sort by continent</label>
-          <form action="">
-            <select name="continents" id="continents-selection">
-              <option value="Velg">velg</option>
-              <option value="Asia">Asia</option>
-              <option value="Afrika">Afrika</option>
-              <option value="Nord-Amerika">Nord Amerika</option>
-              <option value="Sør-Amerika">Sør-Amerika</option>
-              <option value="Antarktis">Antarctia</option>
-              <option value="Europa">Europa</option>
-              <option value="Oseania">Oseania</option>
-            </select>
-          </form>
+        <section class="button-section">
+          <div class="button">
+            <button class="button__info">Se all info</button>
+            <button class="button__alphabetical">Alphabetical a-z</button>
+            <button class="button__year">År</button>
+          </div>
         </section>
 
-        <section class="all-learning-section print-out-building"></section>
-        <section class="print-out-planet all-learning-section"></section>
+        <section class="continent-section">
+          <div class="continents-form">
+            <label class="continents-form__header" for="continent-header"
+              >Sort by continent</label
+            >
+            <form action="">
+              <select id="continents" name="continents">
+                <option value="Velg">velg</option>
+                <option value="Asia">Asia</option>
+                <option value="Afrika">Afrika</option>
+                <option value="Nord-Amerika">Nord-Amerika</option>
+                <option value="Sør-Amerika">Sør-Amerika</option>
+                <option value="Antarktis">Antarctia</option>
+                <option value="Europa">Europa</option>
+                <option value="Oseania">Oseania</option>
+              </select>
+            </form>
+          </div>
+        </section>
+
+        <section class="all-learning-section print-out"></section>
       </main>
     </div>
-    <script src="/scripts/learning-buildings.js"></script>
+    <script type="module" src="/scripts/learning-buildings.js"></script>
     <script src="/scripts/learning-planets.js"></script>
   </body>
 </html>
+ 
