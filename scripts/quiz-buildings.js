@@ -1,7 +1,14 @@
 /* FUNKSJONER */
 
-// Laster buildingquiz
+submitBtn.style.display = "none"
+
+//Laster buildingquiz
 function loadQuiz(){
+    resultsOutput.innerHTML = ""
+    quizOutput.innerHTML = ""
+    submitBtn.style.display = "block"
+    
+
     //Lagrer HTML output
     const output = []
 
@@ -18,7 +25,7 @@ function loadQuiz(){
                     <label class="quiz-label">
                         <input type="radio" name="questions${questionNo}" value="${choice}">
                         ${choice} :
-                        ${activeQuestion.options[choice]}
+                        ${activeQuestion.options[choice]}<br>
                     </label>
                 `
                 )
@@ -31,13 +38,13 @@ function loadQuiz(){
             )
         }
     )
-
-    quizOutput.innerHTML = output.join('')
+    
+    quizOutput2.innerHTML = output.join('')
 }
 
 function displayResults(){
     //Hent svaralternativ fra quizen
-    const optionsBoxes = quizOutput.querySelectorAll(".options")
+    const optionsBoxes = quizOutput2.querySelectorAll(".options")
 
     //Brukersvar
     let noOfRightAnswers = 0
@@ -47,12 +54,13 @@ function displayResults(){
         //Finn det riktige svaret
         const optionsBox = optionsBoxes[questionNo]
         const userChoice = `input[name=questions${questionNo}]:checked`
-        const userAnswer = (optionsBox.querySelector(userChoice) || {}).value;
+        const userAnswer = (optionsBox.querySelector(userChoice)||{}).value;
 
         //hvis svaret er riktig
         if(userAnswer === activeQuestion.rightAnswer){
             //legg til i antall riktige svar
             noOfRightAnswers++
+            optionsBoxes[questionNo].style.color = "lightgreen"
         }else{
             optionsBoxes[questionNo].style.color = "red"
         }
@@ -63,6 +71,7 @@ function displayResults(){
 
 /* VARIABLER */
 const buildingBtn = document.querySelector(".building-icon")
+const quizOutput2 = document.getElementById("quiz2")
 
 const buildingArray = [
     {
@@ -95,7 +104,9 @@ const buildingArray = [
 ]
 
 
-//Laster quiz ved knappetrykk
-buildingBtn.addEventListener("click", loadQuiz)
+//Laster quiz ved knappetrykk og fjerner evt
+buildingBtn.addEventListener("click", loadQuiz, ()=>{
+    document.getElementById("quiz-output").style.display = "none"
+})
 submitBtn.addEventListener("click", displayResults)
 

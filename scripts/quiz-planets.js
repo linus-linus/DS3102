@@ -1,10 +1,15 @@
 /* FUNKSJONER */
 
 // Laster Planetquiz
-function loadQuiz(){
+function loadPlanetQuiz(){
+
+    //Sletter evt resultat ved bytte av quiz
+    resultsOutput.innerHTML = ""
+    quizOutput2.innerHTML = ""
+    submitBtn.style.display = "block"
+
     //Lagrer HTML output
     const output = []
-    
 
     planetArray.forEach(
         (activeQuestion, questionNo) => {
@@ -14,12 +19,12 @@ function loadQuiz(){
             //og for hvert mulige svar..
             for(choice in activeQuestion.options){
 
-                //legg til radioKnapp i HTML
+                //..legg til radioKnapp i HTML
                 options.push(`
                     <label class="quiz-label">
                         <input type="radio" name="questions${questionNo}" value="${choice}">
                         ${choice} :
-                        ${activeQuestion.options[choice]}
+                        ${activeQuestion.options[choice]}<br>
                     </label>
                 `
                 )
@@ -36,10 +41,14 @@ function loadQuiz(){
     quizOutput.innerHTML = output.join('')
 }
 
+
+
 function displayResults(){
+
+    resultsOutput.innerHTML = "";
+    
     //Hent svaralternativ fra quizen
     const optionsBoxes = quizOutput.querySelectorAll(".options")
-
     //Brukersvar
     let noOfRightAnswers = 0
 
@@ -54,12 +63,11 @@ function displayResults(){
         if(userAnswer === activeQuestion.rightAnswer){
             //legg til i antall riktige svar
             noOfRightAnswers++
-            optionsBoxes[questionNo].style.color = "green"
+            optionsBoxes[questionNo].style.color = "lightgreen"
         }else{
             optionsBoxes[questionNo].style.color = "red"
         }
     })
-
 
     resultsOutput.innerHTML = `${noOfRightAnswers} av ${planetArray.length}`
 }
@@ -68,9 +76,10 @@ function displayResults(){
 
 /* VARIABLER */
 const quizOutput = document.getElementById("quiz")
-const resultsOutput = document.getElementById("results-div")
+let resultsOutput = document.getElementById("results-div")
 const submitBtn = document.getElementById("submit-btn")
 const planetBtn = document.querySelector(".planet-icon")
+
 
 /* ARRAY */
 const planetArray = [
@@ -95,8 +104,7 @@ const planetArray = [
     }
 ]
 
-
 /* AKTIVERER KNAPP + IKON */
-planetBtn.addEventListener("click", loadQuiz)
-submitBtn.addEventListener("click", displayResults)
 
+planetBtn.addEventListener("click", loadPlanetQuiz)
+submitBtn.addEventListener("click", displayResults)
