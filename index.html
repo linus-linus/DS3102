@@ -20,6 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
+    <!-- GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <title>KnowledgeMe</title>
   </head>
   <body>
@@ -28,10 +30,10 @@
       <img class="logo-container__logo-img" src="images/logo.png" />
     </header>
 
-  <main class="main-content">
+  <main class="main-content-container">
 
-    <section class="smooth-scroll" id="section-1">
-      <a class="smooth-scroll__initializer" href="#section-2">Start</a>
+    <section class="start-section" id="section-1">
+      <a class="start-section__initializer" href="#section-2">Start</a>
     </section>
 
     <section class="add-name" id="section-2">
@@ -39,14 +41,20 @@
       <button class="add-name__confirm-name-btn">
         <i class="fas fa-check"></i>
       </button> 
-      <div class="add-name__name-output">
+    </section>
+
+    <!--<section class="show-name" id="section-3">
+      <div class="show-name__name-output">
+      </div>
+    </section> -->
+
+
+    <section class="choose-action" id="section-4">
+      <div class="show-name__name-output">
         <!-- Will write out name here....-->
       </div>
-    </section>
- 
-    <section class="choose-action" id="section-3">
-      <button class="choose-action__learn-btn">Gå til læresiden</button>
-      <button class="choose-action__quiz-btn">Start quiz</button>
+      <a class="choose-action__learn-btn" type="button" href="learing-page.html">Gå til læresiden</a>
+      <a class="choose-action__quiz-btn" type="button" href="quiz.html">Start quiz</a>
     </section>
 
   </main>
