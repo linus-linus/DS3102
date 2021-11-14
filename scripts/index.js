@@ -5,8 +5,10 @@ const nameOutput = document.querySelector(".add-name__name-output")
 
 
 function storeName(){
+    localStorage.setItem("username", nameInput.value)
+    let userName = localStorage.getItem("username")
     nameOutput.innerHTML = `
-    <p>Hei ${nameInput.value}</p>
+    <p>Hei ${userName}</p>
     `
 }
 
