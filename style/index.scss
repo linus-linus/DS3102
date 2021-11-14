@@ -9,6 +9,7 @@ body {
     background-color: black;
 }
 
+/* Mobile */ 
 .logo-container{
     text-align: center;
 
@@ -38,7 +39,7 @@ section{
     }   
 
     &__initializer:hover{
-        color: grey;
+        color: $primary;
         cursor: pointer;
     }
 }
@@ -66,10 +67,48 @@ section{
         background-color: grey;
         border-color: grey;
     }
+
+    .fas{
+        color: white;
+    }
+
+    &__name-output{
+        color: white;
+        font-family: 'VT323';
+        font-size: 25px;
+    }
 }
 
+.choose-action{
+    height: 600px;
+    justify-content: space-evenly;
 
-.fas{
-    color: white;
+    &__learn-btn{
+        border-radius: 10px;
+        font-family: 'VT323';
+        height: 30px;
+        font-size: 20px;
+        width: 170px;
+    }
+
+    &__quiz-btn{
+        border-radius: 10px;
+        font-family: 'VT323';
+        height: 30px;
+        font-size: 20px;
+        width: 170px;
+    }
 }
 
+/* Tablet */
+@media screen and(min-width: 768px){
+    .logo-container{
+        text-align: center;
+
+        &__logo-img{
+            margin-top: 40px;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

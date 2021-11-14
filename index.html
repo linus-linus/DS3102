@@ -24,20 +24,34 @@
   </head>
   <body>
 
-  <header class="logo-container">
-    <img class="logo-container__logo-img" src="images/logo.png" />
-  </header>
+    <header class="logo-container">
+      <img class="logo-container__logo-img" src="images/logo.png" />
+    </header>
 
-    <section class="smooth-scroll" id="section1">
-      <a class="smooth-scroll__initializer" href="#section2">Start</a>
+  <main class="main-content">
+
+    <section class="smooth-scroll" id="section-1">
+      <a class="smooth-scroll__initializer" href="#section-2">Start</a>
     </section>
 
-    <section class="add-name" id="section2">
-      <input class="add-name__name-input" placeholder="Hva heter du?" />
+    <section class="add-name" id="section-2">
+      <input class="add-name__name-input" placeholder="Hva heter du?" type="text">
       <button class="add-name__confirm-name-btn">
         <i class="fas fa-check"></i>
-      </button>
+      </button> 
+      <div class="add-name__name-output">
+        <!-- Will write out name here....-->
+      </div>
     </section>
  
+    <section class="choose-action" id="section-3">
+      <button class="choose-action__learn-btn">Gå til læresiden</button>
+      <button class="choose-action__quiz-btn">Start quiz</button>
+    </section>
+
+  </main>
+
+    <script src="scripts/index.js" defer></script>
+
   </body>
 </html>
