@@ -109,14 +109,14 @@
 .planet-section .button__info,
 .planet-section .button__info-planet {
   margin-right: 1rem;
-  width: 6rem;
+  width: 7rem;
   height: 3rem;
   padding: 0.8rem;
   border-radius: 2rem;
   border-style: none;
   background-color: #ced9ff;
   color: #020d33;
-  font-size: 0.6rem;
+  font-size: 0.6rem bold;
   font-family: "Share Tech Mono", monospace;
 }
 .building-section .button__info:hover,
@@ -135,13 +135,13 @@
 .planet-section .button__alphabetical,
 .planet-section .button__alphabetical-planet {
   padding: 0.8rem;
-  width: 7.3rem;
+  width: 9rem;
   height: 3rem;
   border-radius: 2rem;
   border-style: none;
   background-color: #ced9ff;
   color: #020d33;
-  font-size: 0.6rem;
+  font-size: 0.6rem bold;
   font-family: "Share Tech Mono", monospace;
 }
 .building-section .button__alphabetical:hover,
@@ -167,7 +167,7 @@
   border-style: none;
   background-color: #ced9ff;
   color: #020d33;
-  font-size: 0.6rem;
+  font-size: 0.6rem bold;
   font-family: "Share Tech Mono", monospace;
 }
 .building-section .button__year:hover,
