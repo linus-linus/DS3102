@@ -47,6 +47,7 @@ body {
 
   .add-name {
     display: none;
+
     margin-top: 300px;
     text-align: center;
 
@@ -56,15 +57,6 @@ body {
       width: 300px;
       font-family: "VT323";
       font-size: 20px;
-    }
-
-    &__confirm-name-btn {
-      background-color: $color-4;
-      border-radius: 30px;
-      border-color: $color-4;
-      height: 30px;
-      width: 30px;
-      display: none;
     }
 
     &__confirm-name-btn:active {
@@ -77,6 +69,20 @@ body {
     }
   }
 
+  .btn-section {
+    display: none;
+
+    margin-top: 300px;
+    text-align: center;
+
+    &__confirm-name-btn {
+      background-color: $color-4;
+      border-radius: 30px;
+      border-color: $color-4;
+      height: 30px;
+      width: 30px;
+    }
+  }
   /*.show-name{
         display: none;
         grid-column: span 12;

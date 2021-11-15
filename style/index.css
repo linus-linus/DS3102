@@ -58,20 +58,24 @@ body {
   font-family: "VT323";
   font-size: 20px;
 }
-.main-content-container .add-name__confirm-name-btn {
-  background-color: #66f875;
-  border-radius: 30px;
-  border-color: #66f875;
-  height: 30px;
-  width: 30px;
-  display: none;
-}
 .main-content-container .add-name__confirm-name-btn:active {
   background-color: #ced9ff;
   border-color: #ced9ff;
 }
 .main-content-container .add-name .fas {
   color: #f5f5f5;
+}
+.main-content-container .btn-section {
+  display: none;
+  margin-top: 300px;
+  text-align: center;
+}
+.main-content-container .btn-section__confirm-name-btn {
+  background-color: #66f875;
+  border-radius: 30px;
+  border-color: #66f875;
+  height: 30px;
+  width: 30px;
 }
 .main-content-container .choose-action {
   display: none;
