@@ -22,7 +22,10 @@ body {
   }
 }
 
-.main-content-container{
+.main-content-container {
+  /*display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;*/
 
   .start-section {
     text-align: center;
@@ -74,10 +77,22 @@ body {
     }
   }
 
-    .choose-action{
+  /*.show-name{
         display: none;
-        margin-top: 300px;
-        text-align: center;
+        grid-column: span 12;
+        height: 300px;
+
+        &__name-output{
+            color: $color-5;
+            font-family: 'VT323';
+            font-size: 30px;
+        }
+    }*/
+
+  .choose-action {
+    display: none;
+    margin-top: 300px;
+    text-align: center;
 
     &__name-output {
       color: $color-5;
