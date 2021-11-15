@@ -4,11 +4,10 @@ body {
 
 .planet-container__title {
   color: white;
-  font-family: 'VT323';
+  font-family: "VT323";
   font-size: 40px;
   padding: 20px;
 }
-
 .planet-container__back-btn, .planet-container__repeat-btn {
   font-family: "VT323";
   font-size: 15px;
@@ -20,54 +19,37 @@ body {
   color: #020d33;
   text-align: center;
 }
-
 .planet-container .planets {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 30px;
 }
-
 .planet-container .planets__mercury {
   width: 100px;
 }
-
 .planet-container .planets__venus {
   width: 120px;
 }
-
 .planet-container .planets__earth {
   width: 75px;
 }
-
 .planet-container .planets__mars {
   width: 75px;
 }
-
 .planet-container .planets__jupiter {
   width: 75px;
 }
-
 .planet-container .planets__saturn {
   width: 100px;
 }
-
 .planet-container .planets__uranus {
   width: 100px;
 }
-
 .planet-container .planets__neptune {
   width: 75px;
 }
-
 .planet-container .planets__sun {
   width: 60px;
   opacity: 0;
-}
-/*# sourceMappingURL=planet-orbit.css.map */
+}/*# sourceMappingURL=planet-orbit.css.map */
