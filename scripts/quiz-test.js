@@ -1,4 +1,5 @@
 //Oppretter en funksjon som kan ta imot array gjennom parameter arrayToUse
+
 const buildingArray = [
     {
         question: "Hvilket land ligger Chryslerbygningen i?",
@@ -50,6 +51,7 @@ const planetArray = [
         rightAnswer: "c"
     }
 ]
+
 /* KNAPPER */
 const buildingBtn = document.querySelector(".building-icon")
 const planetBtn = document.querySelector(".planet-icon")
@@ -61,6 +63,7 @@ planetBtn.addEventListener("click", function(){
     loadQuiz(planetArray)})
 buildingBtn.addEventListener("click", function(){
     loadQuiz(buildingArray)})
+    const submitBtn = document.getElementById("submit-btn")
 
 
 /* LASTER QUIZ */
@@ -102,12 +105,22 @@ function loadQuiz( arrayToUse ){
             )
         }
     )
+        if(arrayToUse==planetArray){
+            submitBtn.addEventListener("click", function(){
+                displayPlanetResults()
+            })
+        }else{
+            submitBtn.addEventListener("click", function(){
+                displayBuildingResults()
+            })
+        }
+    
     quizOutput.innerHTML = output.join('')
 };
 
 
 /* PRINTER RESULTAT*/
-function displayPlanetResults(activeArray){
+function displayPlanetResults(){
     resultsOutput.innerHTML = ""
     
     //Hent svaralternativ fra quizen
@@ -116,7 +129,7 @@ function displayPlanetResults(activeArray){
     let noOfRightAnswers = 0
 
     //For each question..
-    activeArray.forEach( (activeQuestion, questionNo) => {
+    planetArray.forEach( (activeQuestion, questionNo) => {
         //Finn det riktige svaret
         const optionsBox = optionsBoxes[questionNo]
         const userChoice = `input[name=questions${questionNo}]:checked`
@@ -137,7 +150,7 @@ function displayPlanetResults(activeArray){
     localStorage.setItem("result", noOfRightAnswers)
     //savedResults.innerHTML = localStorageValue;
 
-    resultsOutput.innerHTML = `${noOfRightAnswers} av ${activeArray.length}`
+    resultsOutput.innerHTML = `${noOfRightAnswers} av ${planetArray.length}`
 };
 
 function displayBuildingResults(){
@@ -178,20 +191,8 @@ function displayBuildingResults(){
 
 const savedResults = document.querySelector(".saved-results")
 
-const submitBtn = document.getElementById("submit-btn")
-submitBtn.addEventListener("click", function(){
-    displayPlanetResults()
-})
-
-
-
-
-
 
 /* ARRAY */
-
-
-
 
 /*submitBtn.addEventListener("click", displayResults, () => {
     savedResults = ""
