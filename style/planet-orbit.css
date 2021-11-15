@@ -2,7 +2,31 @@ body {
   background-image: url(/images/planets/space.jpg);
 }
 
+.planet-container__title {
+  color: white;
+  font-family: 'VT323';
+  font-size: 40px;
+  padding: 20px;
+}
+
+.planet-container__back-btn, .planet-container__repeat-btn {
+  font-family: "VT323";
+  font-size: 15px;
+  text-decoration: none;
+  width: 10rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  background-color: #ced9ff;
+  color: #020d33;
+  text-align: center;
+}
+
 .planet-container .planets {
+<<<<<<< Updated upstream
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+>>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -35,4 +59,9 @@ body {
 .planet-container .planets__sun {
   width: 60px;
   opacity: 0;
+<<<<<<< Updated upstream
 }/*# sourceMappingURL=planet-orbit.css.map */
+=======
+}
+/*# sourceMappingURL=planet-orbit.css.map */
+>>>>>>> Stashed changes

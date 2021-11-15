@@ -1,8 +1,3 @@
-/*gsap.from(".planets__mercury", {
-    duration: 10,
-    y: 500,
-    x: 200,
-}) */
 
 let planetTimeline = gsap.timeline({repeat: 0})
 
@@ -62,20 +57,24 @@ planetTimeline.to(".planets__neptune", {
     rotation: 360
 })
 
-/*planetTimeline.to(".planets__sun", { 
-    x: 650,
-    y: -300,
-    scale: 12.0,
-    duration: 2,
-    opacity: 0.2
-})*/
-
-gsap.to(".planets__sun", { 
+planetTimeline.to(".planets__sun", { 
     x: 650,
     y: -300,
     scale: 12.0,
     duration: 2,
     opacity: 0.2
 })
+
+let repeatBtn = document.querySelector(".planet-container__repeat-btn").onclick = () => planetTimeline.restart()
+
+
+
+/*gsap.to(".planets__sun", { 
+    x: 650,
+    y: -300,
+    scale: 12.0,
+    duration: 2,
+    opacity: 0.2
+})*/
 
 
