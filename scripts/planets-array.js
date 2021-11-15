@@ -1,6 +1,6 @@
 let planetArray = [
   {
-    name: "Earth",
+    name: "Jorden",
     img: "/images/planets/earth.svg",
     age: "4.6",
     placement: "3",
