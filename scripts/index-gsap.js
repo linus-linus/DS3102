@@ -8,5 +8,5 @@ gsap.to(".add-name",{
 })
 
 gsap.to(".choose-action",{
-    y: 300
+    y: 200
 })
