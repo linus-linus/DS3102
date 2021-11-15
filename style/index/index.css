@@ -53,9 +53,9 @@ body {
   text-align: center;
 }
 .main-content-container .add-name__name-input {
-  border-radius: 15px;
-  height: 30px;
-  width: 300px;
+  width: 15rem;
+  padding: 0.6rem;
+  border-radius: 2rem;
   font-family: "VT323";
   font-size: 20px;
 }
@@ -68,9 +68,13 @@ body {
   width: 8rem;
   display: none;
   margin-top: 1rem;
-  margin-left: 47%;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "VT323";
   font-size: 1.5rem;
+  color: #020d33;
+}
+.main-content-container .add-name__confirm-name-btn .icon {
   color: #020d33;
 }
 .main-content-container .add-name__confirm-name-btn:active {
