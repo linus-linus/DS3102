@@ -5,78 +5,86 @@ $color-4: #66f875;
 $color-5: #f5f5f5;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: $color-1;
+  background-color: $color-1;
 }
 
-.logo-container{
-    text-align: center;
+.logo-container {
+  text-align: center;
 
-    &__logo-img{
-        margin-top: 15px;
-        height: auto;
-        width: 100%;
-    }
+  &__logo-img {
+    margin-top: 15px;
+    height: auto;
+    width: 50%;
+  }
 }
 
-.main-content-container{
-    /*display: grid;
+.main-content-container {
+  /*display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;*/
 
-    .start-section{
-        text-align: center;
-        margin-top: 300px;
-
-        &__initializer{
-            font-family: 'VT323';
-            text-decoration: underline;
-            color: $color-5;
-            font-size: 45px;
-            text-transform: uppercase;
-        }   
-
-        &__initializer:hover{
-            color: $color-4;
-            cursor: pointer;
-        }
+  .start-section {
+    text-align: center;
+    margin-top: 300px;
+    width: 100%;
+    &__initializer {
+      font-family: "VT323";
+      text-decoration: underline;
+      color: $color-5;
+      font-size: 45px;
+      text-transform: uppercase;
     }
 
-    .add-name{
-        display: none;
-        margin-top: 300px;
-        text-align: center;
+    &__initializer:hover {
+      color: $color-4;
+      cursor: pointer;
+    }
+  }
 
-        &__name-input{
-            border-radius: 15px;
-            height: 30px;
-            width: 300px;
-            font-family: 'VT323';
-            font-size: 20px;
-        }
+  .add-name {
+    display: none;
 
-        &__confirm-name-btn{
-            background-color: $color-4;
-            border-radius: 30px;
-            border-color: $color-4;
-            height: 30px;
-            width: 30px;
-        }
+    margin-top: 300px;
+    text-align: center;
 
-        &__confirm-name-btn:active{
-            background-color: $color-2;
-            border-color: $color-2;
-        }
-
-        .fas{
-            color: $color-5;
-        }
+    &__name-input {
+      border-radius: 15px;
+      height: 30px;
+      width: 300px;
+      font-family: "VT323";
+      font-size: 20px;
     }
 
-    /*.show-name{
+    &__confirm-name-btn {
+      text-align: center;
+      background-color: $color-4;
+      border-radius: 30px;
+      border-color: $color-4;
+      height: 3rem;
+      width: 8rem;
+      display: none;
+      margin-top: 1rem;
+      margin-left: 47%;
+      font-family: "VT323";
+      font-size: 1.5rem;
+      color: $color-1;
+    }
+
+    &__confirm-name-btn:active {
+      background-color: $color-2;
+      border-color: $color-2;
+    }
+
+    .fas {
+      color: $color-5;
+    }
+  }
+
+  /*.show-name{
         display: none;
         grid-column: span 12;
         height: 300px;
@@ -88,39 +96,27 @@ body {
         }
     }*/
 
-    .choose-action{
-        display: none;
-        margin-top: 300px;
-        text-align: center;
+  .choose-action {
+    display: none;
+    margin-top: 300px;
+    text-align: center;
 
-        &__name-output{
-            color: $color-5;
-            font-family: 'VT323';
-            font-size: 30px;
-        }
-
-        &__learn-btn{
-            font-family: 'VT323';
-            font-size: 20px;
-            text-decoration: none;
-            width: 10rem;
-            padding: 0.8rem;
-            border-radius: 2rem;
-            background-color: $color-2;
-            color: $color-1;
-            text-align: center;
-        }
-
-        &__quiz-btn{
-            font-family: 'VT323';
-            font-size: 20px;
-            text-decoration: none;
-            width: 10rem;
-            padding: 0.8rem;
-            border-radius: 2rem;
-            background-color: $color-2;
-            color: $color-1;
-            text-align: center;
-        }
+    &__name-output {
+      color: $color-5;
+      font-family: "VT323";
+      font-size: 30px;
     }
+    &__quiz-btn,
+    &__learn-btn {
+      font-family: "VT323";
+      font-size: 20px;
+      text-decoration: none;
+      width: 10rem;
+      padding: 0.8rem;
+      border-radius: 2rem;
+      background-color: $color-2;
+      color: $color-1;
+      text-align: center;
+    }
+  }
 }

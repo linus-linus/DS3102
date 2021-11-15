@@ -19,57 +19,12 @@ $color-7: #464d66;
     color: $color-2;
 
     &__info,
-    &__info-planet {
-      margin-right: 1rem;
-      width: 7rem;
-      height: 3rem;
-      padding: 0.8rem;
-      border-radius: 2rem;
-      border-style: none;
-      background-color: $color-2;
-      color: $color-1;
-      font-size: 0.6rem bold;
-      font-family: "Share Tech Mono", monospace;
-    }
-    &__info:hover {
-      border: solid $color-3;
-      background-color: $color-1;
-      color: $color-2;
-    }
-
-    &__info-planet:hover {
-      background-color: $color-1;
-      color: $color-2;
-      border: solid $color-4;
-    }
-
+    &__info-planet,
     &__alphabetical,
-    &__alphabetical-planet {
-      padding: 0.8rem;
-      width: 9rem;
-      height: 3rem;
-      border-radius: 2rem;
-      border-style: none;
-      background-color: $color-2;
-      color: $color-1;
-      font-size: 0.6rem bold;
-      font-family: "Share Tech Mono", monospace;
-    }
-    &__alphabetical:hover {
-      border: solid $color-3;
-      background-color: $color-1;
-      color: $color-2;
-    }
-    &__alphabetical-planet:hover {
-      background-color: $color-1;
-      color: $color-2;
-      border: solid $color-4;
-    }
-
+    &__alphabetical-planet,
     &__year,
     &__placement {
-      margin-left: 1rem;
-      width: 6rem;
+      width: 9rem;
       height: 3rem;
       padding: 0.8rem;
       border-radius: 2rem;
@@ -78,17 +33,9 @@ $color-7: #464d66;
       color: $color-1;
       font-size: 0.6rem bold;
       font-family: "Share Tech Mono", monospace;
+      margin-right: 1rem;
     }
-    &__year:hover {
-      border: solid $color-3;
-      background-color: $color-1;
-      color: $color-2;
-    }
-    &__placement:hover {
-      background-color: $color-1;
-      color: $color-2;
-      border: solid $color-4;
-    }
+
     /*tablet*/
     @media screen and(min-width: 768px) {
       .button {
@@ -102,19 +49,36 @@ $color-7: #464d66;
           margin-left: 4rem;
         }
       }
-    }
 
-    /*pc*/
-    @media screen and(min-width: 1200px) {
-      .button {
-        &__info,
-        &__info-planet {
-          margin-right: 6rem;
-        }
+      /*HOVER*/
+      &__info:hover,
+      &__alphabetical:hover,
+      &__year:hover {
+        border: solid $color-3;
+        background-color: $color-1;
+        color: $color-2;
+      }
 
-        &__year,
-        &__placement {
-          margin-left: 6rem;
+      &__info-planet:hover,
+      &__alphabetical-planet:hover,
+      &__placement:hover {
+        background-color: $color-1;
+        color: $color-2;
+        border: solid $color-4;
+      }
+
+      /*pc*/
+      @media screen and(min-width: 1200px) {
+        .button {
+          &__info,
+          &__info-planet {
+            margin-right: 6rem;
+          }
+
+          &__year,
+          &__placement {
+            margin-left: 6rem;
+          }
         }
       }
     }

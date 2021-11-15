@@ -1,0 +1,50 @@
+body{
+    background-image: url(/images/planets/space.jpg);
+}
+
+.planet-container{
+
+    .planets{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px;
+
+        &__mercury{
+            width: 100px;
+        }
+
+        &__venus{
+            width: 120px;
+        }
+
+        &__earth{
+            width: 75px;
+        }
+
+        &__mars{
+            width: 75px;
+        }
+
+        &__jupiter{
+            width: 75px;
+        }
+
+        &__saturn{
+            width: 100px;
+        }
+
+        &__uranus{
+            width: 100px;
+        }
+
+        &__neptune{
+            width: 75px;
+        }
+
+        &__sun{
+            width: 60px;
+            opacity: 0;
+        }
+    }  
+}

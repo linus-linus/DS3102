@@ -1,22 +1,29 @@
 /*mob*/
 .page-header {
-  top: 0;
+  display: flex;
+  justify-content: right;
+  margin: 1rem;
   /*tablet*/
 }
 .page-header .nav-btn {
   font-family: "Share Tech Mono", monospace;
   font-size: 0.9rem;
   color: #020d33;
-  background-color: #ced9ff;
+  background-color: #f5f5f5;
   border: none;
   border-radius: 2rem;
-  width: 5rem;
-  padding: 0.5rem;
+  width: 9rem;
+  height: 3rem;
+  padding: 0.8rem;
   margin-right: 1rem;
-  margin-top: 0;
+}
+.page-header .nav-btn:hover {
+  border: solid #f5f5f5;
+  background-color: #020d33;
+  color: #f5f5f5;
 }
 .page-header .start-quize-btn {
-  width: 7rem;
+  width: 9rem;
   margin-right: 2rem;
 }
 
@@ -103,64 +110,15 @@
   justify-content: center;
   color: #ced9ff;
   /*tablet*/
-  /*pc*/
 }
-.building-section .button__info, .building-section .button__info-planet,
+.building-section .button__info, .building-section .button__info-planet, .building-section .button__alphabetical, .building-section .button__alphabetical-planet, .building-section .button__year, .building-section .button__placement,
 .planet-section .button__info,
-.planet-section .button__info-planet {
-  margin-right: 1rem;
-  width: 7rem;
-  height: 3rem;
-  padding: 0.8rem;
-  border-radius: 2rem;
-  border-style: none;
-  background-color: #ced9ff;
-  color: #020d33;
-  font-size: 0.6rem bold;
-  font-family: "Share Tech Mono", monospace;
-}
-.building-section .button__info:hover,
-.planet-section .button__info:hover {
-  border: solid #ff7a41;
-  background-color: #020d33;
-  color: #ced9ff;
-}
-.building-section .button__info-planet:hover,
-.planet-section .button__info-planet:hover {
-  background-color: #020d33;
-  color: #ced9ff;
-  border: solid #66f875;
-}
-.building-section .button__alphabetical, .building-section .button__alphabetical-planet,
+.planet-section .button__info-planet,
 .planet-section .button__alphabetical,
-.planet-section .button__alphabetical-planet {
-  padding: 0.8rem;
-  width: 9rem;
-  height: 3rem;
-  border-radius: 2rem;
-  border-style: none;
-  background-color: #ced9ff;
-  color: #020d33;
-  font-size: 0.6rem bold;
-  font-family: "Share Tech Mono", monospace;
-}
-.building-section .button__alphabetical:hover,
-.planet-section .button__alphabetical:hover {
-  border: solid #ff7a41;
-  background-color: #020d33;
-  color: #ced9ff;
-}
-.building-section .button__alphabetical-planet:hover,
-.planet-section .button__alphabetical-planet:hover {
-  background-color: #020d33;
-  color: #ced9ff;
-  border: solid #66f875;
-}
-.building-section .button__year, .building-section .button__placement,
+.planet-section .button__alphabetical-planet,
 .planet-section .button__year,
 .planet-section .button__placement {
-  margin-left: 1rem;
-  width: 6rem;
+  width: 9rem;
   height: 3rem;
   padding: 0.8rem;
   border-radius: 2rem;
@@ -169,20 +127,14 @@
   color: #020d33;
   font-size: 0.6rem bold;
   font-family: "Share Tech Mono", monospace;
-}
-.building-section .button__year:hover,
-.planet-section .button__year:hover {
-  border: solid #ff7a41;
-  background-color: #020d33;
-  color: #ced9ff;
-}
-.building-section .button__placement:hover,
-.planet-section .button__placement:hover {
-  background-color: #020d33;
-  color: #ced9ff;
-  border: solid #66f875;
+  margin-right: 1rem;
 }
 @media screen and (min-width: 768px) {
+  .building-section .button,
+.planet-section .button {
+    /*HOVER*/
+    /*pc*/
+  }
   .building-section .button .button__info, .building-section .button .button__info-planet,
 .planet-section .button .button__info,
 .planet-section .button .button__info-planet {
@@ -193,8 +145,24 @@
 .planet-section .button .button__placement {
     margin-left: 4rem;
   }
+  .building-section .button__info:hover, .building-section .button__alphabetical:hover, .building-section .button__year:hover,
+.planet-section .button__info:hover,
+.planet-section .button__alphabetical:hover,
+.planet-section .button__year:hover {
+    border: solid #ff7a41;
+    background-color: #020d33;
+    color: #ced9ff;
+  }
+  .building-section .button__info-planet:hover, .building-section .button__alphabetical-planet:hover, .building-section .button__placement:hover,
+.planet-section .button__info-planet:hover,
+.planet-section .button__alphabetical-planet:hover,
+.planet-section .button__placement:hover {
+    background-color: #020d33;
+    color: #ced9ff;
+    border: solid #66f875;
+  }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .building-section .button .button__info, .building-section .button .button__info-planet,
 .planet-section .button .button__info,
 .planet-section .button .button__info-planet {
@@ -276,12 +244,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .all-learning-section .info {
-    grid-column: auto/span 4;
+    grid-column: auto/span 6;
   }
 }
 @media screen and (min-width: 1100px) {
   .all-learning-section .info {
-    grid-column: auto/span 3;
+    grid-column: auto/span 4;
   }
 }
 
@@ -294,7 +262,9 @@ body {
   background-color: #f5f5f5;
 }
 
-.smiley {
+.smiley,
+.smiley-text {
+  width: 100%;
   grid-column: auto/span 12;
   display: flex;
   justify-content: center;
@@ -304,12 +274,6 @@ body {
   margin-top: 4rem;
 }
 
-.smiley-text {
-  grid-column: auto/span 12;
-  display: flex;
-  justify-content: center;
-  color: #ff7a41;
-  font-size: 2rem;
-  width: 100%;
-  font-family: "VT323", monospace;
+.smiley-text:not(font-size) {
+  font-size: 5rem;
 }/*# sourceMappingURL=learning-main.css.map */

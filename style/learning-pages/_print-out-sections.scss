@@ -57,14 +57,14 @@ body {
   /*tablet*/
   @media screen and(min-width: 768px) {
     .info {
-      grid-column: auto/span 4;
+      grid-column: auto/span 6;
     }
   }
 
   /*pc*/
   @media screen and(min-width: 1100px) {
     .info {
-      grid-column: auto/span 3;
+      grid-column: auto/span 4;
     }
   }
 }
