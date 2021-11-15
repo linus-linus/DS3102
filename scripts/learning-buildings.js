@@ -2,7 +2,7 @@ import buildingsArray from "./buildings-array.js"
 
 /***** DOM *****/
 
-/* Print out ved å trykke på icon Buildings eller planets  */
+/* Print out ved å trykke på icon Buildings */
 let printOutBuilding = document.querySelector(".print-out")
 
 let buildingBte = document.querySelector(".building-bte")
@@ -23,34 +23,65 @@ let selectes = document.querySelector("#continents")
 
 /*DOM for søke felt */
 
-const searchInput = document.querySelector(".search__input")
+let searchInput = document.querySelector(".search__input")
 
+/* error tekst print*/
+let errorPrint = document.querySelector(".error-print")
+
+let oneclickAllInfo = document.querySelector(".oneclick-all-info")
 /***** DOM slutt *****/
+
+/* Kode som blir gjentatt */
+
+let forEachFunctionLong = (data) => {
+  data.forEach((building) => {
+    printOutBuilding.innerHTML += `
+
+    <article class="info">
+    
+    <h3 class="info__title">${building.name}</h3>
+    <img class="info__img" src=${building.img} alt="Taj Mahal">
+    <p class="info__section">${building.year} ${building.yearText}</p>
+    <p class="info__section">${building.continent}</p>
+    <p class="info__section">${building.country}</p>
+    <p class="info__section">${building.history}</p>
+    
+</article>
+
+
+`
+  })
+}
+
+let forEachFunctionShort = (data) => {
+  data.forEach((building) => {
+    printOutBuilding.innerHTML += `
+  
+    <article class="info">
+    
+    <h3 class="info__title">${building.name}</h3>
+  
+    <img class="info__img" src=${building.img} alt="Taj Mahal">
+    
+</article>
+
+`
+  })
+}
 
 /* Printer ut alle Buildings */
 
 let printAllBuldings = () => {
   printOutBuilding.innerHTML = ""
   //printOutPlanet.innerHTML = ""
-  let searchSection = (document.querySelector(".search-section").style.display =
-    "block")
-
-  let btnDisplay = (document.querySelector(".button-section").style.display =
-    "block")
-
-  let continentDisplay = (document.querySelector(
-    ".continent-section"
+  let buildingSection = (document.querySelector(
+    ".building-section"
   ).style.display = "block")
 
-  buildingsArray.forEach((building) => {
-    printOutBuilding.innerHTML += `
-    <article class="info">
-          <h3 class="info__title">${building.name}</h3>
-          <img class="info__img" src=${building.img} alt="Taj Mahal">
-        </article>
-    
-    `
-  })
+  let planetSection = (document.querySelector(".planet-section").style.display =
+    "none")
+
+  forEachFunctionShort(buildingsArray)
 }
 
 buildingBte.addEventListener("click", printAllBuldings)
@@ -66,19 +97,8 @@ let showSearchResult = () => {
     return Object.values(building).some((val) => val.includes(searchWord))
   })
 
-  searchResult.forEach((building) => {
-    printOutBuilding.innerHTML += `
-    <article class="info">
-    <h3 class="info__title">${building.name}</h3>
-    <img class="info__img" src=${building.img} alt="Taj Mahal">
-    <p>${building.year}</p>
-    <p>${building.yearText}</p>
-    <p>${building.continent}</p>
-    <p>${building.country}</p>
-    <p>${building.history}</p>
-</article>
-`
-  })
+  /*Gjentagen kode */
+  forEachFunctionLong(searchResult)
 }
 
 searchInput.addEventListener("input", showSearchResult)
@@ -88,19 +108,7 @@ searchInput.addEventListener("input", showSearchResult)
 let printAllBuldingInfo = () => {
   printOutBuilding.innerHTML = ""
 
-  buildingsArray.forEach((building) => {
-    printOutBuilding.innerHTML += `
-    <article class="info">
-          <h3 class="info__title">${building.name}</h3>
-          <img class="info__img" src=${building.img} alt="Taj Mahal">
-          <p>${building.year}</p>
-          <p>${building.yearText}</p>
-          <p>${building.continent}</p>
-          <p>${building.country}</p>
-          <p>${building.history}</p>
-    </article>
-    `
-  })
+  forEachFunctionLong(buildingsArray)
 }
 
 btnInfo.addEventListener("click", printAllBuldingInfo)
@@ -113,15 +121,7 @@ let showAlphabeticalOrder = () => {
     building1.name > building2.name ? 1 : -1
   )
 
-  alphabeticalSort.forEach((building) => {
-    printOutBuilding.innerHTML += `
-    <article class="info">
-          <h3 class="info__title">${building.name}</h3>
-          <img class="info__img" src=${building.img} alt="Taj Mahal">
-        </article>
-    
-    `
-  })
+  forEachFunctionShort(alphabeticalSort)
 }
 
 console.log(showAlphabeticalOrder)
@@ -141,8 +141,8 @@ let showYearOrder = () => {
     <article class="info">
           <h3 class="info__title">${building.name}</h3>
           <img class="info__img" src=${building.img} alt="Taj Mahal">
-          <p>${building.year}</p>
-          <p>${building.yearText}</p>
+          <p class="info__section">${building.year}</p>
+          <p class="info__section">${building.yearText}</p>
          
         </article>
     
@@ -153,6 +153,7 @@ let showYearOrder = () => {
 btnYear.addEventListener("click", showYearOrder)
 
 /* Print ut på valg av continent */
+
 let showSelected = () => {
   //printOut.innerHTML = ""
   let continentSearch = buildingsArray.filter((building) => {
@@ -160,18 +161,25 @@ let showSelected = () => {
   })
   console.log(selectes.value)
 
-  if (selectes.value === "Afrika") {
-    printOutBuilding.innerHTML = "ok"
+  if (selectes.value === ("Sør-Amerika" || "Antarctia" || "Oseania")) {
+    printOutBuilding.innerHTML = ""
+    printOutBuilding.innerHTML = `
+    <i class="far fa-frown smiley"></i>
+    <h3 class="smiley-text">Ingen bygning funnet</h3>
+    
+    `
+  } else if (selectes.value === "Velg") {
+    printOutBuilding.innerHTML = ""
   } else {
     printOutBuilding.innerHTML = ""
 
     continentSearch.forEach((search) => {
       printOutBuilding.innerHTML += `
-  
+
   <article class="info">
   <h3 class="info__title">${search.name}</h3>
   <img class="info__img" src=${search.img} alt="Taj Mahal">
-  <p>${search.continent}
+  <p class="info__section">${search.continent}
   </article>
   `
     })

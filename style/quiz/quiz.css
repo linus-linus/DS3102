@@ -29,6 +29,9 @@
   flex-wrap: wrap;
 }
 .icon-section .icon-titel {
+  font-size: 1.7rem;
+}
+.icon-section .icon-titel {
   order: 0;
   width: 100%;
   color: #f5f5f5;

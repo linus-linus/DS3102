@@ -24,20 +24,44 @@
   </head>
   <body>
 
-  <header class="logo-container">
-    <img class="logo-container__logo-img" src="images/logo.png" />
-  </header>
+    <header class="logo-container">
+      <img class="logo-container__logo-img" src="images/logo.png" />
+    </header>
 
-    <section class="smooth-scroll" id="section1">
-      <a class="smooth-scroll__initializer" href="#section2">Start</a>
+  <main class="main-content-container">
+
+    <section class="start-section">
+      <h2 class="start-section__initializer">Start</h2>
     </section>
 
-    <section class="add-name" id="section2">
-      <input class="add-name__name-input" placeholder="Hva heter du?" />
+    <section class="add-name">
+      <input class="add-name__name-input" placeholder="Hva heter du?" type="text">
       <button class="add-name__confirm-name-btn">
         <i class="fas fa-check"></i>
-      </button>
+      </button> 
     </section>
- 
+
+    <!--<section class="show-name" id="section-3">
+      <div class="show-name__name-output">
+      </div>
+    </section> -->
+
+    <section class="choose-action">
+      <div class="choose-action__name-output">
+        <!-- Will write out name here....-->
+      </div>
+      <br><br>
+      <a class="choose-action__learn-btn" type="button" href="learing-page.html">Gå til læresiden</a>
+      <a class="choose-action__quiz-btn" type="button" href="quiz.html">Start quiz</a>
+    </section>
+
+  </main>
+
+    <!-- GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index-gsap.js"></script>
+
   </body>
 </html>
