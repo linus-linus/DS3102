@@ -17,29 +17,33 @@ $color-7: #464d66;
   //align-items: center;
   //position: fixed;
   //width: 100vw;
-
-  top: 0;
+  display: flex;
+  justify-content: right;
+  margin: 1rem;
 
   .nav-btn {
-    //float: right;
-    // order: 2;
-    font-family: "VT323", monospace;
-    font-size: 0.9rem;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.6rem bold;
     color: $color-1;
-    background-color: $color-2;
+    background-color: $color-5;
     border: none;
     border-radius: 2rem;
-    width: 5rem;
-    padding: 0.5rem;
+    width: 9rem;
+    height: 3rem;
+    padding: 0.8rem;
     margin-right: 1rem;
-    margin-top: 0;
+  }
+  .nav-btn:hover {
+    border: solid $color-5;
+    background-color: $color-1;
+    color: $color-5;
   }
 
   /*tablet*/
   @media screen and(min-width: 768px) {
   }
   .start-quize-btn {
-    width: 7rem;
+    width: 9rem;
     margin-right: 2rem;
   }
 }

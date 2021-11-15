@@ -29,8 +29,20 @@ let searchInput = document.querySelector(".search__input")
 let errorPrint = document.querySelector(".error-print")
 
 let oneclickAllInfo = document.querySelector(".oneclick-all-info")
+
+/*printe navn  */
+let namePrintOut = document.querySelector(".icon-titel")
 /***** DOM slutt *****/
 
+/*henter inn navn gjennom LocalStorage */
+let printUserName = () => {
+  let userName = localStorage.getItem("username")
+  namePrintOut.innerHTML = `
+  <p> ${userName}! Klikk på det icoen du vil lære om!</p>
+  `
+}
+
+printUserName()
 /* Kode som blir gjentatt */
 
 let forEachFunctionLong = (data) => {
@@ -161,7 +173,11 @@ let showSelected = () => {
   })
   console.log(selectes.value)
 
-  if (selectes.value === ("Sør-Amerika" || "Antarctia" || "Oseania")) {
+  if (
+    selectes.value === "Sør-Amerika" ||
+    selectes.value === "Antarktis" ||
+    selectes.value === "Oseania"
+  ) {
     printOutBuilding.innerHTML = ""
     printOutBuilding.innerHTML = `
     <i class="far fa-frown smiley"></i>

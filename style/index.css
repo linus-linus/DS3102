@@ -34,6 +34,7 @@ body {
 .main-content-container .start-section {
   text-align: center;
   margin-top: 300px;
+  width: 100%;
 }
 .main-content-container .start-section__initializer {
   font-family: "VT323";
@@ -58,24 +59,26 @@ body {
   font-family: "VT323";
   font-size: 20px;
 }
+.main-content-container .add-name__confirm-name-btn {
+  text-align: center;
+  background-color: #66f875;
+  border-radius: 30px;
+  border-color: #66f875;
+  height: 3rem;
+  width: 8rem;
+  display: none;
+  margin-top: 1rem;
+  margin-left: 47%;
+  font-family: "VT323";
+  font-size: 1.5rem;
+  color: #020d33;
+}
 .main-content-container .add-name__confirm-name-btn:active {
   background-color: #ced9ff;
   border-color: #ced9ff;
 }
 .main-content-container .add-name .fas {
   color: #f5f5f5;
-}
-.main-content-container .btn-section {
-  display: none;
-  margin-top: 300px;
-  text-align: center;
-}
-.main-content-container .btn-section__confirm-name-btn {
-  background-color: #66f875;
-  border-radius: 30px;
-  border-color: #66f875;
-  height: 30px;
-  width: 30px;
 }
 .main-content-container .choose-action {
   display: none;
@@ -87,18 +90,7 @@ body {
   font-family: "VT323";
   font-size: 30px;
 }
-.main-content-container .choose-action__learn-btn {
-  font-family: "VT323";
-  font-size: 20px;
-  text-decoration: none;
-  width: 10rem;
-  padding: 0.8rem;
-  border-radius: 2rem;
-  background-color: #ced9ff;
-  color: #020d33;
-  text-align: center;
-}
-.main-content-container .choose-action__quiz-btn {
+.main-content-container .choose-action__quiz-btn, .main-content-container .choose-action__learn-btn {
   font-family: "VT323";
   font-size: 20px;
   text-decoration: none;

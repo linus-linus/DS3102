@@ -30,7 +30,7 @@ body {
   .start-section {
     text-align: center;
     margin-top: 300px;
-
+    width: 100%;
     &__initializer {
       font-family: "VT323";
       text-decoration: underline;
@@ -59,6 +59,21 @@ body {
       font-size: 20px;
     }
 
+    &__confirm-name-btn {
+      text-align: center;
+      background-color: $color-4;
+      border-radius: 30px;
+      border-color: $color-4;
+      height: 3rem;
+      width: 8rem;
+      display: none;
+      margin-top: 1rem;
+      margin-left: 47%;
+      font-family: "VT323";
+      font-size: 1.5rem;
+      color: $color-1;
+    }
+
     &__confirm-name-btn:active {
       background-color: $color-2;
       border-color: $color-2;
@@ -69,20 +84,6 @@ body {
     }
   }
 
-  .btn-section {
-    display: none;
-
-    margin-top: 300px;
-    text-align: center;
-
-    &__confirm-name-btn {
-      background-color: $color-4;
-      border-radius: 30px;
-      border-color: $color-4;
-      height: 30px;
-      width: 30px;
-    }
-  }
   /*.show-name{
         display: none;
         grid-column: span 12;
@@ -105,20 +106,8 @@ body {
       font-family: "VT323";
       font-size: 30px;
     }
-
+    &__quiz-btn,
     &__learn-btn {
-      font-family: "VT323";
-      font-size: 20px;
-      text-decoration: none;
-      width: 10rem;
-      padding: 0.8rem;
-      border-radius: 2rem;
-      background-color: $color-2;
-      color: $color-1;
-      text-align: center;
-    }
-
-    &__quiz-btn {
       font-family: "VT323";
       font-size: 20px;
       text-decoration: none;
