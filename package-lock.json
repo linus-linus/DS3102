@@ -1,0 +1,24 @@
+{
+  "name": "DS3102",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "gsap": "file:gsap-bonus.tgz"
+      }
+    },
+    "node_modules/gsap": {
+      "version": "3.8.0",
+      "resolved": "file:gsap-bonus.tgz",
+      "integrity": "sha512-+Tw/NeHM9limPBwNkKbBy3pd/s5edAnLVmAU/QohTnh/BeY+49FdDkIVx71KVKwlr7DpBZzX8fA81QLltab3Pw==",
+      "license": "Standard 'no charge' license: https://greensock.com/standard-license. Club GreenSock members get more: https://greensock.com/licensing/. Why GreenSock doesn't employ an MIT license: https://greensock.com/why-license/"
+    }
+  },
+  "dependencies": {
+    "gsap": {
+      "version": "file:gsap-bonus.tgz",
+      "integrity": "sha512-+Tw/NeHM9limPBwNkKbBy3pd/s5edAnLVmAU/QohTnh/BeY+49FdDkIVx71KVKwlr7DpBZzX8fA81QLltab3Pw=="
+    }
+  }
+}
