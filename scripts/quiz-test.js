@@ -74,8 +74,8 @@ function loadQuiz( arrayToUse ){
     submitBtn.style.display = "block"
     
 
-    //Lagrer HTML output
-    const output = []
+  //Lagrer HTML output
+  const output = []
 
     arrayToUse.forEach((activeQuestion, questionNo) => {
                 //Lagrer mulige svar
@@ -87,7 +87,7 @@ function loadQuiz( arrayToUse ){
                     //..legg til radioKnapp i HTML
                  options.push(`
                  <label class="quiz-label">
-                         <input type="radio" name="questions${questionNo}" value="${choice}">
+                         <input type="radio" name="questions${activeQuestion.questionNo}" value="${activeQuestion.choice}">
                          ${choice} :
                          ${activeQuestion.options[choice]}<br>
                      </label>

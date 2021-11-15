@@ -21,13 +21,15 @@ $color-7: #464d66;
     &__info,
     &__info-planet {
       margin-right: 1rem;
-      width: 6rem;
+      width: 7rem;
       height: 3rem;
       padding: 0.8rem;
       border-radius: 2rem;
       border-style: none;
       background-color: $color-2;
       color: $color-1;
+      font-size: 0.6rem bold;
+      font-family: "Share Tech Mono", monospace;
     }
     &__info:hover {
       border: solid $color-3;
@@ -44,12 +46,14 @@ $color-7: #464d66;
     &__alphabetical,
     &__alphabetical-planet {
       padding: 0.8rem;
-      width: 7.3rem;
+      width: 9rem;
       height: 3rem;
       border-radius: 2rem;
       border-style: none;
       background-color: $color-2;
       color: $color-1;
+      font-size: 0.6rem bold;
+      font-family: "Share Tech Mono", monospace;
     }
     &__alphabetical:hover {
       border: solid $color-3;
@@ -72,6 +76,8 @@ $color-7: #464d66;
       border-style: none;
       background-color: $color-2;
       color: $color-1;
+      font-size: 0.6rem bold;
+      font-family: "Share Tech Mono", monospace;
     }
     &__year:hover {
       border: solid $color-3;
