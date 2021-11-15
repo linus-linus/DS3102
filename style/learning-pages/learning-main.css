@@ -276,12 +276,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .all-learning-section .info {
-    grid-column: auto/span 4;
+    grid-column: auto/span 6;
   }
 }
 @media screen and (min-width: 1100px) {
   .all-learning-section .info {
-    grid-column: auto/span 3;
+    grid-column: auto/span 4;
   }
 }
 
