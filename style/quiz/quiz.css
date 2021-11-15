@@ -80,6 +80,7 @@ body {
   align-items: center;
   font-family: "montserrat";
   padding: 1rem;
+  position: relative;
 }
 .quiz-section__div, .quiz-section__div2 {
   display: flex;

@@ -6,11 +6,12 @@ submitBtn.style.display = "none"
 function loadQuiz(){
     resultsOutput.innerHTML = ""
     quizOutput.innerHTML = ""
+    savedResults.innerHTML = ""
     submitBtn.style.display = "block"
-    
-
     //Lagrer HTML output
     const output = []
+
+    checkInfoLocalStorage()
 
     buildingArray.forEach(
         (activeQuestion, questionNo) => {
@@ -65,6 +66,8 @@ function displayResults(){
             optionsBoxes[questionNo].style.color = "red"
         }
     })
+
+
 
     resultsOutput.innerHTML = `${noOfRightAnswers} av ${buildingArray.length}`
 }
