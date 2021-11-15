@@ -1,93 +1,5 @@
-
-/* ARRAYS */ 
-
-let buildingArray = [
-    {
-        question: "Hvilket land ligger Chryslerbygningen i?",
-        options: {
-            a: "Dubai",
-            b: "Australia",
-            c: "USA"
-        },
-        rightAnswer: "c"
-    },
-    {
-        question: "Hvem bygde Keiser Shah Jahan mausoleet Taj mahal for?",
-        options: {
-            a: "Favorittbarnebarnet",
-            b: "Favorittkonen",
-            c: "Dalmantineren Hercules"
-        },
-        rightAnswer: "b"
-    },
-    {
-        question: "Hvor høyt er Det Skjeve Tårnet i Pisa?",
-        options: {
-            a: "115 meter",
-            b: "16 meter",
-            c: "56"
-        },
-        rightAnswer: "c"
-    },
-    {
-        question: "I hvilken verdensdel finner man tempelet Angkor Wat?",
-        options: {
-            a: "Sverge",
-            b: "Asia",
-            c: "Oseania"
-        },
-        rightAnswer: "b"
-    },
-    {
-        question: "Hva ble Louvre brukt som før det ble museum?",
-        options: {
-            a: "Festning og kongelig residens",
-            b: "Et amfiteater",
-            c: "Hundekennel"
-        },
-        rightAnswer: "a"
-    },
-    {
-        question: "Hvorfor har The Pagoda of Auspicious Light måttet bli ombygget flere ganger?",
-        options: {
-            a: "Fordi grunnmuren er svak",
-            b: "På grunn av jordskjelv",
-            c: "På grunn av flere branner"
-        },
-        rightAnswer: "c"
-    },
-    {
-        question: "Hvem ble Triumfbuen bygget til ære for?",
-        options: {
-            a: "De som kjempet og falt for Frankrike under den franske revolusjonen og Napoleons-krigene",
-            b: "De som bygde Eiffeltårnet",
-            c: "Flyktninger"
-        },
-        rightAnswer: "a"
-    },
-]
-
-const planetArray = [
-    {
-        question: "Hva er kallenavnet til Jorda?",
-        options: {
-                a: "Den Blå Lagune",
-                b: "Den Blå Planeten",
-                c: "Venus"
-        },
-        rightAnswer: "b"
-        
-    },
-    {
-        question: "Hvorfor blir Mars kalt Den Røde Planeten?",
-        options: {
-            a: "Fordi den består av flytende lava",
-            b: "Fordi den er så nærme Sola",
-            c: "Fordi overflaten er dekket av jernoksid"
-        },
-        rightAnswer: "c"
-    }
-]
+import buildingArray from "./quiz-buildingArray.js"
+import planetArray from "./quiz-planetArray.js"
 
 /* KNAPPER FRA HTML */
 const buildingBtn = document.querySelector(".building-icon")
@@ -105,49 +17,51 @@ planetBtn.addEventListener("click", function(){
 buildingBtn.addEventListener("click", function(){
     loadQuiz(buildingArray)})
 
-//submitBtn.style.display = "none"
 
-
+//Skjuler fullførknappen
+submitBtn.style.display = "none"
 
 /* LASTER QUIZ */
 function loadQuiz( arrayToUse ){
 
+    //Sletter evt resultat ved bytte av quiz
     savedResults.style.display = "none"
     quizOutput.innerHTML = ""
-
-    //Sletter evt resultat ved bytte av quiz
-    
+    let choice = ""
     resultsOutput.innerHTML = ""
+
+    //Viser fullfør-knapp
     submitBtn.style.display = "block"
 
     //Lagrer HTML output
     const output = []
 
     arrayToUse.forEach((activeQuestion, questionNo) => {
-                //Lagrer mulige svar
-                const options = []
+        //Lagrer mulige svar
+        const options = []
         
-                 //og for hvert mulige svar..
-                for(choice in activeQuestion.options){
+        //og for hvert mulige svar..
+        for(choice in activeQuestion.options){
          
-                    //..legg til radioKnapp i HTML
-                 options.push(`
-                 <label class="quiz-label">
-                         <input type="radio" name="questions${questionNo}" value="${choice}">
-                         ${choice} :
-                         ${activeQuestion.options[choice]}<br>
-                     </label>
-                    `
-                    )                 
-                }
-             //push spørsmål og svaralternativ til HTML
-             output.push(`
-                 <div class="question"> ${activeQuestion.question}</div>
-                 <div class="options"> ${options.join('')}</div>
-                `
-            )
+            //..legg til radioKnapp i HTML
+            options.push(`
+            <label class="quiz-label">
+            <input type="radio" name="questions${questionNo}" value="${choice}">
+            ${choice} :
+            ${activeQuestion.options[choice]}<br>
+            </label>
+            `
+            )                 
         }
-    )
+
+        //push spørsmål og svaralternativ til HTML
+        output.push(`
+            <div class="question"> ${activeQuestion.question}</div>
+            <div class="options"> ${options.join('')}</div>
+            `
+            )
+        })
+
         if(arrayToUse==planetArray){
             submitBtn.addEventListener("click", function(){
                 displayPlanetResults()
@@ -166,6 +80,7 @@ function loadQuiz( arrayToUse ){
 /* PRINTER RESULTAT*/
 function displayPlanetResults(){
     resultsOutput.innerHTML = ""
+    let localStorageValue = "";
     
     //Hent svaralternativ fra quizen
     const optionsBoxes = quizOutput.querySelectorAll(".options")
@@ -178,6 +93,7 @@ function displayPlanetResults(){
         const optionsBox = optionsBoxes[questionNo]
         const userChoice = `input[name=questions${questionNo}]:checked`
         const userAnswer = (optionsBox.querySelector(userChoice) || {}).value
+        
 
         //hvis svaret er riktig
         if(userAnswer === activeQuestion.rightAnswer){
@@ -190,18 +106,23 @@ function displayPlanetResults(){
         }else{
             optionsBoxes[questionNo].style.color = "#ff7a41"
         }
+        //Hvis full pott -> Gå til vinnerside
+        if(noOfRightAnswers === planetArray.length){
+            window.location.href = "./planet-orbit.html";
+        }
     })
+
     localStorage.setItem("result", noOfRightAnswers)
     savedResults.style.display = "block"
     savedResults.innerHTML = localStorageValue;
-    
+
 
     resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} poeng av ${planetArray.length} mulige`
 };
 
 function displayBuildingResults(){
     resultsOutput.innerHTML = ""
-    
+    let localStorageValue = ""
     
     //Hent svaralternativ fra quizen
     const optionsBoxes = quizOutput.querySelectorAll(".options")
@@ -226,17 +147,23 @@ function displayBuildingResults(){
         }else{
             optionsBoxes[questionNo].style.color = "#ff7a41"
         }
-    })
 
+        if(noOfRightAnswers === buildingArray.length){
+            window.location.href = "./planet-orbit.html";
+        }
+
+    })
+    //Lagrer resultat i localStorage
     localStorage.setItem("result", noOfRightAnswers)
     savedResults.innerHTML = localStorageValue;
-    savedResults.style.display = "block"
 
+    //Viser at resultat blir lagret
+    savedResults.style.display = "block"
     resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} poeng av ${buildingArray.length} mulige`
     
 };
 
-
+/* HENTER FRA LOKALSTORAGE OM DET ER MATCHENDE VERDIER DER */
 const checkInfoLocalStorage = () => {
     const numberOfItems = localStorage.length
     let localStorageValue = ``
@@ -251,5 +178,5 @@ const checkInfoLocalStorage = () => {
     }
     savedResults.innerHTML = localStorageValue;
 }
-checkInfoLocalStorage()
 
+checkInfoLocalStorage()
