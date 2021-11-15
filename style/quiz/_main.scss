@@ -8,6 +8,7 @@ $font-1: "VT323", monospace;
 $font-2: "montserrat";
 
 
+
 body{
     background-color: $color-1;
     //box-sizing: border-box;
@@ -30,7 +31,27 @@ body{
         margin: 1rem;
         font-size: 12px;
     }
+
+    #results-div{
+        padding: 1rem;
+    }
+
+    #submit-btn{
+    padding: 0.4rem;
+      width: 7rem;
+      height: 2rem;
+      border-radius: 2rem;
+      border-style: none;
+      background-color: $color-2;
+      color: $color-1;
+      font-size: 0.6rem bold;
+      font-family: "Share Tech Mono", monospace;
+    }
 }
+
+
+/* Hentet fra JS */
+
 
 .question{
     padding: 1rem;
@@ -38,56 +59,31 @@ body{
     font-size: 14px;
 }
 
+
 .quiz-label{
     padding: 1rem;
 }
 
-/**
-.quiz{
-    //box-sizing: border-box;
-    background-color: $color-2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem 3rem 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    overflow: hidden;
-    font-size: 14px;
 
-    &__div{
-        color: $color-1;
-        font-family: $font-1;
-        overflow: hidden;
 
-        #question-h3{
-            padding: 0.5rem;
-        }
+/* Tablet */
+@media screen and(min-width: 768px) {
 
-        .list{
-           
-        }
+    
+}
 
-    }
+ /*pc*/
+ @media screen and(min-width: 1200px) {
 
-    #next-btn{
-        border-radius: 5px;
-        display: block;
-        border: none;
+
+    #submit-btn {
+        &:hover{
         background-color: $color-1;
-        color: $color-5;
-        font-family: $font-1;
-        padding: 0.5rem;
-        margin: 1rem;
-
-        &:focus{
-            outline: none;
-            background-color: $color-3;
+        color: $color-2;
+        border: solid $color-4;
         }
-
     }
+}
 
-
-}*/
 
 

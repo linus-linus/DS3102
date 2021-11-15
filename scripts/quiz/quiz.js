@@ -1,6 +1,7 @@
-//Oppretter en funksjon som kan ta imot array gjennom parameter arrayToUse
 
-const buildingArray = [
+/* ARRAYS */ 
+
+let buildingArray = [
     {
         question: "Hvilket land ligger Chryslerbygningen i?",
         options: {
@@ -27,7 +28,43 @@ const buildingArray = [
             c: "56"
         },
         rightAnswer: "c"
-    }
+    },
+    {
+        question: "I hvilken verdensdel finner man tempelet Angkor Wat?",
+        options: {
+            a: "Sverge",
+            b: "Asia",
+            c: "Oseania"
+        },
+        rightAnswer: "b"
+    },
+    {
+        question: "Hva ble Louvre brukt som før det ble museum?",
+        options: {
+            a: "Festning og kongelig residens",
+            b: "Et amfiteater",
+            c: "Hundekennel"
+        },
+        rightAnswer: "a"
+    },
+    {
+        question: "Hvorfor har The Pagoda of Auspicious Light måttet bli ombygget flere ganger?",
+        options: {
+            a: "Fordi grunnmuren er svak",
+            b: "På grunn av jordskjelv",
+            c: "På grunn av flere branner"
+        },
+        rightAnswer: "c"
+    },
+    {
+        question: "Hvem ble Triumfbuen bygget til ære for?",
+        options: {
+            a: "De som kjempet og falt for Frankrike under den franske revolusjonen og Napoleons-krigene",
+            b: "De som bygde Eiffeltårnet",
+            c: "Flyktninger"
+        },
+        rightAnswer: "a"
+    },
 ]
 
 const planetArray = [
@@ -52,30 +89,36 @@ const planetArray = [
     }
 ]
 
-/* KNAPPER */
+/* KNAPPER FRA HTML */
 const buildingBtn = document.querySelector(".building-icon")
 const planetBtn = document.querySelector(".planet-icon")
+/* OUTPUT-SEKSJONER FRA HTML */
 let quizOutput = document.querySelector("#quiz")
 let resultsOutput = document.getElementById("results-div")
+const savedResults = document.querySelector(".saved-results")
 
 
+/* AKTIVERER KNAPPENE */
+const submitBtn = document.getElementById("submit-btn")
 planetBtn.addEventListener("click", function(){
     loadQuiz(planetArray)})
 buildingBtn.addEventListener("click", function(){
     loadQuiz(buildingArray)})
-    const submitBtn = document.getElementById("submit-btn")
+
+//submitBtn.style.display = "none"
+
 
 
 /* LASTER QUIZ */
 function loadQuiz( arrayToUse ){
 
+    savedResults.style.display = "none"
     quizOutput.innerHTML = ""
 
     //Sletter evt resultat ved bytte av quiz
-    //savedResults.innerHTML = ""
+    
     resultsOutput.innerHTML = ""
     submitBtn.style.display = "block"
-    
 
     //Lagrer HTML output
     const output = []
@@ -116,6 +159,7 @@ function loadQuiz( arrayToUse ){
         }
     
     quizOutput.innerHTML = output.join('')
+    
 };
 
 
@@ -140,17 +184,19 @@ function displayPlanetResults(){
             //legg til i antall riktige svar
             noOfRightAnswers++
             localStorage.setItem("result", noOfRightAnswers)
-            //localStorageValue = `Ditt resultat ${noOfRightAnswers} er nå lagret`
+            localStorageValue = `Ditt resultat ${noOfRightAnswers} er nå lagret`
 
-            optionsBoxes[questionNo].style.color = "lightgreen"
+            optionsBoxes[questionNo].style.color = "#66f875"
         }else{
-            optionsBoxes[questionNo].style.color = "red"
+            optionsBoxes[questionNo].style.color = "#ff7a41"
         }
     })
     localStorage.setItem("result", noOfRightAnswers)
-    //savedResults.innerHTML = localStorageValue;
+    savedResults.style.display = "block"
+    savedResults.innerHTML = localStorageValue;
+    
 
-    resultsOutput.innerHTML = `${noOfRightAnswers} av ${planetArray.length}`
+    resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} poeng av ${planetArray.length} mulige`
 };
 
 function displayBuildingResults(){
@@ -174,28 +220,36 @@ function displayBuildingResults(){
             //legg til i antall riktige svar
             noOfRightAnswers++
             localStorage.setItem("result", noOfRightAnswers)
-            //localStorageValue = `Ditt resultat ${noOfRightAnswers} er nå lagret`
+            localStorageValue = `Ditt resultat ${noOfRightAnswers} er nå lagret`
 
-            optionsBoxes[questionNo].style.color = "lightgreen"
+            optionsBoxes[questionNo].style.color = "#66f875"
         }else{
-            optionsBoxes[questionNo].style.color = "red"
+            optionsBoxes[questionNo].style.color = "#ff7a41"
         }
     })
-    localStorage.setItem("result", noOfRightAnswers)
-    //savedResults.innerHTML = localStorageValue;
 
-    resultsOutput.innerHTML = `${noOfRightAnswers} av ${buildingArray.length}`
+    localStorage.setItem("result", noOfRightAnswers)
+    savedResults.innerHTML = localStorageValue;
+    savedResults.style.display = "block"
+
+    resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} poeng av ${buildingArray.length} mulige`
+    
 };
 
-/* VARIABLER */
 
-const savedResults = document.querySelector(".saved-results")
+const checkInfoLocalStorage = () => {
+    const numberOfItems = localStorage.length
+    let localStorageValue = ``
 
-
-/* ARRAY */
-
-/*submitBtn.addEventListener("click", displayResults, () => {
-    savedResults = ""
-})*/
-
+    if(numberOfItems === 0){
+        localStorageValue = `Antall verdier i local storage: ${numberOfItems}`
+    }else{
+        let result = localStorage.getItem("result")
+        
+        localStorageValue = `Velkommen tilbake! Ditt forrige resultat var ${result} poeng.<br>
+                            Vil du prøve igjen?`
+    }
+    savedResults.innerHTML = localStorageValue;
+}
+checkInfoLocalStorage()
 

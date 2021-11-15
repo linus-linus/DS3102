@@ -6,7 +6,9 @@ $color-5: #f5f5f5;
 $color-6: #6f7488;
 $color-7: #464d66;
 
-/* Mobile */
+$font-2: "Share Tech Mono", monospace;
+
+/* Mobile 
 .page-header{
     justify-content: flex-start;
 
@@ -21,10 +23,10 @@ $color-7: #464d66;
         width: 9rem;
         margin: 0.5rem;
         font-size: 0.8rem;
-    }
+    }  
 
 
-/* Tablet */
+/* Tablet 
     @media screen and(min-width: 768px) {
         .back-btn{
             &:hover{

@@ -5,7 +5,7 @@
   /*tablet*/
 }
 .page-header .nav-btn {
-  font-family: "VT323", monospace;
+  font-family: "Share Tech Mono", monospace;
   font-size: 0.9rem;
   color: #020d33;
   background-color: #ced9ff;
@@ -91,7 +91,22 @@ body {
   margin: 1rem;
   font-size: 12px;
 }
+.quiz-section #results-div {
+  padding: 1rem;
+}
+.quiz-section #submit-btn {
+  padding: 0.4rem;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: #ced9ff;
+  color: #020d33;
+  font-size: 0.6rem bold;
+  font-family: "Share Tech Mono", monospace;
+}
 
+/* Hentet fra JS */
 .question {
   padding: 1rem;
   font-family: "montserrat";
@@ -102,53 +117,15 @@ body {
   padding: 1rem;
 }
 
-/**
-.quiz{
-    //box-sizing: border-box;
-    background-color: $color-2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem 3rem 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    overflow: hidden;
-    font-size: 14px;
-
-    &__div{
-        color: $color-1;
-        font-family: $font-1;
-        overflow: hidden;
-
-        #question-h3{
-            padding: 0.5rem;
-        }
-
-        .list{
-
-        }
-
-    }
-
-    #next-btn{
-        border-radius: 5px;
-        display: block;
-        border: none;
-        background-color: $color-1;
-        color: $color-5;
-        font-family: $font-1;
-        padding: 0.5rem;
-        margin: 1rem;
-
-        &:focus{
-            outline: none;
-            background-color: $color-3;
-        }
-
-    }
-
-
-}*/
+/* Tablet */
+/*pc*/
+@media screen and (min-width: 1200px) {
+  #submit-btn:hover {
+    background-color: #020d33;
+    color: #ced9ff;
+    border: solid #66f875;
+  }
+}
 /* Mobile */
 .page-header {
   justify-content: flex-start;
@@ -177,15 +154,39 @@ body {
 /* Mob */
 .icon-section {
   display: flex;
-  margin-top: 4rem;
+  margin-top: 1rem;
   flex-wrap: wrap;
 }
 .icon-section .icon-titel {
-  padding: 1rem;
+  padding: 1.5rem;
+  font-size: 14px;
 }
 .icon-section .icon {
   margin: 0.5rem;
+  text-decoration: none;
 }
 .icon-section .icon__planet, .icon-section .icon__building {
   padding: 0.5rem;
+}
+
+.saved-results {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 14px;
+  margin: 0 1rem 0 1rem;
+  padding: 0.5rem;
+  color: #ced9ff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ced9ff;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .saved-results {
+    margin: 2rem 8rem 0 8rem;
+    text-align: center;
+  }
 }/*# sourceMappingURL=quiz.css.map */
