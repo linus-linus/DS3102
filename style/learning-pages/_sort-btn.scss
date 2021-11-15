@@ -9,7 +9,8 @@ $color-6: #6f7488;
 $color-7: #464d66;
 
 /*** Mobil ***/
-.building-section {
+.building-section,
+.planet-section {
   display: none;
 
   .button {
@@ -17,56 +18,98 @@ $color-7: #464d66;
     justify-content: center;
     color: $color-2;
 
-    &__info {
+    &__info,
+    &__info-planet {
       margin-right: 1rem;
       width: 6rem;
+      height: 3rem;
       padding: 0.8rem;
       border-radius: 2rem;
       border-style: none;
       background-color: $color-2;
       color: $color-1;
     }
+    &__info:hover {
+      border: solid $color-3;
+      background-color: $color-1;
+      color: $color-2;
+    }
 
-    &__alphabetical {
+    &__info-planet:hover {
+      background-color: $color-1;
+      color: $color-2;
+      border: solid $color-4;
+    }
+
+    &__alphabetical,
+    &__alphabetical-planet {
       padding: 0.8rem;
+      width: 7.3rem;
+      height: 3rem;
       border-radius: 2rem;
       border-style: none;
       background-color: $color-2;
       color: $color-1;
     }
+    &__alphabetical:hover {
+      border: solid $color-3;
+      background-color: $color-1;
+      color: $color-2;
+    }
+    &__alphabetical-planet:hover {
+      background-color: $color-1;
+      color: $color-2;
+      border: solid $color-4;
+    }
 
-    &__year {
+    &__year,
+    &__placement {
       margin-left: 1rem;
-      width: 3rem;
+      width: 6rem;
+      height: 3rem;
       padding: 0.8rem;
       border-radius: 2rem;
       border-style: none;
       background-color: $color-2;
       color: $color-1;
     }
-  }
-  /*tablet*/
-  @media screen and(min-width: 768px) {
-    .button {
-      &__info {
-        margin-right: 4rem;
-      }
+    &__year:hover {
+      border: solid $color-3;
+      background-color: $color-1;
+      color: $color-2;
+    }
+    &__placement:hover {
+      background-color: $color-1;
+      color: $color-2;
+      border: solid $color-4;
+    }
+    /*tablet*/
+    @media screen and(min-width: 768px) {
+      .button {
+        &__info,
+        &__info-planet {
+          margin-right: 4rem;
+        }
 
-      &__year {
-        margin-left: 4rem;
+        &__year,
+        &__placement {
+          margin-left: 4rem;
+        }
       }
     }
-  }
 
-  /*pc*/
-  @media screen and(min-width: 1200px) {
-    .button {
-      &__info {
-        margin-right: 6rem;
-      }
+    /*pc*/
+    @media screen and(min-width: 1200px) {
+      .button {
+        &__info,
+        &__info-planet {
+          margin-right: 6rem;
+        }
 
-      &__year {
-        margin-left: 6rem;
+        &__year,
+        &__placement {
+          margin-left: 6rem;
+        }
       }
     }
   }

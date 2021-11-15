@@ -93,7 +93,7 @@ let buildingsArray = [
   {
     name: "Colosseum",
     img: "/images/buildings/colosseum.png",
-    year: "80",
+    year: "0080",
     yearText: "e.Kr",
     continent: "Europa",
     country: "Italia",
@@ -113,7 +113,7 @@ let buildingsArray = [
   {
     name: "The Pagoda of Auspicious Light",
     img: "/images/buildings/auspicious-light-pagoda.png",
-    year: "280",
+    year: "0280",
     yearText: "e.Kr",
     continent: "Asia",
     country: "Kina",
@@ -123,7 +123,7 @@ let buildingsArray = [
   {
     name: "Samarra-moskeen",
     img: "/images/buildings/great-mosque-of-samarra.png",
-    year: "851",
+    year: "0851",
     yearText: "e.Kr",
     continent: "Europa",
     country: "Island",
@@ -133,7 +133,7 @@ let buildingsArray = [
   {
     name: "Klippedomen",
     img: "/images/buildings/dome-of-the-rock.png",
-    year: "691",
+    year: "0691",
     yearText: "e.kr",
     continent: "Asia",
     country: "Israel",
