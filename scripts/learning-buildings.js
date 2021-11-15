@@ -36,7 +36,7 @@ let oneclickAllInfo = document.querySelector(".oneclick-all-info")
 let forEachFunctionLong = (data) => {
   data.forEach((building) => {
     printOutBuilding.innerHTML += `
-    <a class="oneclick-all-info">
+
     <article class="info">
     
     <h3 class="info__title">${building.name}</h3>
@@ -47,7 +47,7 @@ let forEachFunctionLong = (data) => {
     <p class="info__section">${building.history}</p>
     
 </article>
-</a>
+
 
 `
   })
@@ -59,7 +59,7 @@ let forEachFunctionShort = (data) => {
   
     <article class="info">
     
-    <h3 class="info__title"><a class="oneclick-all-info">${building.name}</a></h3>
+    <h3 class="info__title">${building.name}</h3>
   
     <img class="info__img" src=${building.img} alt="Taj Mahal">
     
@@ -187,16 +187,3 @@ let showSelected = () => {
 }
 
 selectes.addEventListener("change", showSelected)
-
-/*OneClick printer ut info på et spesifikt objekt */
-
-/* Print ut all info om building */
-
-let printAllBuldingInfoOneClick = () => {
-  //printOutBuilding.innerHTML = ""
-
-  alert("hello")
-  //forEachFunctionLong(buildingsArray)
-}
-
-oneclickAllInfo.addEventListener("click", printAllBuldingInfoOneClick)

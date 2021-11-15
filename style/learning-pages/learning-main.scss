@@ -1,7 +1,10 @@
-@use "./search-section";
 @use "../shared/header";
-@use "./print-sections";
 @use "../shared/theme-selection";
-@use "./sort-btn";
-@use "./continent-input";
+
+@use "./search-section";
+@use "./btn-section";
+@use "./continent-selector";
+
+@use "./print-out-sections";
+
 @use "./error-text";
