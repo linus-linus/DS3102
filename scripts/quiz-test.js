@@ -74,8 +74,8 @@ function loadQuiz( arrayToUse ){
     submitBtn.style.display = "block"
     
 
-  //Lagrer HTML output
-  const output = []
+    //Lagrer HTML output
+    const output = []
 
     arrayToUse.forEach((activeQuestion, questionNo) => {
                 //Lagrer mulige svar
@@ -87,7 +87,7 @@ function loadQuiz( arrayToUse ){
                     //..legg til radioKnapp i HTML
                  options.push(`
                  <label class="quiz-label">
-                         <input type="radio" name="questions${activeQuestion.questionNo}" value="${activeQuestion.choice}">
+                         <input type="radio" name="questions${questionNo}" value="${choice}">
                          ${choice} :
                          ${activeQuestion.options[choice]}<br>
                      </label>
@@ -107,7 +107,7 @@ function loadQuiz( arrayToUse ){
 
 
 /* PRINTER RESULTAT*/
-function displayPlanetResults(){
+function displayPlanetResults(activeArray){
     resultsOutput.innerHTML = ""
     
     //Hent svaralternativ fra quizen
@@ -116,7 +116,7 @@ function displayPlanetResults(){
     let noOfRightAnswers = 0
 
     //For each question..
-    planetArray.forEach( (activeQuestion, questionNo) => {
+    activeArray.forEach( (activeQuestion, questionNo) => {
         //Finn det riktige svaret
         const optionsBox = optionsBoxes[questionNo]
         const userChoice = `input[name=questions${questionNo}]:checked`
@@ -137,7 +137,7 @@ function displayPlanetResults(){
     localStorage.setItem("result", noOfRightAnswers)
     //savedResults.innerHTML = localStorageValue;
 
-    resultsOutput.innerHTML = `${noOfRightAnswers} av ${planetArray.length}`
+    resultsOutput.innerHTML = `${noOfRightAnswers} av ${activeArray.length}`
 };
 
 function displayBuildingResults(){
@@ -196,6 +196,5 @@ submitBtn.addEventListener("click", function(){
 /*submitBtn.addEventListener("click", displayResults, () => {
     savedResults = ""
 })*/
-
 
 
