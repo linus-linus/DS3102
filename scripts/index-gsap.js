@@ -1,14 +1,12 @@
-gsap.to(".logo-container__logo-img", {
+gsap.from(".logo-container__logo-img", {
   rotation: 360,
-  duration: 3,
+  duration: 4,
 })
 
-gsap.to(".start-section__initializer", {
+gsap.from(".start-section__initializer", {
+    delay: 4,
     duration: 4,
     y: 80,
     opacity: 0
 })
 
-gsap.to(".choose-action", {
-  y: 200,
-})
