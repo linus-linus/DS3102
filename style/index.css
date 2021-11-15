@@ -7,9 +7,6 @@ body {
 }
 
 .logo-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-align: center;
 }
 .logo-container__logo-img {
@@ -18,8 +15,6 @@ body {
   width: 50%;
 }
 
-<<<<<<< Updated upstream
-=======
 .main-content-container {
   /*display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -36,7 +31,6 @@ body {
         }
     }*/
 }
->>>>>>> Stashed changes
 .main-content-container .start-section {
   text-align: center;
   margin-top: 300px;
