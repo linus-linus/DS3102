@@ -3,8 +3,10 @@ gsap.to(".logo-container__logo-img", {
   duration: 3,
 })
 
-gsap.to(".add-name", {
-  y: 300,
+gsap.to(".start-section__initializer", {
+    duration: 4,
+    y: 80,
+    opacity: 0
 })
 
 gsap.to(".choose-action", {

@@ -29,7 +29,6 @@ body {
 
     .start-section{
         text-align: center;
-        height: 300px;
         margin-top: 300px;
 
         &__initializer{
@@ -48,7 +47,7 @@ body {
 
     .add-name{
         display: none;
-        height: 300px;
+        margin-top: 300px;
         text-align: center;
 
         &__name-input{
@@ -91,7 +90,7 @@ body {
 
     .choose-action{
         display: none;
-        height: 500px;
+        margin-top: 300px;
         text-align: center;
 
         &__name-output{

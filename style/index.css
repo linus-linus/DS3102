@@ -9,6 +9,7 @@ body {
 .logo-container {
   text-align: center;
 }
+
 .logo-container__logo-img {
   margin-top: 15px;
   height: auto;
@@ -17,48 +18,53 @@ body {
 
 .main-content-container {
   /*display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;*/
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;*/
   /*.show-name{
-      display: none;
-      grid-column: span 12;
-      height: 300px;
+        display: none;
+        grid-column: span 12;
+        height: 300px;
 
-      &__name-output{
-          color: $color-5;
-          font-family: 'VT323';
-          font-size: 30px;
-      }
-  }*/
+        &__name-output{
+            color: $color-5;
+            font-family: 'VT323';
+            font-size: 30px;
+        }
+    }*/
 }
+
 .main-content-container .start-section {
   text-align: center;
-  height: 300px;
   margin-top: 300px;
 }
+
 .main-content-container .start-section__initializer {
-  font-family: "VT323";
+  font-family: 'VT323';
   text-decoration: underline;
   color: #f5f5f5;
   font-size: 45px;
   text-transform: uppercase;
 }
+
 .main-content-container .start-section__initializer:hover {
   color: #66f875;
   cursor: pointer;
 }
+
 .main-content-container .add-name {
   display: none;
-  height: 300px;
+  margin-top: 300px;
   text-align: center;
 }
+
 .main-content-container .add-name__name-input {
   border-radius: 15px;
   height: 30px;
   width: 300px;
-  font-family: "VT323";
+  font-family: 'VT323';
   font-size: 20px;
 }
+
 .main-content-container .add-name__confirm-name-btn {
   background-color: #66f875;
   border-radius: 30px;
@@ -66,25 +72,30 @@ body {
   height: 30px;
   width: 30px;
 }
+
 .main-content-container .add-name__confirm-name-btn:active {
   background-color: #ced9ff;
   border-color: #ced9ff;
 }
+
 .main-content-container .add-name .fas {
   color: #f5f5f5;
 }
+
 .main-content-container .choose-action {
   display: none;
-  height: 500px;
+  margin-top: 300px;
   text-align: center;
 }
+
 .main-content-container .choose-action__name-output {
   color: #f5f5f5;
-  font-family: "VT323";
+  font-family: 'VT323';
   font-size: 30px;
 }
+
 .main-content-container .choose-action__learn-btn {
-  font-family: "VT323";
+  font-family: 'VT323';
   font-size: 20px;
   text-decoration: none;
   width: 10rem;
@@ -94,8 +105,9 @@ body {
   color: #020d33;
   text-align: center;
 }
+
 .main-content-container .choose-action__quiz-btn {
-  font-family: "VT323";
+  font-family: 'VT323';
   font-size: 20px;
   text-decoration: none;
   width: 10rem;
@@ -104,4 +116,5 @@ body {
   background-color: #ced9ff;
   color: #020d33;
   text-align: center;
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */
