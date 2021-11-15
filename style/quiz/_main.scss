@@ -10,6 +10,7 @@ $font-2: "montserrat";
 
 body{
     background-color: $color-1;
+    //box-sizing: border-box;
 }
 
 .quiz-section{
@@ -20,6 +21,8 @@ body{
     align-items: center;
     font-family: $font-2;
     padding: 1rem;
+    position: relative;
+
 
     &__div, &__div2{
         display: flex;
