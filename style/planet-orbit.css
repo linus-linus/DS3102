@@ -1,0 +1,13 @@
+body {
+  background-image: url(/images/planets/space.jpg);
+}
+
+.planet-container .planets {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+}
+/*# sourceMappingURL=planet-orbit.css.map */
