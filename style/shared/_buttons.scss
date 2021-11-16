@@ -20,25 +20,29 @@ $font-3: "Share Tech Mono, monospace";
   margin: 1rem;
 }
 */
+
 .nav-btn:hover {
   border: solid $color-5;
   background-color: $color-1;
   color: $color-5;
 }
 
+
+
+.nav-btn,
 .button {
   display: flex;
   justify-content: center;
   color: $color-2;
 
-.nav-btn,
-  /*info*/
+
   &__info,
   &__info-planet,
   &__alphabetical,
   &__alphabetical-planet,
   &__year,
-  &__placement {
+  &__placement 
+  {
     width: 9rem;
     height: 3rem;
     padding: 0.8rem;
