@@ -51,7 +51,7 @@ let planetArray = [
     info: "Saturn er den sjette planeten fra sola og den nest største planeten i hele solsystemet. Planeten består i hovedsak av gass og er med det en gasskjempe. Fordi Saturn omringes av krystallisert ammoniakk i sin ytre atmosfære, ser planeten lys gul ut. Saturn kjennetegnes av flere ringer som omkranser selve planeten. Disse ringene består av ispartikler, samt noe støv og steinpartikler. På en runde rundt sola bruker Saturn 10 759 dager som tilsvarer 29,5 år. Saturn er 4.5 milliarder år gammel, og er med det yngre enn jorda.",
   },
   {
-    name: "venus",
+    name: "Venus",
     img: "/images/planets/venus.svg",
     age: "4.5",
     placement: "2",

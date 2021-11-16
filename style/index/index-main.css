@@ -15,11 +15,6 @@ body {
   width: 50%;
 }
 
-.main-content-container {
-  /*display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;*/
-}
 .main-content-container .start-section {
   text-align: center;
   margin-top: 300px;

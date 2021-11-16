@@ -15,6 +15,9 @@ let btnAlphabetical = document.querySelector(".button__alphabetical-planet")
 
 /*DOM printer ut basert på year btn*/
 let btnPlacement = document.querySelector(".button__placement")
+
+let buttoSum = document.querySelector(".button__img")
+
 /*DOM Slutt*/
 
 /*Gjentagende kode*/
@@ -120,3 +123,23 @@ let showOrder = () => {
 }
 
 btnPlacement.addEventListener("click", showOrder)
+
+/*kun printe bilder*/
+
+let showImg = () => {
+  printOutPlanet.innerHTML = ""
+  let mapImg = planetArray.map((planetImg) => planetImg.img)
+
+  mapImg.forEach((planetImg) => {
+    printOutPlanet.innerHTML += `
+    <article class="info">
+         
+          <img class="info__img-planet" src=${planetImg} alt="Planeten:">
+        
+         
+        </article>
+    `
+  })
+}
+
+buttoSum.addEventListener("click", showImg)

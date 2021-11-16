@@ -105,7 +105,6 @@ let showSearchResult = () => {
   printOutBuilding.innerHTML = ""
 
   let searchWord = searchInput.value
-  let filterName = buildingsArray.filter((building) => building.name)
 
   const searchResult = buildingsArray.filter((building) => {
     return Object.values(building).some((val) => val.includes(searchWord))
@@ -146,6 +145,8 @@ btnAlphabetical.addEventListener("click", showAlphabeticalOrder)
 
 let showYearOrder = () => {
   printOutBuilding.innerHTML = ""
+
+  printOutBuilding.innerHTML = ""
   let yearSort = buildingsArray.sort((building1, building2) =>
     building1.year > building2.year ? 1 : -1
   )
@@ -159,6 +160,7 @@ let showYearOrder = () => {
           <p class="info__section">${building.yearText}</p>
          
         </article>
+
     
     `
   })

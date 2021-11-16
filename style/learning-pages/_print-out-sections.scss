@@ -70,14 +70,13 @@ body {
     .info {
       grid-column: auto/span 4;
     }
+    /*hover*/
+    .info:hover h3 {
+      color: #020d33;
+    }
+
+    .info:hover {
+      background-color: $color-5;
+    }
   }
-}
-
-/*hover*/
-.info:hover h3 {
-  color: #020d33;
-}
-
-.info:hover {
-  background-color: $color-5;
 }

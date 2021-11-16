@@ -6,21 +6,6 @@ let storeNameBtn = document.querySelector(".add-name__confirm-name-btn")
 const nameInput = document.querySelector(".add-name__name-input")
 const nameOutput = document.querySelector(".choose-action__name-output")
 
-// Function that stores the input value to localStorage, and also returns the value to innerHTML
-/*
-let writeName = () => {
-  let inputName = yourinputname.value
-
-  if (nameInput.value === inputName) {
-    let storeNameBtn = (document.querySelector(
-      ".add-name__confirm-name-btn"
-    ).style.display = "block")
-  }
-}
-
-yourinputname.addEventListener("input", writeName)
-*/
-
 /*trykke på start kanpp, for å komme til neste*/
 const startBtn = document.querySelector(".start-btn")
 
