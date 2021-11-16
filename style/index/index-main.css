@@ -19,17 +19,6 @@ body {
   /*display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;*/
-  /*.show-name{
-        display: none;
-        grid-column: span 12;
-        height: 300px;
-
-        &__name-output{
-            color: $color-5;
-            font-family: 'VT323';
-            font-size: 30px;
-        }
-    }*/
 }
 .main-content-container .start-section {
   text-align: center;
@@ -54,35 +43,37 @@ body {
 }
 .main-content-container .add-name__name-input {
   width: 15rem;
-  padding: 0.6rem;
+  padding: 0.8rem;
   border-radius: 2rem;
   font-family: "VT323";
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 .main-content-container .add-name__confirm-name-btn {
-  text-align: center;
-  background-color: #66f875;
-  border-radius: 30px;
-  border-color: #66f875;
+  width: 9rem;
   height: 3rem;
-  width: 8rem;
-  display: none;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  background-color: #66f875;
+  color: #020d33;
+  font-size: 1rem;
+  font-family: "Share Tech Mono", monospace;
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
-  font-family: "VT323";
-  font-size: 1.5rem;
-  color: #020d33;
+  display: none;
 }
-.main-content-container .add-name__confirm-name-btn .icon {
+.main-content-container .add-name__confirm-name-btn__icon {
+  font-size: 1;
   color: #020d33;
 }
 .main-content-container .add-name__confirm-name-btn:active {
-  background-color: #ced9ff;
-  border-color: #ced9ff;
+  height: 3rem;
+  background-color: #020d33;
+  color: #66f875;
+  border: solid #66f875;
 }
-.main-content-container .add-name .fas {
-  color: #f5f5f5;
+.main-content-container .add-name__confirm-name-btn:active__icon:active {
+  color: #66f875;
 }
 .main-content-container .choose-action {
   display: none;
@@ -93,15 +84,23 @@ body {
   color: #f5f5f5;
   font-family: "VT323";
   font-size: 30px;
+  margin-bottom: 2rem;
 }
 .main-content-container .choose-action__quiz-btn, .main-content-container .choose-action__learn-btn {
-  font-family: "VT323";
-  font-size: 20px;
-  text-decoration: none;
-  width: 10rem;
+  width: 12rem;
+  height: 3rem;
   padding: 0.8rem;
   border-radius: 2rem;
+  border-style: none;
   background-color: #ced9ff;
   color: #020d33;
-  text-align: center;
-}/*# sourceMappingURL=index.css.map */
+  font-size: 0.6rem bold;
+  font-family: "Share Tech Mono", monospace;
+  margin: 2rem;
+  text-decoration: none;
+}
+.main-content-container .choose-action__quiz-btn:hover, .main-content-container .choose-action__learn-btn:hover {
+  background-color: #020d33;
+  color: #ced9ff;
+  border: solid #ced9ff;
+}/*# sourceMappingURL=index-main.css.map */
