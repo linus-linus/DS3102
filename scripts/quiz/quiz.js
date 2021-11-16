@@ -50,11 +50,13 @@ function loadQuiz( arrayToUse ){
          
             //..legg til radioKnapp i HTML
             options.push(`
+            <div id="quiz-container">
             <label class="quiz-section__label">
             <input type="radio" name="questions${questionNo}" value="${choice}">
             ${choice} :
             ${activeQuestion.options[choice]}<br>
             </label>
+            </div>
             `
             )                 
         }
@@ -113,7 +115,7 @@ function displayPlanetResults(){
         }
         //Hvis full pott -> Vis premielink
         if(noOfRightAnswers === planetArray.length){
-            prizeTxt.innerHTML = "Gratulerer! Du fikk full score!"
+            prizeTxt.innerHTML = "Gratulerer! Du fikk full score! Trykk for å åpne premien din!"
             collectPrize.style.display = "Block"
         }
     })
@@ -151,9 +153,11 @@ function displayBuildingResults(){
             optionsBoxes[questionNo].style.color = "#ff7a41"
         }
 
-        if(noOfRightAnswers === buildingArray.length){
-            window.location.href = "./planet-orbit.html";
-        }
+       //Hvis full pott -> Vis premielink
+       if(noOfRightAnswers === planetArray.length){
+        prizeTxt.innerHTML = "Gratulerer! Du fikk full score! Trykk for å åpne premien din!"
+        collectPrize.style.display = "Block"
+    }
 
     })
     //Lagrer resultat i localStorage

@@ -29,7 +29,7 @@ let buildingArray = [
     {
         question: "I hvilken verdensdel finner man tempelet Angkor Wat?",
         options: {
-            a: "Sverge",
+            a: "Sverige",
             b: "Asia",
             c: "Oseania"
         },

@@ -14,7 +14,7 @@ let planetArray = [
         options: {
             a: "Fordi den består av flytende lava",
             b: "Fordi den er så nærme Sola",
-            c: "Fordi overflaten er dekket av jernoksid"
+            c: "Fordi den er dekket av jernoksid"
         },
         rightAnswer: "c"
     },

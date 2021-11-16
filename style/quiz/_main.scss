@@ -6,13 +6,25 @@ $color-5: #f5f5f5;
 
 $font-1: "VT323", monospace;
 $font-2: "montserrat";
-$font-3: "Share Tech Mono, monospace";
+$font-3: "Share Tech Mono", monospace;
 
-
+/*LocalStorage resultater*/
 .saved-results{
-    font-size: 16px;
+    //width: auto;
+    font-size: 18px;
+    margin: auto 2rem 1rem 2rem;
+    border-color: $color-2;
+    border-style: solid;
+    border-width: 1px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 1rem;
 }
 
+/* Quiz */
 .quiz-section {
   color: $color-5;
   display: flex;
@@ -32,29 +44,56 @@ $font-3: "Share Tech Mono, monospace";
 
   #results-div {
     padding: 1rem;
+    font-family: $font-3;
   }
 
-  
-
-  /* Fra JS */
   &__question {
     padding: 1rem;
     font-family: $font-2;
-    font-size: 14px;
+    font-size: 15px;
+    margin-top: 1rem;
   }
 
   &__label {
     padding: 1rem;
   }
+
+  #prize-txt{
+    color: $color-5;
+    font-family: $font-3;
+  }
+
+  #collect-prize{
+    text-decoration: none;
+    color: $color-5;
+    padding: 0.5rem;
+    border-color: $color-4;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 0.9rem;
+    border-radius: 50%;
+  }
+
+  
   
 }
-
 
 /* Tablet */
 @media screen and(min-width: 768px) {
+    .saved-results{
+        font-size: 16px;
+        margin: auto 10rem 1rem 10rem;
+    }
 }
 
 /*pc*/
-@media screen and(min-width: 1200px) {
-  
+@media screen and(min-width: 1024px) {
+    .saved-results{
+        margin-left: 4rem;
+        margin: auto 10rem 1rem 10rem;
+    }
+
+    #collect-prize:hover{
+        color: $color-4;
+    }
 }
