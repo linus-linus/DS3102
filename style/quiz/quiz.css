@@ -144,6 +144,7 @@ body {
 /* Quiz CSS */
 /*LocalStorage resultater*/
 .saved-results {
+  width: auto;
   font-size: 18px;
   margin: auto 2rem 1rem 2rem;
   border-color: #ced9ff;
