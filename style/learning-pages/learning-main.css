@@ -1,14 +1,11 @@
+@charset "UTF-8";
 /*mob*/
 .page-header {
   display: flex;
   justify-content: right;
-  /*tablet*/
-}
-.page-header .nav-btn {
-  width: 9rem;
+  /* Tablet og større */
 }
 
-/* samme for pc  1200px */
 /*
 /* Mob */
 /*logo*/
@@ -22,7 +19,7 @@ body {
   margin-bottom: 4rem;
 }
 .page-header-resize .page-header-logo {
-  width: 20rem;
+  width: 13rem;
 }
 
 .icon-section {
@@ -72,7 +69,9 @@ body {
   */
 }
 
-.nav-btn {
+/* quize page*/
+.nav-btn,
+#submit-btn {
   font-family: "Share Tech Mono", monospace;
   font-size: 0.9rem;
   color: #020d33;
@@ -80,7 +79,7 @@ body {
   border: none;
   border-radius: 2rem;
   width: 9rem;
-  height: 3rem;
+  height: 2rem;
   margin: 1rem;
 }
 
@@ -90,12 +89,13 @@ body {
   color: #f5f5f5;
 }
 
+/*learning page*/
 .button {
   display: flex;
   justify-content: center;
   color: #ced9ff;
-  /*info*/
   /*HOVER*/
+  /*tablet*/
   /*pc*/
 }
 .button__info, .button__info-planet, .button__alphabetical, .button__alphabetical-planet, .button__year, .button__placement {
@@ -120,6 +120,11 @@ body {
   color: #ced9ff;
   border: solid #66f875;
 }
+@media screen and (min-width: 768px) {
+  .button .nav-btn {
+    width: 9rem;
+  }
+}
 @media screen and (min-width: 1200px) {
   .button .button__info, .button .button__info-planet {
     margin-right: 6rem;
@@ -129,6 +134,24 @@ body {
   }
 }
 
+/*
+#submit-btn {
+    padding: 0.4rem;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border-style: none;
+    background-color: $color-2;
+    color: $color-1;
+    font-size: 0.6rem bold;
+    font-family: "Share Tech Mono", monospace;
+
+    &:hover{
+    border: solid $color-5;
+    background-color: $color-1;
+    color: $color-5;
+    }
+  }*/
 .building-section,
 .planet-section {
   display: none;
