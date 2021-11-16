@@ -2,7 +2,6 @@
 .page-header {
   display: flex;
   justify-content: right;
-  margin: 1rem;
   /*tablet*/
 }
 .page-header .nav-btn {
@@ -15,7 +14,7 @@
   width: 9rem;
   height: 3rem;
   padding: 0.8rem;
-  margin-right: 1rem;
+  margin: 1rem;
 }
 .page-header .nav-btn:hover {
   border: solid #f5f5f5;
@@ -28,7 +27,22 @@
 }
 
 /* samme for pc  1200px */
+/*
 /* Mob */
+/*logo*/
+body {
+  background-color: #020d33;
+}
+
+.page-header-resize {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.page-header-resize .page-header-logo {
+  width: 20rem;
+}
+
 .icon-section {
   display: flex;
   margin-top: 2rem;

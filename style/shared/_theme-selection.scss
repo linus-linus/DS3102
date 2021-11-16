@@ -5,8 +5,23 @@ $color-4: #66f875;
 $color-5: #f5f5f5;
 $color-6: #6f7488;
 $color-7: #464d66;
-
+/*
 /* Mob */
+
+/*logo*/
+body {
+  background-color: $color-1;
+}
+
+.page-header-resize {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  .page-header-logo {
+    width: 20rem;
+  }
+}
+
 .icon-section {
   display: flex;
   margin-top: 2rem;
