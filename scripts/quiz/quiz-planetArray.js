@@ -1,4 +1,5 @@
 let planetArray = [
+    
     {
         question: "Hva er kallenavnet til Jorda?",
         options: {
