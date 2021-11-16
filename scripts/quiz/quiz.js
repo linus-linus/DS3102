@@ -4,6 +4,7 @@ import planetArray from "./quiz-planetArray.js"
 /* KNAPPER FRA HTML */
 const buildingBtn = document.querySelector(".building-icon")
 const planetBtn = document.querySelector(".planet-icon")
+
 /* OUTPUT-SEKSJONER FRA HTML */
 let quizOutput = document.querySelector("#quiz")
 let resultsOutput = document.getElementById("results-div")
