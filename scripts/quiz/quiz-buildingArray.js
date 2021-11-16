@@ -61,7 +61,7 @@ let buildingArray = [
             c: "Flyktninger"
         },
         rightAnswer: "a"
-    },
+    }
 ]
 
 export default buildingArray

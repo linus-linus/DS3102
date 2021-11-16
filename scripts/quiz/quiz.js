@@ -4,12 +4,16 @@ import planetArray from "./quiz-planetArray.js"
 /* KNAPPER FRA HTML */
 const buildingBtn = document.querySelector(".building-icon")
 const planetBtn = document.querySelector(".planet-icon")
+const collectPrize = doc.querySelector("#collect-prize")
 
 /* OUTPUT-SEKSJONER FRA HTML */
 let quizOutput = document.querySelector("#quiz")
 let resultsOutput = document.getElementById("results-div")
 const savedResults = document.querySelector(".saved-results")
 
+
+submitBtn.style.display = "none"
+collectPrize.style.display = "none"
 
 /* AKTIVERER KNAPPENE */
 const submitBtn = document.getElementById("submit-btn")
@@ -19,8 +23,8 @@ buildingBtn.addEventListener("click", function(){
     loadQuiz(buildingArray)})
 
 
-//Skjuler fullførknappen
-submitBtn.style.display = "none"
+
+
 
 /* LASTER QUIZ */
 function loadQuiz( arrayToUse ){
@@ -76,7 +80,6 @@ function loadQuiz( arrayToUse ){
     quizOutput.innerHTML = output.join('')
     
 };
-
 
 /* PRINTER RESULTAT*/
 function displayPlanetResults(){
