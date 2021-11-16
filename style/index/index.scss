@@ -52,9 +52,9 @@ body {
     text-align: center;
 
     &__name-input {
-      border-radius: 15px;
-      height: 30px;
-      width: 300px;
+      width: 15rem;
+      padding: 0.6rem;
+      border-radius: 2rem;
       font-family: "VT323";
       font-size: 20px;
     }
@@ -68,10 +68,15 @@ body {
       width: 8rem;
       display: none;
       margin-top: 1rem;
-      margin-left: 47%;
+      margin-left: auto;
+      margin-right: auto;
       font-family: "VT323";
       font-size: 1.5rem;
       color: $color-1;
+
+      .icon {
+        color: $color-1;
+      }
     }
 
     &__confirm-name-btn:active {

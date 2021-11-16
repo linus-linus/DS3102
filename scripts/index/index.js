@@ -33,9 +33,16 @@ startBtn.addEventListener("click", startLearning)
 
 /* input felt --> grønn ok knapp  */
 let textValue = () => {
-  let storeNameBtn = (document.querySelector(
-    ".add-name__confirm-name-btn"
-  ).style.display = "block")
+  let input = nameInput.value
+  if (input === "") {
+    let storeNameBtn = (document.querySelector(
+      ".add-name__confirm-name-btn"
+    ).style.display = "none")
+  } else {
+    let storeNameBtn = (document.querySelector(
+      ".add-name__confirm-name-btn"
+    ).style.display = "block")
+  }
 }
 
 nameInput.addEventListener("input", textValue)
