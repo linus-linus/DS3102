@@ -72,6 +72,63 @@ body {
   */
 }
 
+.nav-btn {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.9rem;
+  color: #020d33;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 2rem;
+  width: 9rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.nav-btn:hover {
+  border: solid #f5f5f5;
+  background-color: #020d33;
+  color: #f5f5f5;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  color: #ced9ff;
+  /*info*/
+  /*HOVER*/
+  /*pc*/
+}
+.button__info, .button__info-planet, .button__alphabetical, .button__alphabetical-planet, .button__year, .button__placement {
+  width: 9rem;
+  height: 3rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: #ced9ff;
+  color: #020d33;
+  font-size: 0.6rem bold;
+  font-family: "Share Tech Mono", monospace;
+  margin-right: 1rem;
+}
+.button__info:hover, .button__alphabetical:hover, .button__year:hover {
+  border: solid #ff7a41;
+  background-color: #020d33;
+  color: #ced9ff;
+}
+.button__info-planet:hover, .button__alphabetical-planet:hover, .button__placement:hover {
+  background-color: #020d33;
+  color: #ced9ff;
+  border: solid #66f875;
+}
+@media screen and (min-width: 1200px) {
+  .button .button__info, .button .button__info-planet {
+    margin-right: 6rem;
+  }
+  .button .button__year, .button .button__placement {
+    margin-left: 6rem;
+  }
+}
+
 .building-section,
 .planet-section {
   display: none;
@@ -93,82 +150,6 @@ body {
   text-align: center;
   font-size: 1rem;
   font-family: "Share Tech Mono", monospace;
-}
-
-/*** Mobil ***/
-.building-section,
-.planet-section {
-  display: none;
-}
-.building-section .button,
-.planet-section .button {
-  display: flex;
-  justify-content: center;
-  color: #ced9ff;
-  /*tablet*/
-}
-.building-section .button__info, .building-section .button__info-planet, .building-section .button__alphabetical, .building-section .button__alphabetical-planet, .building-section .button__year, .building-section .button__placement,
-.planet-section .button__info,
-.planet-section .button__info-planet,
-.planet-section .button__alphabetical,
-.planet-section .button__alphabetical-planet,
-.planet-section .button__year,
-.planet-section .button__placement {
-  width: 9rem;
-  height: 3rem;
-  padding: 0.8rem;
-  border-radius: 2rem;
-  border-style: none;
-  background-color: #ced9ff;
-  color: #020d33;
-  font-size: 0.6rem bold;
-  font-family: "Share Tech Mono", monospace;
-  margin-right: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .building-section .button,
-.planet-section .button {
-    /*HOVER*/
-    /*pc*/
-  }
-  .building-section .button .button__info, .building-section .button .button__info-planet,
-.planet-section .button .button__info,
-.planet-section .button .button__info-planet {
-    margin-right: 4rem;
-  }
-  .building-section .button .button__year, .building-section .button .button__placement,
-.planet-section .button .button__year,
-.planet-section .button .button__placement {
-    margin-left: 4rem;
-  }
-  .building-section .button__info:hover, .building-section .button__alphabetical:hover, .building-section .button__year:hover,
-.planet-section .button__info:hover,
-.planet-section .button__alphabetical:hover,
-.planet-section .button__year:hover {
-    border: solid #ff7a41;
-    background-color: #020d33;
-    color: #ced9ff;
-  }
-  .building-section .button__info-planet:hover, .building-section .button__alphabetical-planet:hover, .building-section .button__placement:hover,
-.planet-section .button__info-planet:hover,
-.planet-section .button__alphabetical-planet:hover,
-.planet-section .button__placement:hover {
-    background-color: #020d33;
-    color: #ced9ff;
-    border: solid #66f875;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .building-section .button .button__info, .building-section .button .button__info-planet,
-.planet-section .button .button__info,
-.planet-section .button .button__info-planet {
-    margin-right: 6rem;
-  }
-  .building-section .button .button__year, .building-section .button .button__placement,
-.planet-section .button .button__year,
-.planet-section .button .button__placement {
-    margin-left: 6rem;
-  }
 }
 
 .building-section {
