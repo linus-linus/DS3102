@@ -51,7 +51,7 @@ let planetArray = [
             b: "2021 år",
             c: "300 000 år"
         },
-        rightAnswer: "b"
+        rightAnswer: "a"
     }
 ]
 

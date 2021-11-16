@@ -1,0 +1,16 @@
+.nav-btn {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.9rem;
+    color: $color-1;
+    background-color: $color-5;
+    border: none;
+    border-radius: 2rem;
+    width: 9rem;
+    height: 3rem;
+    margin: 1rem;
+  }
+  .nav-btn:hover {
+    border: solid $color-5;
+    background-color: $color-1;
+    color: $color-5;
+  }

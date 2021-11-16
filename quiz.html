@@ -30,16 +30,17 @@
       <main>
         <section class="icon-section">
           <header class="icon-titel">
-            <h2>Klikk på iconet du vil lære mer om!</h2>
+            <h3 class="saved-results"></h3>
+            <h2>Velg tema ved å trykke på ett av ikonene</h2>
           </header>
           <div class="icon">
             <a class="icon__link planet-bte" href="#"
-              ><img class="icon__planet" src="/images/icons/planet.png" alt=""
+              ><img class="icon__planet planet-icon" src="/images/icons/planet.png" alt=""
             /></a>
 
             <a class="icon__link building-bte" href="#"
               ><img
-                class="icon__building"
+                class="icon__building building-icon"
                 src="/images/icons/building.png"
                 alt=""
               />
@@ -50,7 +51,9 @@
         <section class="quiz-section">
           <div class="quiz-section__div" id="quiz"></div>
           <button id="submit-btn">Fullfør</button>
-          <a href="planet-orbit.html" type="button" id="collect-prize">Du fikk full score! Se premie!</a>
+          <p id="prize-txt"></p>
+          <a href="planet-orbit.html" type="button" id="collect-prize">Se premie!</a>
+          <div id="results-div"></div>
         </section>
       </main>
       <footer></footer>

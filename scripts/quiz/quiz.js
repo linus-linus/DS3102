@@ -4,16 +4,14 @@ import planetArray from "./quiz-planetArray.js"
 /* KNAPPER FRA HTML */
 const buildingBtn = document.querySelector(".building-icon")
 const planetBtn = document.querySelector(".planet-icon")
-const collectPrize = doc.querySelector("#collect-prize")
 
 /* OUTPUT-SEKSJONER FRA HTML */
 let quizOutput = document.querySelector("#quiz")
 let resultsOutput = document.getElementById("results-div")
 const savedResults = document.querySelector(".saved-results")
+const collectPrize = document.querySelector("#collect-prize")
+let prizeTxt = document.querySelector("#prize-txt")
 
-
-submitBtn.style.display = "none"
-collectPrize.style.display = "none"
 
 /* AKTIVERER KNAPPENE */
 const submitBtn = document.getElementById("submit-btn")
@@ -23,7 +21,9 @@ buildingBtn.addEventListener("click", function(){
     loadQuiz(buildingArray)})
 
 
-
+//Skjuler fullfør- og premieknapp
+submitBtn.style.display = "none"
+collectPrize.style.display = "none"
 
 
 /* LASTER QUIZ */
@@ -50,7 +50,7 @@ function loadQuiz( arrayToUse ){
          
             //..legg til radioKnapp i HTML
             options.push(`
-            <label class="quiz-label">
+            <label class="quiz-section__label">
             <input type="radio" name="questions${questionNo}" value="${choice}">
             ${choice} :
             ${activeQuestion.options[choice]}<br>
@@ -61,7 +61,7 @@ function loadQuiz( arrayToUse ){
 
         //push spørsmål og svaralternativ til HTML
         output.push(`
-            <div class="question"> ${activeQuestion.question}</div>
+            <div class="quiz-section__question"> ${activeQuestion.question}</div>
             <div class="options"> ${options.join('')}</div>
             `
             )
@@ -103,6 +103,7 @@ function displayPlanetResults(){
         if(userAnswer === activeQuestion.rightAnswer){
             //legg til i antall riktige svar
             noOfRightAnswers++
+            //Lagrer resultat i localStorage
             localStorage.setItem("result", noOfRightAnswers)
             localStorageValue = `Ditt resultat ${noOfRightAnswers} er nå lagret`
 
@@ -110,18 +111,17 @@ function displayPlanetResults(){
         }else{
             optionsBoxes[questionNo].style.color = "#ff7a41"
         }
-        //Hvis full pott -> Gå til vinnerside
+        //Hvis full pott -> Vis premielink
         if(noOfRightAnswers === planetArray.length){
-            window.location.href = "./planet-orbit.html";
+            prizeTxt.innerHTML = "Gratulerer! Du fikk full score!"
+            collectPrize.style.display = "Block"
         }
     })
+    console.log(localStorageValue)
+    //savedResults.style.display = "block"
+    //savedResults.innerHTML = localStorageValue;
 
-    localStorage.setItem("result", noOfRightAnswers)
-    savedResults.style.display = "block"
-    savedResults.innerHTML = localStorageValue;
-
-
-    resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} poeng av ${planetArray.length} mulige`
+    resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} av ${planetArray.length} mulige poeng`
 };
 
 function displayBuildingResults(){
@@ -146,7 +146,6 @@ function displayBuildingResults(){
             noOfRightAnswers++
             localStorage.setItem("result", noOfRightAnswers)
             localStorageValue = `Ditt resultat ${noOfRightAnswers} er nå lagret`
-
             optionsBoxes[questionNo].style.color = "#66f875"
         }else{
             optionsBoxes[questionNo].style.color = "#ff7a41"
@@ -158,17 +157,18 @@ function displayBuildingResults(){
 
     })
     //Lagrer resultat i localStorage
-    localStorage.setItem("result", noOfRightAnswers)
-    savedResults.innerHTML = localStorageValue;
+    //localStorage.setItem("result", noOfRightAnswers)
+    //savedResults.innerHTML = localStorageValue;
 
     //Viser at resultat blir lagret
     savedResults.style.display = "block"
-    resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} poeng av ${buildingArray.length} mulige`
+    resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} av ${buildingArray.length} mulige poeng`
     
 };
 
 /* HENTER FRA LOKALSTORAGE OM DET ER MATCHENDE VERDIER DER */
 const checkInfoLocalStorage = () => {
+    
     const numberOfItems = localStorage.length
     let localStorageValue = ``
 

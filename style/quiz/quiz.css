@@ -6,25 +6,7 @@
   /*tablet*/
 }
 .page-header .nav-btn {
-  font-family: "Share Tech Mono", monospace;
-  font-size: 0.9rem;
-  color: #020d33;
-  background-color: #f5f5f5;
-  border: none;
-  border-radius: 2rem;
   width: 9rem;
-  height: 3rem;
-  padding: 0.8rem;
-  margin: 1rem;
-}
-.page-header .nav-btn:hover {
-  border: solid #f5f5f5;
-  background-color: #020d33;
-  color: #f5f5f5;
-}
-.page-header .start-quize-btn {
-  width: 9rem;
-  margin-right: 2rem;
 }
 
 /* samme for pc  1200px */
@@ -91,7 +73,29 @@ body {
   */
 }
 
+.nav-btn {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.9rem;
+  color: #020d33;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 2rem;
+  width: 9rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.nav-btn:hover {
+  border: solid #f5f5f5;
+  background-color: #020d33;
+  color: #f5f5f5;
+}
+
 /* Quiz CSS */
+.saved-results {
+  font-size: 16px;
+}
+
 .quiz-section {
   color: #f5f5f5;
   display: flex;
@@ -101,6 +105,7 @@ body {
   font-family: "montserrat";
   padding: 1rem;
   position: relative;
+  /* Fra JS */
 }
 .quiz-section__div {
   display: flex;
@@ -122,15 +127,12 @@ body {
   font-size: 0.6rem bold;
   font-family: "Share Tech Mono", monospace;
 }
-
-/* Hentet fra JS */
-.question {
+.quiz-section__question {
   padding: 1rem;
   font-family: "montserrat";
   font-size: 14px;
 }
-
-.quiz-label {
+.quiz-section__label {
   padding: 1rem;
 }
 
