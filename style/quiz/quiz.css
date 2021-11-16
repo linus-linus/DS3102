@@ -34,7 +34,7 @@ body {
   color: #f5f5f5;
   font-family: "VT323", monospace;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .icon-section .icon {
   order: 1;
@@ -63,7 +63,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .icon-section .icon-titel {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -185,7 +185,6 @@ body {
 .quiz-section__div {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
   font-size: 12px;
 }
 .quiz-section #results-div {
@@ -199,7 +198,7 @@ body {
   margin-top: 1rem;
 }
 .quiz-section__label {
-  padding: 1rem;
+  padding-left: 1rem;
 }
 .quiz-section #prize-txt {
   color: #f5f5f5;
@@ -219,8 +218,16 @@ body {
 /* Tablet */
 @media screen and (min-width: 768px) {
   .saved-results {
-    font-size: 16px;
+    font-size: 20px;
     margin: auto 10rem 1rem 10rem;
+    padding: 1rem;
+  }
+
+  .quiz-section__div {
+    font-size: 15px;
+  }
+  .quiz-section__question {
+    font-size: 17px;
   }
 }
 /*pc*/
@@ -232,5 +239,12 @@ body {
 
   #collect-prize:hover {
     color: #66f875;
+  }
+
+  .quiz-section__div {
+    font-size: 18px;
+  }
+  .quiz-section__question {
+    font-size: 19px;
   }
 }/*# sourceMappingURL=quiz.css.map */

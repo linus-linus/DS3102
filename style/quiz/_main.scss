@@ -38,7 +38,7 @@ $font-3: "Share Tech Mono", monospace;
   &__div {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    //margin: 1rem;
     font-size: 12px;
   }
 
@@ -55,7 +55,7 @@ $font-3: "Share Tech Mono", monospace;
   }
 
   &__label {
-    padding: 1rem;
+    padding-left: 1rem;
   }
 
   #prize-txt{
@@ -79,9 +79,19 @@ $font-3: "Share Tech Mono", monospace;
 /* Tablet */
 @media screen and(min-width: 768px) {
     .saved-results{
-        font-size: 16px;
+        font-size: 20px;
         margin: auto 10rem 1rem 10rem;
+        padding: 1rem;
     }
+    .quiz-section{
+        &__div {
+            font-size: 15px;
+        }
+
+       &__question{
+           font-size: 17px;
+       }
+    } 
 }
 
 /*pc*/
@@ -94,4 +104,15 @@ $font-3: "Share Tech Mono", monospace;
     #collect-prize:hover{
         color: $color-4;
     }
+
+    .quiz-section{
+        &__div {
+            font-size: 18px;
+        }
+    
+       &__question{
+           font-size: 19px;
+       }
+    }
+    
 }

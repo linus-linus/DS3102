@@ -120,8 +120,8 @@ function displayPlanetResults(){
         }
     })
     console.log(localStorageValue)
-    //savedResults.style.display = "block"
-    //savedResults.innerHTML = localStorageValue;
+    savedResults.style.display = "block"
+    savedResults.innerHTML = localStorageValue;
 
     resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} av ${planetArray.length} mulige poeng`
 };
@@ -161,8 +161,8 @@ function displayBuildingResults(){
 
     })
     //Lagrer resultat i localStorage
-    //localStorage.setItem("result", noOfRightAnswers)
-    //savedResults.innerHTML = localStorageValue;
+    localStorage.setItem("result", noOfRightAnswers)
+    savedResults.innerHTML = localStorageValue;
 
     //Viser at resultat blir lagret
     savedResults.style.display = "block"
