@@ -38,7 +38,7 @@ let namePrintOut = document.querySelector(".icon-titel")
 let printUserName = () => {
   let userName = localStorage.getItem("username")
   namePrintOut.innerHTML = `
-  <h3 class="name-text"> ${userName}! Klikk på det icoen du vil lære om!</h3>
+  <h3 class="name-text"> ${userName}😄 Klikk på det icoen du vil lære om!</h3>
   `
 }
 
