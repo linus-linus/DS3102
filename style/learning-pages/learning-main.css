@@ -3,6 +3,7 @@
 .page-header {
   display: flex;
   justify-content: right;
+  margin-bottom: 1rem;
   /* Tablet og større */
 }
 
@@ -16,7 +17,7 @@ body {
 .page-header-resize {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .page-header-resize .page-header-logo {
   width: 13rem;

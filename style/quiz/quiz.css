@@ -4,6 +4,7 @@
 .page-header {
   display: flex;
   justify-content: right;
+  margin-bottom: 1rem;
   /* Tablet og større */
 }
 
@@ -17,7 +18,7 @@ body {
 .page-header-resize {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .page-header-resize .page-header-logo {
   width: 13rem;
@@ -191,11 +192,4 @@ body {
 }
 
 /* Tablet */
-/*pc*/
-@media screen and (min-width: 1200px) {
-  #submit-btn:hover {
-    background-color: #020d33;
-    color: #ced9ff;
-    border: solid #66f875;
-  }
-}/*# sourceMappingURL=quiz.css.map */
+/*pc*//*# sourceMappingURL=quiz.css.map */
