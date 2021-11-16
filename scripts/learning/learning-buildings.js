@@ -38,7 +38,7 @@ let namePrintOut = document.querySelector(".icon-titel")
 let printUserName = () => {
   let userName = localStorage.getItem("username")
   namePrintOut.innerHTML = `
-  <h3 class="name-text"> ${userName} 😄 
+  <h3 class="name-text"> ${userName} <i class="fas fa-grin-beam-sweat"></i>
   Velg tema ved å trykke på et av iconene!</h3>
   `
 }
