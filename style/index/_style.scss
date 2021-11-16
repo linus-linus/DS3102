@@ -51,59 +51,47 @@ body {
 
   .add-name {
     display: none;
-
     margin-top: 300px;
     text-align: center;
 
     &__name-input {
       width: 15rem;
-      padding: 0.6rem;
+      padding: 0.8rem;
       border-radius: 2rem;
       font-family: "VT323";
-      font-size: 20px;
+      font-size: 1.3rem;
     }
 
     &__confirm-name-btn {
-      text-align: center;
-      background-color: $color-4;
-      border-radius: 30px;
-      border-color: $color-4;
+      width: 9rem;
       height: 3rem;
-      width: 8rem;
-      display: none;
+      padding: 0.8rem;
+      border-radius: 2rem;
+      background-color: $color-4;
+      color: $color-1;
+      font-size: 1rem;
+      font-family: "Share Tech Mono", monospace;
       margin-top: 1rem;
       margin-left: auto;
       margin-right: auto;
-      font-family: "VT323";
-      font-size: 1.5rem;
-      color: $color-1;
+      display: none;
 
-      .icon {
+      &__icon {
+        font-size: 1;
         color: $color-1;
       }
     }
 
     &__confirm-name-btn:active {
-      background-color: $color-2;
-      border-color: $color-2;
-    }
-
-    .fas {
-      color: $color-5;
+      height: 3rem;
+      background-color: $color-1;
+      color: $color-4;
+      border: solid $color-4;
+      &__icon:active {
+        color: $color-4;
+      }
     }
   }
-
-  /*.show-name{
-        display: none;
-        grid-column: span 12;
-        height: 300px;
-
-        &__name-output{
-            color: $color-5;
-            font-family: 'VT323';
-            font-size: 30px;
-        }
-    }*/
 
   .choose-action {
     display: none;
@@ -114,18 +102,28 @@ body {
       color: $color-5;
       font-family: "VT323";
       font-size: 30px;
+      margin-bottom: 2rem;
     }
     &__quiz-btn,
     &__learn-btn {
-      font-family: "VT323";
-      font-size: 20px;
-      text-decoration: none;
-      width: 10rem;
+      width: 12rem;
+      height: 3rem;
       padding: 0.8rem;
       border-radius: 2rem;
+      border-style: none;
       background-color: $color-2;
       color: $color-1;
-      text-align: center;
+      font-size: 0.6rem bold;
+      font-family: "Share Tech Mono", monospace;
+      margin: 2rem;
+      text-decoration: none;
+    }
+
+    &__quiz-btn:hover,
+    &__learn-btn:hover {
+      background-color: $color-1;
+      color: $color-2;
+      border: solid $color-2;
     }
   }
 }

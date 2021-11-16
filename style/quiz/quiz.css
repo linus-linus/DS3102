@@ -8,7 +8,6 @@
   /* Tablet og større */
 }
 
-/*
 /* Mob */
 /*logo*/
 body {
@@ -30,14 +29,12 @@ body {
   flex-wrap: wrap;
 }
 .icon-section .icon-titel {
-  font-size: 1.7rem;
-}
-.icon-section .icon-titel {
   order: 0;
   width: 100%;
   color: #f5f5f5;
   font-family: "VT323", monospace;
   text-align: center;
+  font-size: 1.7rem;
 }
 .icon-section .icon {
   order: 1;
@@ -63,15 +60,10 @@ body {
 .icon-section .icon__building:hover {
   background-color: #020d33;
   opacity: 0.5;
-  /*   border: 0.15rem solid;
-  border-radius: 20%;
-  border-color: $color-3;
-  width: 2rem;
-  height: 1.5rem;
-  */
 }
 
 /*mob*/
+/*Inder*/
 /* quize page*/
 .nav-btn,
 #submit-btn {
@@ -91,8 +83,6 @@ body {
   display: flex;
   justify-content: center;
   color: #ced9ff;
-  /*tablet*/
-  /*pc*/
 }
 .button__info, .button__info-planet, .button__alphabetical, .button__alphabetical-planet, .button__year, .button__placement {
   width: 9rem;
@@ -102,43 +92,45 @@ body {
   border-style: none;
   background-color: #ced9ff;
   color: #020d33;
-  font-size: 0.6rem bold;
+  font-size: 0.6rem;
   font-family: "Share Tech Mono", monospace;
   margin-right: 1rem;
 }
+
+/*tablet*/
 @media screen and (min-width: 768px) {
-  .button .nav-btn {
+  .nav-btn {
     width: 9rem;
   }
 }
+/*pc*/
 @media screen and (min-width: 1200px) {
-  .button .nav-btn:hover,
-.button #submit-btn:hover {
+  .button__info, .button__info-planet {
+    margin-right: 6rem;
+  }
+  .button__year, .button__placement {
+    margin-left: 6rem;
+  }
+
+  /*HOVER*/
+  .nav-btn:hover,
+#submit-btn:hover {
     border: solid #f5f5f5;
     background-color: #020d33;
     color: #f5f5f5;
   }
-  .button .button {
-    /*HOVER*/
-  }
-  .button .button__info, .button .button__info-planet {
-    margin-right: 6rem;
-  }
-  .button .button__year, .button .button__placement {
-    margin-left: 6rem;
-  }
-  .button .button__info:hover, .button .button__alphabetical:hover, .button .button__year:hover {
+
+  .button__info:hover, .button__alphabetical:hover, .button__year:hover {
     border: solid #ff7a41;
     background-color: #020d33;
     color: #ced9ff;
   }
-  .button .button__info-planet:hover, .button .button__alphabetical-planet:hover, .button .button__placement:hover {
+  .button__info-planet:hover, .button__alphabetical-planet:hover, .button__placement:hover {
     background-color: #020d33;
     color: #ced9ff;
     border: solid #66f875;
   }
 }
-
 /*
 #submit-btn {
     padding: 0.4rem;

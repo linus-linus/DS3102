@@ -8,6 +8,9 @@ $font-1: "VT323", monospace;
 $font-2: "montserrat";
 $font-3: "Share Tech Mono, monospace";
 /*mob*/
+
+/*Inder*/
+
 /* quize page*/
 .nav-btn,
 #submit-btn {
@@ -41,52 +44,54 @@ $font-3: "Share Tech Mono, monospace";
     border-style: none;
     background-color: $color-2;
     color: $color-1;
-    font-size: 0.6rem bold;
+    font-size: 0.6rem;
     font-family: "Share Tech Mono", monospace;
     margin-right: 1rem;
   }
+}
 
-  /*tablet*/
-  @media screen and(min-width: 768px) {
-    .nav-btn {
-      width: 9rem;
+/*tablet*/
+@media screen and(min-width: 768px) {
+  .nav-btn {
+    width: 9rem;
+  }
+}
+
+/*pc*/
+@media screen and(min-width: 1200px) {
+  .button {
+    &__info,
+    &__info-planet {
+      margin-right: 6rem;
+    }
+
+    &__year,
+    &__placement {
+      margin-left: 6rem;
     }
   }
-
-  /*pc*/
-  @media screen and(min-width: 1200px) {
-    .nav-btn:hover,
-    #submit-btn:hover {
-      border: solid $color-5;
+  /*HOVER*/
+  .nav-btn:hover,
+  #submit-btn:hover {
+    border: solid $color-5;
+    background-color: $color-1;
+    color: $color-5;
+  }
+  .button {
+    &__info:hover,
+    &__alphabetical:hover,
+    &__year:hover {
+      border: solid $color-3;
       background-color: $color-1;
-      color: $color-5;
+      color: $color-2;
     }
-    .button {
-      &__info,
-      &__info-planet {
-        margin-right: 6rem;
-      }
 
-      &__year,
-      &__placement {
-        margin-left: 6rem;
-      }
-      /*HOVER*/
-      &__info:hover,
-      &__alphabetical:hover,
-      &__year:hover {
-        border: solid $color-3;
-        background-color: $color-1;
-        color: $color-2;
-      }
-
-      &__info-planet:hover,
-      &__alphabetical-planet:hover,
-      &__placement:hover {
-        background-color: $color-1;
-        color: $color-2;
-        border: solid $color-4;
-      }
+    &__info-planet:hover,
+    &__alphabetical-planet:hover,
+    &__placement:hover {
+      background-color: $color-1;
+      color: $color-2;
+      border: solid $color-4;
     }
   }
 }

@@ -3,9 +3,10 @@ $color-2: #ced9ff;
 $color-3: #ff7a41;
 $color-4: #66f875;
 $color-5: #f5f5f5;
-$color-6: #6f7488;
-$color-7: #464d66;
-/*
+
+$font-1: "VT323", monospace;
+$font-2: "montserrat";
+$font-3: "Share Tech Mono, monospace";
 /* Mob */
 
 /*logo*/
@@ -31,14 +32,12 @@ body {
   //width: 100vw;
 
   .icon-titel {
-    font-size: 1.7rem;
-  }
-  .icon-titel {
     order: 0;
     width: 100%;
     color: $color-5;
     font-family: "VT323", monospace;
     text-align: center;
+    font-size: 1.7rem;
   }
 
   .icon {
@@ -66,12 +65,6 @@ body {
     &__building:hover {
       background-color: $color-1;
       opacity: 0.5;
-      /*   border: 0.15rem solid;
-      border-radius: 20%;
-      border-color: $color-3;
-      width: 2rem;
-      height: 1.5rem;
-      */
     }
   }
 }
