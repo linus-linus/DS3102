@@ -9,6 +9,17 @@ $font-2: "montserrat";
 $font-3: "Share Tech Mono, monospace";
 
 /*mob*/
+
+.page-header-resize {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  .page-header-logo {
+    width: 13rem;
+  }
+}
+
 .page-header {
   display: flex;
   justify-content: right;
