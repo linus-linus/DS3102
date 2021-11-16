@@ -162,13 +162,12 @@ function displayBuildingResults(){
 
     //Viser at resultat blir lagret
     savedResults.style.display = "block"
-    resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} av ${buildingArray.length} mulige poeng`
+    resultsOutput.innerHTML = `Du fikk ${noOfRightAnswers} poeng av ${buildingArray.length} mulige`
     
 };
 
 /* HENTER FRA LOKALSTORAGE OM DET ER MATCHENDE VERDIER DER */
 const checkInfoLocalStorage = () => {
-    
     const numberOfItems = localStorage.length
     let localStorageValue = ``
 
