@@ -70,6 +70,7 @@ body {
   */
 }
 
+/*mob*/
 /* quize page*/
 .nav-btn,
 #submit-btn {
@@ -80,14 +81,8 @@ body {
   border: none;
   border-radius: 2rem;
   width: 9rem;
-  height: 2rem;
+  height: 3rem;
   margin: 1rem;
-}
-
-.nav-btn:hover {
-  border: solid #f5f5f5;
-  background-color: #020d33;
-  color: #f5f5f5;
 }
 
 /*learning page*/
@@ -95,7 +90,6 @@ body {
   display: flex;
   justify-content: center;
   color: #ced9ff;
-  /*HOVER*/
   /*tablet*/
   /*pc*/
 }
@@ -111,27 +105,36 @@ body {
   font-family: "Share Tech Mono", monospace;
   margin-right: 1rem;
 }
-.button__info:hover, .button__alphabetical:hover, .button__year:hover {
-  border: solid #ff7a41;
-  background-color: #020d33;
-  color: #ced9ff;
-}
-.button__info-planet:hover, .button__alphabetical-planet:hover, .button__placement:hover {
-  background-color: #020d33;
-  color: #ced9ff;
-  border: solid #66f875;
-}
 @media screen and (min-width: 768px) {
   .button .nav-btn {
     width: 9rem;
   }
 }
 @media screen and (min-width: 1200px) {
+  .button .nav-btn:hover,
+.button #submit-btn:hover {
+    border: solid #f5f5f5;
+    background-color: #020d33;
+    color: #f5f5f5;
+  }
+  .button .button {
+    /*HOVER*/
+  }
   .button .button__info, .button .button__info-planet {
     margin-right: 6rem;
   }
   .button .button__year, .button .button__placement {
     margin-left: 6rem;
+  }
+  .button .button__info:hover, .button .button__alphabetical:hover, .button .button__year:hover {
+    border: solid #ff7a41;
+    background-color: #020d33;
+    color: #ced9ff;
+  }
+  .button .button__info-planet:hover, .button .button__alphabetical-planet:hover, .button .button__placement:hover {
+    background-color: #020d33;
+    color: #ced9ff;
+    border: solid #66f875;
   }
 }
 
