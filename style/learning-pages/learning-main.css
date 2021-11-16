@@ -2,18 +2,7 @@
 .page-header {
   display: flex;
   justify-content: right;
-  margin: 1rem;
   /*tablet*/
-}
-.page-header .page-header-resize {
-  flex: auto;
-  width: 50%;
-}
-.page-header .page-header-resize page-header-logo {
-  margin-top: 15px;
-  height: auto;
-  width: 20%;
-  padding: 50px;
 }
 .page-header .nav-btn {
   font-family: "Share Tech Mono", monospace;
