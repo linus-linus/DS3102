@@ -1,15 +1,6 @@
 @charset "UTF-8";
 /* Shared CSS */
 /*mob*/
-.page-header-resize {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-.page-header-resize .page-header-logo {
-  width: 13rem;
-}
-
 .page-header {
   display: flex;
   justify-content: right;
@@ -213,8 +204,9 @@ body {
 /* Tablet */
 @media screen and (min-width: 768px) {
   .saved-results {
-    font-size: 16px;
+    font-size: 20px;
     margin: auto 10rem 1rem 10rem;
+    padding: 1rem;
   }
 
   .quiz-section__div {

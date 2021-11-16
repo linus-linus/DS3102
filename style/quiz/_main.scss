@@ -79,8 +79,9 @@ $font-3: "Share Tech Mono", monospace;
 /* Tablet */
 @media screen and(min-width: 768px) {
     .saved-results{
-        font-size: 16px;
+        font-size: 20px;
         margin: auto 10rem 1rem 10rem;
+        padding: 1rem;
     }
     .quiz-section{
         &__div {
