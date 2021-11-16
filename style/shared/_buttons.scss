@@ -1,4 +1,4 @@
-.nav-btn {
+.nav-btn, #submit-btn {
     font-family: "Share Tech Mono", monospace;
     font-size: 0.9rem;
     color: $color-1;
@@ -6,11 +6,36 @@
     border: none;
     border-radius: 2rem;
     width: 9rem;
-    height: 3rem;
+    height: 2rem;
     margin: 1rem;
-  }
-  .nav-btn:hover {
+}
+
+.nav-btn:hover {
     border: solid $color-5;
     background-color: $color-1;
     color: $color-5;
-  }
+}
+/*
+#submit-btn {
+    padding: 0.4rem;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border-style: none;
+    background-color: $color-2;
+    color: $color-1;
+    font-size: 0.6rem bold;
+    font-family: "Share Tech Mono", monospace;
+
+    &:hover{
+    border: solid $color-5;
+    background-color: $color-1;
+    color: $color-5;
+    }
+  }*/
+
+  @media screen and(min-width: 768px) {
+    .nav-btn {
+        width: 9rem;
+      }
+}

@@ -10,25 +10,11 @@ $color-7: #464d66;
 
 /*mob*/
 .page-header {
-  //background: rgb(255, 255, 255, 0.3);
-  //display: flex;
-  //justify-content: space-between;
-  //flex-wrap: wrap;
-  //align-items: center;
-  //position: fixed;
-  //width: 100vw;
   display: flex;
   justify-content: right;
-  // margin: 1rem;
 
 
-
-  /*tablet*/
-  @media screen and(min-width: 768px) {
-  }
-  .nav-btn {
-    width: 9rem;
-  }
+  /* Tablet og større */
+  
 }
 
-/* samme for pc  1200px */
