@@ -3,7 +3,6 @@
 .page-header {
   display: flex;
   justify-content: right;
-  margin: 1rem;
   /*tablet*/
 }
 .page-header .nav-btn {
@@ -16,7 +15,7 @@
   width: 9rem;
   height: 3rem;
   padding: 0.8rem;
-  margin-right: 1rem;
+  margin: 1rem;
 }
 .page-header .nav-btn:hover {
   border: solid #f5f5f5;
@@ -29,7 +28,22 @@
 }
 
 /* samme for pc  1200px */
+/*
 /* Mob */
+/*logo*/
+body {
+  background-color: #020d33;
+}
+
+.page-header-resize {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.page-header-resize .page-header-logo {
+  width: 20rem;
+}
+
 .icon-section {
   display: flex;
   margin-top: 2rem;
@@ -78,10 +92,6 @@
 }
 
 /* Quiz CSS */
-body {
-  background-color: #020d33;
-}
-
 .quiz-section {
   color: #f5f5f5;
   display: flex;
@@ -92,7 +102,7 @@ body {
   padding: 1rem;
   position: relative;
 }
-.quiz-section__div, .quiz-section__div2 {
+.quiz-section__div {
   display: flex;
   flex-direction: column;
   margin: 1rem;
@@ -131,69 +141,5 @@ body {
     background-color: #020d33;
     color: #ced9ff;
     border: solid #66f875;
-  }
-}
-/* Mobile */
-.page-header {
-  justify-content: flex-start;
-  /* Tablet */
-}
-.page-header .back-btn {
-  margin-left: 0.5rem;
-  color: #ff7a41;
-  padding: 0.4rem;
-  flex: start;
-}
-.page-header .nav-btn {
-  width: 9rem;
-  margin: 0.5rem;
-  font-size: 0.8rem;
-}
-@media screen and (min-width: 768px) {
-  .page-header .back-btn:hover {
-    color: #66f875;
-    background-color: #020d33;
-    border-radius: 50%;
-    padding: 0.4rem;
-  }
-}
-
-/* Mob */
-.icon-section {
-  display: flex;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-.icon-section .icon-titel {
-  padding: 1.5rem;
-  font-size: 14px;
-}
-.icon-section .icon {
-  margin: 0.5rem;
-  text-decoration: none;
-}
-.icon-section .icon__planet, .icon-section .icon__building {
-  padding: 0.5rem;
-}
-
-.saved-results {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-family: "Share Tech Mono", monospace;
-  font-size: 14px;
-  margin: 0 1rem 0 1rem;
-  padding: 0.5rem;
-  color: #ced9ff;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ced9ff;
-  border-radius: 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .saved-results {
-    margin: 2rem 8rem 0 8rem;
-    text-align: center;
   }
 }/*# sourceMappingURL=quiz.css.map */
