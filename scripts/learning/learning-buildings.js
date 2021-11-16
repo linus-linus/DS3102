@@ -38,7 +38,7 @@ let namePrintOut = document.querySelector(".icon-titel")
 let printUserName = () => {
   let userName = localStorage.getItem("username")
   namePrintOut.innerHTML = `
-  <p> ${userName}! Klikk på det icoen du vil lære om!</p>
+  <h3 class="name-text"> ${userName}! Klikk på det icoen du vil lære om!</h3>
   `
 }
 
@@ -52,7 +52,7 @@ let forEachFunctionLong = (data) => {
     <article class="info">
     
     <h3 class="info__title">${building.name}</h3>
-    <img class="info__img" src=${building.img} alt="Taj Mahal">
+    <img class="info__img" src=${building.img}  alt="Byggning: ${building.name}">
     <p class="info__section">${building.year} ${building.yearText}</p>
     <p class="info__section">${building.continent}</p>
     <p class="info__section">${building.country}</p>
@@ -73,7 +73,7 @@ let forEachFunctionShort = (data) => {
     
     <h3 class="info__title">${building.name}</h3>
   
-    <img class="info__img" src=${building.img} alt="Taj Mahal">
+    <img class="info__img" src=${building.img} alt="Byggning: ${building.name}">
     
 </article>
 
@@ -104,6 +104,7 @@ let showSearchResult = () => {
   printOutBuilding.innerHTML = ""
 
   let searchWord = searchInput.value
+  let filterName = buildingsArray.filter((building) => building.name)
 
   const searchResult = buildingsArray.filter((building) => {
     return Object.values(building).some((val) => val.includes(searchWord))
@@ -152,7 +153,7 @@ let showYearOrder = () => {
     printOutBuilding.innerHTML += `
     <article class="info">
           <h3 class="info__title">${building.name}</h3>
-          <img class="info__img" src=${building.img} alt="Taj Mahal">
+          <img class="info__img" src=${building.img}  alt="Byggning: ${building.name}">
           <p class="info__section">${building.year}</p>
           <p class="info__section">${building.yearText}</p>
          
@@ -194,7 +195,7 @@ let showSelected = () => {
 
   <article class="info">
   <h3 class="info__title">${search.name}</h3>
-  <img class="info__img" src=${search.img} alt="Taj Mahal">
+  <img class="info__img" src=${search.img}  alt="Byggning: ${search.name}">
   <p class="info__section">${search.continent}
   </article>
   `

@@ -23,7 +23,7 @@ let repeatCodeLonge = (data) => {
     printOutPlanet.innerHTML += `
           <article class="info">
                 <h3 class="info__title">${planet.name}</h3>
-                <img class="info__img-planet" src=${planet.img} alt="Taj Mahal">
+                <img class="info__img-planet" src=${planet.img} alt="Planeten: ${planet.name}">
                 <p>${planet.age} Milliarder år
                 </p>
                 <p>Plassering i sol systemet: ${planet.placement}</p>
@@ -39,7 +39,7 @@ let repaetCodeShort = (data) => {
     printOutPlanet.innerHTML += `
           <article class="info">
                 <h3 class="info__title">${planet.name}</h3>
-                <img class="info__img-planet" src=${planet.img} alt="Taj Mahal">
+                <img class="info__img-planet" src=${planet.img} alt="Planeten: ${planet.name}">
               </article>
           
           `
@@ -110,7 +110,7 @@ let showOrder = () => {
     printOutPlanet.innerHTML += `
     <article class="info">
           <h3 class="info__title">${planet.name}</h3>
-          <img class="info__img-planet" src=${planet.img} alt="Taj Mahal">
+          <img class="info__img-planet" src=${planet.img} alt="Planeten: ${planet.name}">
           <p class="info__section">Plassering i sol systemet: ${planet.placement}</p>
          
         </article>
