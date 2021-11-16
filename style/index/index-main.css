@@ -60,6 +60,7 @@ body {
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
+  border: solid #66f875;
   display: none;
 }
 .main-content-container .add-name__confirm-name-btn__icon {
@@ -87,7 +88,7 @@ body {
   margin-bottom: 2rem;
 }
 .main-content-container .choose-action__quiz-btn, .main-content-container .choose-action__learn-btn {
-  width: 12rem;
+  width: 9rem;
   height: 3rem;
   padding: 0.8rem;
   border-radius: 2rem;
@@ -98,6 +99,7 @@ body {
   font-family: "Share Tech Mono", monospace;
   margin: 2rem;
   text-decoration: none;
+  border: solid #ced9ff;
 }
 .main-content-container .choose-action__quiz-btn:hover, .main-content-container .choose-action__learn-btn:hover {
   background-color: #020d33;
